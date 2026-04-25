@@ -1,0 +1,183 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Man Who Sold Everything to Sell Ice Cream | Hatsun Agro</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf8; color: #1a1a1a; font-family: 'Merriweather', Georgia, serif; font-size: 18px; line-height: 1.85; }
+  .hero { background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%); color: #fff; padding: 90px 40px 80px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; left: -60px; right: -60px; bottom: -60px; background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%); pointer-events: none; }
+  .hero .tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #f0c040; margin-bottom: 22px; position: relative; }
+  .hero h1 { font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 700; line-height: 1.2; max-width: 740px; margin: 0 auto 24px; position: relative; }
+  .hero .subtitle { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #b0c4d8; max-width: 600px; margin: 0 auto; line-height: 1.65; position: relative; }
+  .hero .meta { font-family: 'Inter', sans-serif; font-size: 12px; color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px; text-transform: uppercase; position: relative; }
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+  .section-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c0872a; margin-bottom: 10px; }
+  h2 { font-family: 'Merriweather', serif; font-size: 1.7rem; font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3; }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+  .pull-quote { border-left: 4px solid #f0c040; padding: 20px 28px; margin: 42px 0; background: #fffdf0; border-radius: 0 10px 10px 0; }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: #999; margin-top: 12px; letter-spacing: 1px; text-transform: uppercase; font-style: normal; display: block; }
+  .infographic { background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 34px 32px; margin: 46px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+  .infographic-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #aaa; margin-bottom: 30px; text-align: center; }
+  .founder-block { display: flex; gap: 28px; align-items: flex-start; background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+  .founder-photo { flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040; display: flex; align-items: center; justify-content: center; }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-info .founder-name { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 800; color: #0f1f2a; margin-bottom: 4px; }
+  .founder-info .founder-title { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #c0872a; margin-bottom: 14px; }
+  .founder-info p { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #555; line-height: 1.65; margin: 0; }
+  .trivia-badge { background: linear-gradient(135deg, #0f2027, #1a3a4a); color: #fff; border-radius: 12px; padding: 22px 28px; margin: 40px 0; display: flex; gap: 20px; align-items: flex-start; }
+  .trivia-badge .badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .trivia-badge .badge-label { font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #f0c040; margin-bottom: 6px; }
+  .trivia-badge .badge-text { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #c8d8e8; line-height: 1.6; margin: 0; }
+  .timeline-wrap { overflow-x: auto; padding-bottom: 8px; }
+  .timeline { min-width: 560px; position: relative; padding: 12px 0 0; }
+  .timeline-line { position: absolute; top: 22px; left: 20px; right: 20px; height: 3px; background: linear-gradient(90deg, #c0872a, #1a3a4a, #0d5c8a); border-radius: 2px; z-index: 0; }
+  .timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 1; }
+  .timeline-item { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 0 4px; }
+  .timeline-dot { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid #c0872a; margin-bottom: 10px; flex-shrink: 0; }
+  .timeline-dot.key { background: #c0872a; width: 20px; height: 20px; border-color: #c0872a; box-shadow: 0 0 0 3px rgba(192,135,42,0.2); }
+  .timeline-dot.blue { background: #1a3a4a; border-color: #1a3a4a; box-shadow: 0 0 0 3px rgba(26,58,74,0.2); }
+  .timeline-year { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #c0872a; margin-bottom: 5px; }
+  .timeline-year.blue { color: #1a3a4a; }
+  .timeline-text { font-family: 'Inter', sans-serif; font-size: 11px; color: #666; text-align: center; line-height: 1.45; max-width: 82px; }
+  .customers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .customer-card { background: #f7f5f0; border-radius: 10px; padding: 16px 14px; text-align: center; border: 1px solid #ece8e0; }
+  .customer-name { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #0f1f2a; margin-bottom: 4px; }
+  .customer-desc { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; line-height: 1.4; }
+  .bar-chart { display: flex; align-items: flex-end; gap: 10px; height: 180px; padding: 0 8px; margin-bottom: 10px; }
+  .bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+  .bar-value { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #333; margin-bottom: 4px; }
+  .bar { width: 100%; border-radius: 5px 5px 0 0; }
+  .bar-label { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; margin-top: 8px; }
+  .chart-note { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; font-style: italic; }
+  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
+  .legacy-card.blue { border-left-color: #1a3a4a; }
+  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
+  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+  .closing-card { background: linear-gradient(160deg, #0a1a24, #1a3a4a); color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px; }
+  .closing-card .label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #f0c040; margin-bottom: 16px; }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+  .disclaimer { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 40px; line-height: 1.6; padding: 18px; border-top: 1px solid #e4e0d8; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="tag">Indian FMCG &nbsp;·&nbsp; Founder Journey &nbsp;·&nbsp; Dairy &amp; Bootstrapped Growth</div>
+  <h1>The Man Who Sold Everything to Sell Ice Cream</h1>
+  <div class="subtitle">A college dropout turned his family's last asset into India's largest private dairy empire. He started with ₹13,000. He never looked back.</div>
+  <div class="meta">Hatsun Agro Product Ltd &nbsp;·&nbsp; April 2025</div>
+</div>
+<div class="content">
+  <div class="section-label">The Beginning</div>
+  <h2>A 250 Sq Ft Shop and a Family's Last Hope</h2>
+  <p>In 1970, a 21-year-old named Raja Ganesan Chandramogan stood at a crossroads that most men would have walked away from. His father's small provision shop had collapsed. The family had one significant asset left — their property. Around him, Chennai hummed with the sounds of a city moving forward, indifferent to one young man's desperation.</p>
+  <p>Chandramogan, who had dropped out of school and spent time earning ₹65 a month at a timber depot, made a decision that would define the next five decades of his life. He convinced his family to sell their property and used the proceeds — roughly <strong>₹13,000</strong> — to rent a 250-square-foot space in Royapuram, a working-class neighbourhood in North Chennai. He hired three workers. He bought a few basic machines. He started making ice cream.</p>
+  <p>There was no business plan, no mentor, no angel investor. Just a young man with an instinct that quality sells, and that if you make something genuinely good, people will come back for it. He named his brand <strong>Arun Ice Cream</strong> — and he had no idea he was building what would one day become India's largest private dairy company.</p>
+  <div class="founder-block">
+    <div class="founder-photo">
+      <img src="https://www.hap.in/images/board-1.png" alt="R.G. Chandramogan, Chairman, Hatsun Agro" onerror="this.parentElement.innerHTML='<div style=\'font-family:Inter,sans-serif;font-size:28px;font-weight:800;color:#f0c040;\'>RGC</div>';" />
+    </div>
+    <div class="founder-info">
+      <div class="founder-name">R.G. Chandramogan</div>
+      <div class="founder-title">Founder &amp; Chairman · Hatsun Agro Product Ltd</div>
+      <p>A school dropout from Thiruthangal, Tamil Nadu, who once earned ₹65 a month at a timber depot. He sold his family's only property at 21 to start an ice cream business — and never stopped building. Awarded the Padma Shri in January 2025, five decades after he first put an ice cream cart on a Chennai street.</p>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">The Struggle</div>
+  <h2>When Handcarts Were the Only Distribution Network</h2>
+  <p>The early years were a lesson in creative survival. Established ice cream companies had cold storage infrastructure, distribution networks, and marketing budgets. Chandramogan had handcarts and bicycles. His workers would wheel Arun Ice Cream through Chennai's lanes in the morning heat, competing against brands that had been around for decades.</p>
+  <p>Funding constraints forced him to be sharper about where to sell. Instead of chasing retail shelves already dominated by competitors, he found pockets of captive demand — college canteens, ship galleys in Chennai port, institutional buyers who needed reliable supply. In these niches, quality was everything. Chandramogan understood this intuitively: <strong>if your ice cream was better, the canteen manager called you back tomorrow.</strong></p>
+  <p>Competition from larger brands and state dairy cooperatives pressed hard from every direction. But the discipline he built in those years — of sourcing well, never cutting corners on fat content, and keeping farmers paid on time — would become the invisible moat that none of his competitors could replicate at scale.</p>
+  <div class="trivia-badge">
+    <div class="badge-icon">🏆</div>
+    <div>
+      <div class="badge-label">India's Largest Private Dairy</div>
+      <p class="badge-text">Hatsun Agro is <strong style="color:#f0c040;">India's largest private sector dairy company</strong> — a title earned without external institutional funding in its foundational decades. What started as a handcart ice cream route in Royapuram now procures <strong style="color:#f0c040;">3.3 million litres of milk every single day</strong> from over 4,00,000 farmers across South India.</p>
+    </div>
+  </div>
+  <div class="infographic">
+    <div class="infographic-title">The Hatsun Agro Journey · 1970 – 2025</div>
+    <div class="timeline-wrap"><div class="timeline"><div class="timeline-line"></div><div class="timeline-items">
+      <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">1970</div><div class="timeline-text">₹13,000 &amp; 3 workers. Arun Ice Cream born in Royapuram</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">1978</div><div class="timeline-text">Rural franchise model; small towns first</div></div>
+      <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">1984</div><div class="timeline-text">Largest ice cream maker in Tamil Nadu</div></div>
+      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">1995</div><div class="timeline-text">Enters dairy with Arokya — 4.5% fat milk</div></div>
+      <div class="timeline-item"><div class="timeline-dot blue"></div><div class="timeline-year blue">2006</div><div class="timeline-text">Lists on NSE</div></div>
+      <div class="timeline-item"><div class="timeline-dot blue"></div><div class="timeline-year blue">2025</div><div class="timeline-text">Padma Shri · ₹21,000 Cr · 42 countries</div></div>
+    </div></div></div>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">The First Break</div>
+  <h2>Going Where No FMCG Brand Dared to Go</h2>
+  <p>By 1978, something quietly remarkable was happening. While established ice cream companies concentrated on urban markets, Chandramogan started sending Arun Ice Cream into small towns and rural areas using a franchise model. It was a bold, counterintuitive bet at a time when rural cold-chain infrastructure barely existed.</p>
+  <p>The logic was simple but powerful: in a small town, you need to be the first. Rural India, underserved and quality-starved, responded. By <strong>1984</strong>, Arun was the largest ice cream manufacturer in Tamil Nadu — not by fighting in the city, but by quietly owning the towns that bigger brands had written off.</p>
+  <p>This was Chandramogan's playbook in its earliest form: find the underserved pocket, arrive with quality before anyone else, and let word of mouth build what advertising cannot. It would serve him again, eleven years later, when he made an even bolder bet.</p>
+  <div class="pull-quote">
+    <p>"In the dairy business, trust is built litre by litre, farmer by farmer. There are no shortcuts to freshness."</p>
+    <span class="attr">— R.G. Chandramogan, Chairman, Hatsun Agro Product Ltd</span>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">The Pivot</div>
+  <h2>One Decision That Changed the Entire Scale of Ambition</h2>
+  <p>In 1995, Chandramogan looked at the Indian dairy market and saw something many had seen — and retreated from. State-run dairy cooperatives, backed by government infrastructure and pricing power, dominated the organised milk segment. Chandramogan went in anyway.</p>
+  <p>Hatsun launched <strong>Arokya</strong>, its liquid milk brand, with milk at 4.5% fat content — targeted at children's nutrition. It required building a procurement network from scratch, directly with farmers at Active Bulk Cooler stations, ensuring freshness that the cooperative model structurally struggled to match.</p>
+  <p>The dairy pivot transformed the company's ambition permanently. What looked like a costly distraction in 1995 became, by the 2010s, the foundation of a dairy giant. Chandramogan had built a moat so wide that even Amul would need decades to replicate it in South India.</p>
+  <div class="infographic">
+    <div class="infographic-title">Brand Portfolio · How Hatsun Serves Every Dairy Need</div>
+    <div class="customers-grid">
+      <div class="customer-card"><div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#c0872a,#e8a830);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">AR</div><div class="customer-name">Arun Ice Cream</div><div class="customer-desc">~30% market share in South India ice cream</div></div>
+      <div class="customer-card"><div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#1a3a4a,#2a6080);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">AK</div><div class="customer-name">Arokya Milk</div><div class="customer-desc">The dairy pivot that changed everything</div></div>
+      <div class="customer-card"><div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#0f2027,#1a3a4a);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">GC</div><div class="customer-name">Go Cheese</div><div class="customer-desc">840+ franchised cheese outlets</div></div>
+      <div class="customer-card"><div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#c0872a,#f0c040);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">HD</div><div class="customer-name">HAP Daily</div><div class="customer-desc">3,850+ dairy retail outlets nationwide</div></div>
+      <div class="customer-card"><div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#2a6080,#3a8ab0);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">IB</div><div class="customer-name">IBACO</div><div class="customer-desc">Premium ice cream parlour chain</div></div>
+      <div class="customer-card"><div style="width:40px;height:40px;border-radius:8px;background:linear-gradient(135deg,#5a3a1a,#8a5a2a);color:#fff;font-family:'Inter',sans-serif;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;">EX</div><div class="customer-name">Exports</div><div class="customer-desc">Dairy ingredients to 42 countries</div></div>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">The Ascent</div>
+  <h2>What Happens When Patience Meets Infrastructure</h2>
+  <p>Listing on the NSE in July 2006 gave Hatsun access to growth capital, but the company's character was set long before any public market validation. Decades of farmer-first procurement — paying on time, building Active Bulk Cooler stations in over 1,440 locations — had created a supply network no competitor could replicate overnight.</p>
+  <p>Revenue crossed ₹4,000 crore and climbed toward ₹8,000 crore by FY2024. Q2 FY2025 told a sharper story: revenue at <strong>₹2,427 crore, up 17% year-on-year</strong>, with net profit surging 70%. In 2025, Hatsun acquired Milk Mantra for ₹233 crore — a step into Eastern India carrying the same logic as every Hatsun move before it.</p>
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth (₹ Crore) · FY2019 – FY2025</div>
+    <div class="bar-chart">
+      <div class="bar-group"><div class="bar-value">4,200</div><div class="bar" style="height:95px;background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY19</div></div>
+      <div class="bar-group"><div class="bar-value">4,800</div><div class="bar" style="height:109px;background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY20</div></div>
+      <div class="bar-group"><div class="bar-value">5,100</div><div class="bar" style="height:115px;background:linear-gradient(180deg,#b07020,#d89820);"></div><div class="bar-label">FY21</div></div>
+      <div class="bar-group"><div class="bar-value">5,800</div><div class="bar" style="height:131px;background:linear-gradient(180deg,#a06020,#c08820);"></div><div class="bar-label">FY22</div></div>
+      <div class="bar-group"><div class="bar-value">6,900</div><div class="bar" style="height:156px;background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div><div class="bar-label">FY23</div></div>
+      <div class="bar-group"><div class="bar-value">~7,800</div><div class="bar" style="height:170px;background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div><div class="bar-label">FY24</div></div>
+      <div class="bar-group"><div class="bar-value">~9,600+</div><div class="bar" style="height:180px;background:linear-gradient(180deg,#091820,#0d2535);"></div><div class="bar-label">FY25E</div></div>
+    </div>
+    <div class="chart-note">~13% revenue CAGR over 6 years · FY25 annualised from H1 actuals · Figures approximate</div>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">What It Built</div>
+  <h2>Fifty-Five Years of One Stubborn Belief</h2>
+  <p>Step back and look at what ₹13,000, a 250-square-foot shop, and five decades of compounding actually built. Hatsun today procures <strong>3.3 million litres of milk every single day</strong> from over 4,00,000 farmers. It exports dairy ingredients to 42 countries. Its HAP Daily chain has crossed 3,850 outlets.</p>
+  <p>Market capitalisation stands at approximately <strong>₹21,000 crore</strong>. And the man who sold his family's last property to fund an ice cream cart in Royapuram received the Padma Shri in January 2025 — India's fourth-highest civilian honour.</p>
+  <p>None of this happened because of luck. It happened because Chandramogan understood that in a commoditised business, the only lasting advantage is operational obsession. Over fifty-five years, those marginal advantages compounded into something nearly impossible to dislodge.</p>
+  <div class="infographic">
+    <div class="infographic-title">What 55 Years of Compounding Built</div>
+    <div class="legacy-grid">
+      <div class="legacy-card"><div class="legacy-number">3.3M</div><div class="legacy-label">Litres of Milk Procured Daily</div></div>
+      <div class="legacy-card"><div class="legacy-number">4,00,000+</div><div class="legacy-label">Farmers in the Supply Network</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">42</div><div class="legacy-label">Countries Receiving Dairy Exports</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">₹21,000 Cr</div><div class="legacy-label">Market Cap · Started with ₹13,000</div></div>
+    </div>
+  </div>
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>The Hatsun story is ultimately about the compounding power of operational obsession applied consistently over decades. Chandramogan never chased the next trend — he simply decided that whatever he made would be the best version of that thing. The ₹13,000 that became ₹21,000 crore isn't a story about capital. It's a story about what happens when one person refuses to lower their standard, year after year, until the market has no choice but to reward them. The real lesson isn't about dairy at all. It's about what patience looks like when it has a spine.</p>
+  </div>
+  <div class="disclaimer">This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.</div>
+</div>
+</body>
+</html>
