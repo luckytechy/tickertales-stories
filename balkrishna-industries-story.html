@@ -1,0 +1,455 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>They Walked Away from India to Win the World | Balkrishna Industries</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fafaf8;
+    color: #1a1a1a;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%);
+    color: #fff;
+    padding: 90px 40px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px; right: -60px; bottom: -60px;
+    background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero .tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 22px; position: relative;
+  }
+  .hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem; font-weight: 700; line-height: 1.2;
+    max-width: 740px; margin: 0 auto 24px; position: relative;
+  }
+  .hero .subtitle {
+    font-family: 'Inter', sans-serif; font-size: 1.05rem;
+    color: #b0c4d8; max-width: 600px; margin: 0 auto;
+    line-height: 1.65; position: relative;
+  }
+  .hero .meta {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px;
+    text-transform: uppercase; position: relative;
+  }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+  .section-label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Merriweather', serif; font-size: 1.7rem;
+    font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3;
+  }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+
+  .pull-quote {
+    border-left: 4px solid #f0c040;
+    padding: 20px 28px; margin: 42px 0;
+    background: #fffdf0; border-radius: 0 10px 10px 0;
+  }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+    color: #999; margin-top: 12px; letter-spacing: 1px;
+    text-transform: uppercase; font-style: normal; display: block;
+  }
+
+  .infographic {
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 34px 32px; margin: 46px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .infographic-title {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #aaa; margin-bottom: 30px; text-align: center;
+  }
+
+  .founder-block {
+    display: flex; gap: 28px; align-items: flex-start;
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .founder-photo {
+    flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px;
+    overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-initials {
+    font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800; color: #f0c040;
+  }
+  .founder-info .founder-name {
+    font-family: 'Inter', sans-serif; font-size: 1rem;
+    font-weight: 800; color: #0f1f2a; margin-bottom: 4px;
+  }
+  .founder-info .founder-title {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 14px;
+  }
+  .founder-info p {
+    font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    color: #555; line-height: 1.65; margin: 0;
+  }
+
+  .trivia-badge {
+    background: linear-gradient(135deg, #0f2027, #1a3a4a);
+    color: #fff; border-radius: 12px; padding: 22px 28px;
+    margin: 40px 0; display: flex; gap: 20px; align-items: flex-start;
+  }
+  .trivia-badge .badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .trivia-badge .badge-label {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 6px;
+  }
+  .trivia-badge .badge-text {
+    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    color: #c8d8e8; line-height: 1.6; margin: 0;
+  }
+
+  .timeline-wrap { overflow-x: auto; padding-bottom: 8px; }
+  .timeline { min-width: 560px; position: relative; padding: 12px 0 0; }
+  .timeline-line {
+    position: absolute; top: 22px; left: 20px; right: 20px; height: 3px;
+    background: linear-gradient(90deg, #c0872a, #1a3a4a, #0d5c8a);
+    border-radius: 2px; z-index: 0;
+  }
+  .timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 1; }
+  .timeline-item { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 0 4px; }
+  .timeline-dot {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #fff; border: 3px solid #c0872a; margin-bottom: 10px; flex-shrink: 0;
+  }
+  .timeline-dot.key {
+    background: #c0872a; width: 20px; height: 20px; border-color: #c0872a;
+    box-shadow: 0 0 0 3px rgba(192,135,42,0.2);
+  }
+  .timeline-dot.blue {
+    background: #1a3a4a; border-color: #1a3a4a;
+    box-shadow: 0 0 0 3px rgba(26,58,74,0.2);
+  }
+  .timeline-year { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #c0872a; margin-bottom: 5px; }
+  .timeline-year.blue { color: #1a3a4a; }
+  .timeline-text { font-family: 'Inter', sans-serif; font-size: 11px; color: #666; text-align: center; line-height: 1.45; max-width: 82px; }
+
+  .bar-chart { display: flex; align-items: flex-end; gap: 10px; height: 180px; padding: 0 8px; margin-bottom: 10px; }
+  .bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+  .bar-value { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #333; margin-bottom: 4px; }
+  .bar { width: 100%; border-radius: 5px 5px 0 0; }
+  .bar-label { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; margin-top: 8px; }
+  .chart-note { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; font-style: italic; }
+
+  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
+  .legacy-card.blue { border-left-color: #1a3a4a; }
+  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
+  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+
+  .closing-card {
+    background: linear-gradient(160deg, #0a1a24, #1a3a4a);
+    color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px;
+  }
+  .closing-card .label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 16px;
+  }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+
+  .disclaimer {
+    font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb;
+    text-align: center; margin-top: 40px; line-height: 1.6;
+    padding: 18px; border-top: 1px solid #e4e0d8;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">Tyres &nbsp;&middot;&nbsp; Improbable Pivot &nbsp;&middot;&nbsp; Global Indian</div>
+  <h1>They Walked Away from India to Win the World</h1>
+  <div class="subtitle">When domestic tyre markets grew too crowded, one Mumbai family made a bet so counterintuitive it looked like retreat. Three decades later, Michelin and Bridgestone compete with them in farm fields across 160 countries.</div>
+  <div class="meta">Balkrishna Industries Limited &nbsp;&middot;&nbsp; May 2026</div>
+</div>
+
+<div class="content">
+
+  <div class="section-label">THE ORIGIN</div>
+  <h2>A Trading Family, a Factory, and a Market Nobody Else Wanted</h2>
+
+  <p>The Poddar family's story with rubber began long before Balkrishna Industries took its current form. Mahabirprasad Poddar had built a business in tyre trading in Mumbai &mdash; the kind of business that requires patience, relationships, and an eye for what markets want before they know they want it. When his son Arvind took over the reins and formalised the manufacturing operation in Aurangabad, Maharashtra in 1988, the initial plan was straightforward: make tyres for two-wheelers and three-wheelers, the fastest-growing vehicle segments in a liberalising India.</p>
+
+  <p>It worked &mdash; until it didn't. By the early 1990s, the domestic two-wheeler and three-wheeler tyre market had become viciously competitive. Established players with deeper pockets, better distribution, and stronger brand recall were willing to fight a sustained price war that BKT, a relatively small manufacturer, could not win on those terms. The arithmetic was brutal: stay and lose ground slowly, or walk away entirely and find a different game to play.</p>
+
+  <p>Arvind Poddar chose to walk away. But the decision he made next was not a retreat &mdash; it was one of the most precisely targeted pivots in Indian manufacturing history. He turned the company's entire focus toward Off-Highway Tyres: specialised rubber for agricultural tractors, mining equipment, construction machinery, port vehicles, and industrial forklifts. It was a global market dominated by Michelin, Bridgestone, and Trelleborg, with no significant Indian player. That was exactly the point.</p>
+
+  <div class="founder-block">
+    <div class="founder-photo">
+      <img src="https://www.bkt-tires.com/downloads/14707/12080/Revised_Management_Information_0525.pdf"
+           alt="Arvind Poddar, Chairman and Managing Director, BKT"
+           onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'founder-initials\'>AP</div>';" />
+    </div>
+    <div class="founder-info">
+      <div class="founder-name">Arvind M. Poddar</div>
+      <div class="founder-title">Chairman &amp; Managing Director &middot; Balkrishna Industries</div>
+      <p>Second-generation leader of a tyre trading family. Made the pivotal decision in the early 1990s to abandon a losing domestic price war and bet everything on a globally-dominated niche that no Indian company had attempted. Under his leadership BKT became a top-5 global Off-Highway Tyre manufacturer, competing with Michelin in farm fields across 160 countries.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">THE PIVOT</div>
+  <h2>Losing a Price War Was the Best Thing That Ever Happened to BKT</h2>
+
+  <p>Off-Highway Tyres sound niche because they are. A tractor tyre for a Norwegian salmon farm looks nothing like the tyre on a Mumbai auto-rickshaw. It must withstand different loads, different terrains, different chemical exposures. Agricultural tyres must grip wet soil without compacting it; mining tyres must carry loads that would destroy ordinary rubber. Each application requires specific compounds, specific tread patterns, specific construction &mdash; which is precisely why global giants had dominated the space without much challenge for decades.</p>
+
+  <p>What Arvind Poddar understood was that this complexity, which looked like a barrier, was actually a moat. The development cost of each SKU kept casual entrants out. The long qualification process &mdash; farm equipment manufacturers test new tyres across multiple seasons before approving a supplier &mdash; created deep switching costs. And the global demand for agricultural machinery was structural, tied to the one thing that never goes away: the world's need to grow food.</p>
+
+  <p>BKT entered this market as a challenger on price and a learner on quality, and spent years climbing the trust ladder one OEM relationship at a time. By the mid-2000s, European dealers and agricultural equipment manufacturers had noticed something unusual: here was an Indian company producing OHT at a fraction of Western manufacturing costs, with quality good enough to stock on dealer shelves alongside Michelin and Trelleborg. The pivot was working &mdash; quietly, methodically, and irreversibly.</p>
+
+  <div class="trivia-badge">
+    <div class="badge-icon">&#127807;</div>
+    <div>
+      <div class="badge-label">Europe Beats India &mdash; From Aurangabad</div>
+      <p class="badge-text">BKT earns <strong style="color:#f0c040;">more revenue from Europe alone than from all of India</strong> &mdash; from factories in Rajasthan and Maharashtra. European farm fields, construction sites, and ports are served by tyres made in Indian desert towns most Europeans couldn't find on a map.</p>
+    </div>
+  </div>
+
+  <div class="infographic">
+    <div class="infographic-title">The BKT Journey</div>
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">1961</div>
+            <div class="timeline-text">Poddar family starts tyre trading in Mumbai</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">1988</div>
+            <div class="timeline-text">BKT incorporated; begins two-wheeler tyre manufacturing in Aurangabad</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">1993</div>
+            <div class="timeline-text">Pivots entirely to Off-Highway Tyres; exits domestic 2-3 wheeler market</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2002</div>
+            <div class="timeline-text">First major European distribution deals; listed on BSE and NSE</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2012</div>
+            <div class="timeline-text">Announces Bhuj mega-plant; carbon black backward integration begins</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">2018</div>
+            <div class="timeline-text">Sells in 160 countries; 70%+ revenue from exports</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">2022</div>
+            <div class="timeline-text">Revenue crosses Rs 8,000 Cr; top 5 globally in OHT</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">2025</div>
+            <div class="timeline-text">Revenue Rs 10,447 Cr; targets Rs 23,000 Cr by FY30</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">THE MACHINE</div>
+  <h2>3,200 SKUs, One Carbon Black Plant, and a Desert Mega-Factory</h2>
+
+  <p>The depth of BKT's operation is difficult to appreciate without standing inside it. The company manufactures over 3,200 different tyre variants &mdash; SKUs covering agricultural applications from paddy fields in Vietnam to wheat farms in Kansas, construction equipment from Southeast Asian infrastructure sites to European road projects, port tyres for container terminals from Dubai to Rotterdam. Every variant requires its own compound formulation, mould design, and curing profile. This is not a business you build in a decade.</p>
+
+  <p>In 2012, Arvind Poddar made a second bet almost as bold as the first: a massive greenfield plant at Bhuj, Gujarat, at a cost of over Rs 2,500 crore, designed to produce 1,20,000 metric tonnes of OHT per year when fully ramped. Bhuj was chosen deliberately &mdash; proximity to a port, land availability, and a government hungry for post-earthquake industrial investment. The plant became one of Asia's largest tyre manufacturing facilities. To reduce dependence on commodity inputs, BKT also built its own carbon black manufacturing plant at Bhuj &mdash; one of the few tyre companies in India to backward-integrate into this critical raw material.</p>
+
+  <p>Today, BKT operates plants at Aurangabad, Waluj (Aurangabad), Chopanki (Rajasthan), and Bhuj, with combined capacity exceeding 3,50,000 metric tonnes annually. This scale gives BKT a cost structure that allows it to price competitively against Western manufacturers while maintaining margins that fund continued R&amp;D. The combination of scale, specialisation, and backward integration is not easily replicated &mdash; which is exactly why, after three decades of trying, Michelin's response to BKT in the OHT segment has been to watch, not copy.</p>
+
+  <div class="pull-quote">
+    <p>"In off-highway tyres, our philosophy is simple: be the best value for every specific application, in every corner of the world. We don't chase volume &mdash; we build relationships, one market at a time."</p>
+    <span class="attr">&mdash; Arvind M. Poddar, Chairman &amp; Managing Director, Balkrishna Industries</span>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">THE GLOBAL FOOTPRINT</div>
+  <h2>Where Exactly Does BKT Rubber End Up?</h2>
+
+  <p>The answer is: everywhere you'd expect, and everywhere you wouldn't. BKT tyres are on the tractors that harvest wheat in Poland and sugarcane in Brazil. They are on the forklifts that move cargo in German logistics parks. They're on the combine harvesters in the American Midwest and on the mining haul trucks in Australian open-cut mines. They're on the golf carts in American country clubs and on the port reach-stackers in Singapore's container terminals.</p>
+
+  <p>Europe is BKT's single largest market, contributing revenues that exceed India's domestic contribution. North America is the second pillar. Together, these two Western markets account for over half of BKT's revenue &mdash; a distribution that would look entirely normal for a European or American tyre company, but is extraordinary for one based in Aurangabad. This geographic diversification also means BKT's financial performance is largely insulated from the cycles of the Indian economy.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">End Markets &amp; Revenue Geography</div>
+    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:14px;">
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#1a3a4a,#2a6080); color:#fff; font-family:'Inter',sans-serif; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">EU</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Europe</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Largest single market &mdash; more revenue than all of India</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#c0872a,#e8a830); color:#fff; font-family:'Inter',sans-serif; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">US</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Americas</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Agricultural heartlands of US, Brazil and Canada</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#2a7a3a,#3aaa4a); color:#fff; font-family:'Inter',sans-serif; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">IN</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">India</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Domestic market; smaller than Europe but growing</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#6a1a8a,#9a3aaa); color:#fff; font-family:'Inter',sans-serif; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">AG</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Agriculture</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Tractors, combine harvesters, sprayers worldwide</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#7a4a1a,#aa6a2a); color:#fff; font-family:'Inter',sans-serif; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">MI</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Mining</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Dump trucks, underground loaders, haul equipment</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#1a5a8a,#2a8aaa); color:#fff; font-family:'Inter',sans-serif; font-size:13px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">PT</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Ports &amp; Industry</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Container terminals, forklifts, industrial vehicles</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">THE NUMBERS</div>
+  <h2>What Happens When an Indian Factory Out-Executes Western Giants for 30 Years</h2>
+
+  <p>BKT's revenue trajectory is a textbook study in what compounding looks like in manufacturing. From roughly Rs 5,210 crore in FY2019, the company absorbed a pandemic dip in FY2020 before accelerating sharply through the commodity supercycle of FY2022 and FY2023, when agricultural commodity prices spiked globally and farmers reinvested in machinery upgrades. Revenue touched Rs 9,760 crore in FY2023. A global slowdown in agricultural investment softened FY2024 to Rs 9,369 crore, before recovering to Rs 10,447 crore in FY2025.</p>
+
+  <p>Through it all, operating margins have remained robust at 22&ndash;31%, a reflection of BKT's pricing power in specialty segments where buyers choose reliability over cost alone. The company has maintained a 5&ndash;6% share of the global OHT market &mdash; top-5 position &mdash; despite competing against companies with decades of brand legacy. Net profit in FY2025 crossed Rs 1,655 crore. Management has guided for Rs 23,000 crore in revenue by FY2030, a 2.2x jump that would require entering passenger vehicle tyres as a new growth engine &mdash; yet another pivot, decades in the making.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth (Rs Crore) &mdash; FY2019 to FY2025</div>
+    <div class="bar-chart">
+      <div class="bar-group">
+        <div class="bar-value">5,210</div>
+        <div class="bar" style="height:90px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div>
+        <div class="bar-label">FY19</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">4,811</div>
+        <div class="bar" style="height:83px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div>
+        <div class="bar-label">FY20</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">5,783</div>
+        <div class="bar" style="height:100px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div>
+        <div class="bar-label">FY21</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">8,295</div>
+        <div class="bar" style="height:143px; background:linear-gradient(180deg,#1a3a4a,#2a6080);"></div>
+        <div class="bar-label">FY22</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">9,760</div>
+        <div class="bar" style="height:168px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div>
+        <div class="bar-label">FY23</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">9,369</div>
+        <div class="bar" style="height:162px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div>
+        <div class="bar-label">FY24</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">10,447</div>
+        <div class="bar" style="height:180px; background:linear-gradient(180deg,#0a1a24,#1a3a4a);"></div>
+        <div class="bar-label">FY25</div>
+      </div>
+    </div>
+    <div class="chart-note">~17% Revenue CAGR over 5 years &middot; Source: Screener.in / BSE filings (Consolidated)</div>
+  </div>
+
+  <div class="infographic">
+    <div class="infographic-title">What 30 Years of the Improbable Pivot Built</div>
+    <div class="legacy-grid">
+      <div class="legacy-card">
+        <div class="legacy-number">160</div>
+        <div class="legacy-label">Countries served &mdash; from one Indian family's decision</div>
+      </div>
+      <div class="legacy-card">
+        <div class="legacy-number">71%</div>
+        <div class="legacy-label">Revenue from international markets &mdash; exports-first business</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">3,200+</div>
+        <div class="legacy-label">SKU variants &mdash; each for a specific application</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">Top 5</div>
+        <div class="legacy-label">Globally in Off-Highway Tyres &mdash; alongside Michelin &amp; Bridgestone</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">WHY IT MATTERS NOW</div>
+  <h2>The EV Wave Won't Touch a Farm Tractor in Iowa</h2>
+
+  <p>One of the most persistent questions about BKT is whether the electric vehicle transition poses a threat to its business. The answer is largely no &mdash; and that is a strategic advantage that most investors underappreciate. Off-Highway Tyres serve applications where electrification is either decades away (large agricultural equipment, mining trucks) or structurally constrained by energy density and operating conditions. The global demand for food is not going to shrink. The acres under cultivation are not going to shrink. The tractors that till those acres need tyres whether they run on diesel or eventually on hydrogen.</p>
+
+  <p>Global agricultural machinery spending, the primary driver of BKT's revenue, is structurally tied to food commodity prices and farm income cycles &mdash; not to the Indian economy, not to the urban two-wheeler market that the company long ago walked away from. BKT's ambition to enter passenger vehicle tyres by FY2030 represents a fourth decade of evolution for a company that has reinvented itself before and won.</p>
+
+  <p>A Mumbai trading family looked at a crowded domestic tyre market in 1993 and made a decision that felt like surrender. It turned out to be the beginning of one of Indian manufacturing's most quietly spectacular stories &mdash; a story told not in Indian newspapers but on the muddy tyres of Norwegian salmon farmers and Brazilian sugarcane harvesters, half a world away from Aurangabad.</p>
+
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>The instinct when a market gets too competitive is to fight harder, spend more, and defend what you've built. The rarer, braver move is to recognise that the battle you're in is the wrong one &mdash; and redirect your energy entirely toward a market where your specific capabilities matter more. Arvind Poddar made that move in the early 1990s with no guarantee it would work, in a global niche dominated by giants who had been winning for decades. What he understood was that the giants were complacent, and that quality delivered at Indian cost structures is an edge that almost never loses in the long run. Thirty years and 160 countries later, the lesson is simple: knowing which fights to walk away from is just as important as knowing how to win.</p>
+  </div>
+
+  <div class="disclaimer">
+    This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.
+  </div>
+
+</div>
+</body>
+</html>
