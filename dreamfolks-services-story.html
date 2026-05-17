@@ -1,0 +1,496 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Invisible Woman Who Built India's Airport Lounge Empire | Dreamfolks Services</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fafaf8;
+    color: #1a1a1a;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%);
+    color: #fff;
+    padding: 90px 40px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px; right: -60px; bottom: -60px;
+    background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero .tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 22px; position: relative;
+  }
+  .hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem; font-weight: 700; line-height: 1.2;
+    max-width: 740px; margin: 0 auto 24px; position: relative;
+  }
+  .hero .subtitle {
+    font-family: 'Inter', sans-serif; font-size: 1.05rem;
+    color: #b0c4d8; max-width: 600px; margin: 0 auto;
+    line-height: 1.65; position: relative;
+  }
+  .hero .meta {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px;
+    text-transform: uppercase; position: relative;
+  }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+  .section-label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Merriweather', serif; font-size: 1.7rem;
+    font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3;
+  }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+
+  .pull-quote {
+    border-left: 4px solid #f0c040;
+    padding: 20px 28px; margin: 42px 0;
+    background: #fffdf0; border-radius: 0 10px 10px 0;
+  }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+    color: #999; margin-top: 12px; letter-spacing: 1px;
+    text-transform: uppercase; font-style: normal; display: block;
+  }
+
+  .infographic {
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 34px 32px; margin: 46px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .infographic-title {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #aaa; margin-bottom: 30px; text-align: center;
+  }
+
+  .founder-block {
+    display: flex; gap: 28px; align-items: flex-start;
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .founder-photo {
+    flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px;
+    overflow: hidden; background: linear-gradient(135deg, #1a3a4a, #0f2027); border: 3px solid #f0c040;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-photo .initials {
+    font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800;
+    color: #f0c040; display: none;
+  }
+  .founder-info .founder-name {
+    font-family: 'Inter', sans-serif; font-size: 1rem;
+    font-weight: 800; color: #0f1f2a; margin-bottom: 4px;
+  }
+  .founder-info .founder-title {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 14px;
+  }
+  .founder-info p {
+    font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    color: #555; line-height: 1.65; margin: 0;
+  }
+
+  .trivia-badge {
+    background: linear-gradient(135deg, #0f2027, #1a3a4a);
+    color: #fff; border-radius: 12px; padding: 22px 28px;
+    margin: 40px 0; display: flex; gap: 20px; align-items: flex-start;
+  }
+  .trivia-badge .badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .trivia-badge .badge-label {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 6px;
+  }
+  .trivia-badge .badge-text {
+    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    color: #c8d8e8; line-height: 1.6; margin: 0;
+  }
+
+  .timeline-wrap { overflow-x: auto; padding-bottom: 8px; }
+  .timeline { min-width: 560px; position: relative; padding: 12px 0 0; }
+  .timeline-line {
+    position: absolute; top: 22px; left: 20px; right: 20px; height: 3px;
+    background: linear-gradient(90deg, #c0872a, #1a3a4a, #0d5c8a);
+    border-radius: 2px; z-index: 0;
+  }
+  .timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 1; }
+  .timeline-item { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 0 4px; }
+  .timeline-dot {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #fff; border: 3px solid #c0872a; margin-bottom: 10px; flex-shrink: 0;
+  }
+  .timeline-dot.key {
+    background: #c0872a; width: 20px; height: 20px; border-color: #c0872a;
+    box-shadow: 0 0 0 3px rgba(192,135,42,0.2);
+  }
+  .timeline-dot.blue {
+    background: #1a3a4a; border-color: #1a3a4a;
+    box-shadow: 0 0 0 3px rgba(26,58,74,0.2);
+  }
+  .timeline-year { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #c0872a; margin-bottom: 5px; }
+  .timeline-year.blue { color: #1a3a4a; }
+  .timeline-text { font-family: 'Inter', sans-serif; font-size: 11px; color: #666; text-align: center; line-height: 1.45; max-width: 82px; }
+
+  .closing-card {
+    background: linear-gradient(160deg, #0a1a24, #1a3a4a);
+    color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px;
+  }
+  .closing-card .label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 16px;
+  }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+
+  .disclaimer {
+    font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb;
+    text-align: center; margin-top: 40px; line-height: 1.6;
+    padding: 18px; border-top: 1px solid #e4e0d8;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">Founder Journey &nbsp;&middot;&nbsp; Invisible Infrastructure &nbsp;&middot;&nbsp; Women In Business</div>
+  <h1>The Woman Who Built the Invisible Layer Behind Every Airport Lounge in India</h1>
+  <div class="subtitle">Liberatha Peter Kallat quit a global corporate career to solve a problem nobody else was even naming. She bootstrapped. She never raised VC money. And today she controls 90% of India's airport lounge access market.</div>
+  <div class="meta">Dreamfolks Services Ltd &nbsp;&middot;&nbsp; NSE &amp; BSE: DREAMFOLKS &nbsp;&middot;&nbsp; May 2026</div>
+</div>
+
+<div class="content">
+
+  <div class="section-label">The Scene</div>
+  <h2>Every premium cardholder. Every airport lounge. One invisible company in between.</h2>
+
+  <p>Think about the last time you walked into an airport lounge on your credit card. You tapped, or showed a QR code, or handed over your card number. A second later, a green light. You walked in and helped yourself to the buffet.</p>
+
+  <p>What happened in that second? Someone checked your eligibility against the card network's database. Someone authorised the visit. Someone recorded it so that the bank could reimburse the lounge, and so the lounge could verify it wasn't a fraudulent entry. A settlement would happen later, invisibly, between the bank and the lounge operator.</p>
+
+  <p>That entire chain — the verification, the authorisation, the reconciliation, the settlement — runs through <strong>one company</strong>. And almost no one has heard of it.</p>
+
+  <p>The company is Dreamfolks Services Limited. It was built by a woman named Liberatha Peter Kallat, in Gurugram, with zero external funding, starting from a blank sheet of paper in 2012.</p>
+
+  <div class="founder-block">
+    <div class="founder-photo">
+      <img src="https://www.dreamfolks.com/images/Liberatha-Peter-Kallat.jpg"
+           alt="Liberatha Peter Kallat, Founder and Chairperson, Dreamfolks Services"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.initials').style.display='flex';" />
+      <div class="initials">LK</div>
+    </div>
+    <div class="founder-info">
+      <div class="founder-name">Liberatha Peter Kallat</div>
+      <div class="founder-title">Founder, Chairperson &amp; Managing Director &mdash; Dreamfolks Services Ltd</div>
+      <p>A hospitality veteran who spent years managing premium airport lounges for global operators, Liberatha had a front-row seat to a systemic gap that everyone else walked past. She left the comfort of a senior corporate role to build the technology layer that the entire Indian airport lounge ecosystem was missing — and did it without ever taking a rupee of venture capital.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Problem Nobody Was Solving</div>
+  <h2>A billion-dollar friction point hiding in plain sight</h2>
+
+  <p>Liberatha's career before Dreamfolks reads like a tour of India's premium hospitality world. She worked at Taj GVK Hotels &amp; Resorts, PepsiCo India, Pernod Ricard, and ultimately at Plaza Premium Group — one of the world's largest airport lounge operators. As General Manager, she was deep inside the operations of global lounges.</p>
+
+  <p>And she kept running into the same problem. Every time a credit cardholder visited a lounge, the process of confirming their eligibility — and then reconciling the transaction between the lounge, the card network, and the issuing bank — was fragmented, manual, and error-prone. There was no unified technology layer. Banks had different systems. Card networks had different protocols. Lounges had paper registers and phone calls.</p>
+
+  <p>The customer's experience was seamless on the surface. But underneath it was a tangle of spreadsheets and manual settlements.</p>
+
+  <div class="pull-quote">
+    <p>"I could see that nobody was building the infrastructure. The banks needed it. The lounges needed it. The card networks needed it. But nobody was building it because nobody owned the problem."</p>
+    <span class="attr">— Liberatha Peter Kallat, on why she founded Dreamfolks</span>
+  </div>
+
+  <p>She decided she would own the problem. In 2008, she incorporated the company. By 2012, she had built the first version of the platform and signed her first client.</p>
+
+  <div class="trivia-badge">
+    <div class="badge-icon">&#9733;</div>
+    <div>
+      <div class="badge-label">India's Most Dominant Invisible Business</div>
+      <p class="badge-text">Dreamfolks holds <strong style="color:#f0c040;">90%+ of India's domestic airport lounge access market</strong> — all built without a single rupee of external venture funding. Profitable every year since it signed its first client in 2012. Listed on NSE and BSE in August 2022 at a 55% premium to its IPO price.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Journey</div>
+  <h2>From a blank-sheet startup to a listed monopoly in a decade</h2>
+
+  <p>The early years were a lesson in selling trust to people who had never needed to trust you before. Banks and card companies are notoriously risk-averse institutions. Their premium cardholders — platinum, signature, infinite — are exactly the customers they cannot afford to embarrass. If a cardholder walks into a lounge and the eligibility check fails because of a software glitch, that is a relationship-ending moment for the bank.</p>
+
+  <p>Convincing a bank to hand over that customer touchpoint to a brand-new startup was an immense ask. Liberatha went around the table, pitching the platform again and again, absorbing the scepticism. She had no venture backing to point to, no tier-one investors on her cap table, no high-profile board name to drop.</p>
+
+  <p>What she had was the product. And then, in 2012, she got the proof point that changed everything.</p>
+
+  <p><strong>Mastercard said yes.</strong></p>
+
+  <p>Once a global card network with hundreds of millions of cards in circulation had endorsed the Dreamfolks platform, the conversation with Indian banks changed overnight. If Mastercard trusted the system, HDFC, ICICI, and Axis could trust it too. The platform started signing clients in quick succession. The network effect locked in early.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">The Dreamfolks Journey — 2008 to Present</div>
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2008</div>
+            <div class="timeline-text">Company incorporated in Gurugram by Liberatha Peter Kallat</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2012</div>
+            <div class="timeline-text">Platform launches; Mastercard signs as first client</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2014</div>
+            <div class="timeline-text">Indian banks onboarded; platform covers major domestic lounges</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2019</div>
+            <div class="timeline-text">850+ international lounges in 100+ countries added to platform</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2022</div>
+            <div class="timeline-text">IPO on NSE &amp; BSE; lists at 55% premium to issue price</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year">2024</div>
+            <div class="timeline-text">Revenue hits &#8377;1,135 Cr; 47% YoY growth</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year">2025</div>
+            <div class="timeline-text">Expands beyond lounges into spa, F&amp;B, meet &amp; greet</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Business Model</div>
+  <h2>An asset-light two-sided platform with a natural monopoly</h2>
+
+  <p>Dreamfolks does not own a single lounge. It does not own an airport. It has no planes, no hospitality real estate, no physical assets of any significance. What it owns is the relationship — the technology layer that connects two sides of a marketplace that cannot function without it.</p>
+
+  <p>On one side: banks, credit card companies, and card networks (Mastercard, Visa, RuPay). On the other: airport lounges, spa operators, F&amp;B outlets, and meet-and-greet services at airports across India and around the world.</p>
+
+  <p>Every time a transaction happens — a cardholder uses a benefit — Dreamfolks earns a fee. The platform processes the eligibility check, the authorisation, and the settlement. No phone calls. No paper registers. Just a real-time API that handles the entire flow in under a second.</p>
+
+  <p>The genius of the model is that switching costs are enormous on both sides. A bank that has integrated Dreamfolks into its card benefit stack would need months of engineering work to replicate that integration with a competitor — assuming a competitor of equal capability even existed. On the lounge side, a lounge operator that runs Dreamfolks terminals is not going to rip them out. The platform has no meaningful domestic competition at scale.</p>
+
+  <div style="background:linear-gradient(160deg,#0a1a24,#1a3a4a); border-radius:14px; padding:32px; text-align:center; margin:40px 0;">
+    <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f0c040; margin-bottom:14px;">The Platform Structure</div>
+    <div style="font-family:'Merriweather',serif; font-size:1.15rem; color:#fff; line-height:1.7; max-width:540px; margin:0 auto;">
+      Banks &amp; Card Networks &nbsp;&#8596;&nbsp; <strong style="color:#f0c040;">Dreamfolks</strong> &nbsp;&#8596;&nbsp; Airport Lounges &amp; Services
+    </div>
+    <div style="font-family:'Inter',sans-serif; font-size:0.85rem; color:#7a9ab8; margin-top:14px; line-height:1.6;">
+      Asset-light &middot; Real-time &middot; Zero physical infrastructure &middot; 90%+ domestic market share
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Partners</div>
+  <h2>A client list that tells the whole story</h2>
+
+  <p>The quality of Dreamfolks' client relationships is the clearest signal of the platform's dominance. When Mastercard — a company with hundreds of millions of active cards — trusts your infrastructure with its premium cardholders, you are not a startup anymore. You are critical infrastructure.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Key Partners &amp; Clients</div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#c0872a; width:40px; flex-shrink:0;">2012</div>
+        <div style="flex:1; background:#f7f5f0; border-radius:8px; padding:12px 16px; border-left:3px solid #c0872a;">
+          <span style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Mastercard</span>
+          <span style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-left:10px;">Global Card Network &middot; First Client Ever</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#c0872a; width:40px; flex-shrink:0;">2014+</div>
+        <div style="flex:1; background:#f7f5f0; border-radius:8px; padding:12px 16px; border-left:3px solid #c0872a;">
+          <span style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">HDFC Bank &middot; ICICI Bank &middot; Axis Bank</span>
+          <span style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-left:10px;">India's Top Private Banks</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#c0872a; width:40px; flex-shrink:0;">India</div>
+        <div style="flex:1; background:#f7f5f0; border-radius:8px; padding:12px 16px; border-left:3px solid #1a3a4a;">
+          <span style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">90%+ of Indian Airport Lounges</span>
+          <span style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-left:10px;">Domestic Network &middot; Near-Total Coverage</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#c0872a; width:40px; flex-shrink:0;">Global</div>
+        <div style="flex:1; background:#f7f5f0; border-radius:8px; padding:12px 16px; border-left:3px solid #1a3a4a;">
+          <span style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">850+ International Lounges</span>
+          <span style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-left:10px;">100+ Countries &middot; Worldwide Access</span>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:14px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#c0872a; width:40px; flex-shrink:0;">New</div>
+        <div style="flex:1; background:#f7f5f0; border-radius:8px; padding:12px 16px; border-left:3px solid #0d5c8a;">
+          <span style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">RuPay &amp; UPI Travel Benefits</span>
+          <span style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-left:10px;">NPCI Integration &middot; India's Digital Payment Network</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Numbers</div>
+  <h2>Revenue growth that speaks for itself</h2>
+
+  <p>Dreamfolks went public in August 2022. But the financial story starts earlier. When COVID-19 grounded India's aviation sector in FY21, revenue fell to &#8377;106 crore. Then, as air travel recovered and credit card penetration surged, the company went on a run. FY23 saw revenue nearly triple. FY24 added another 47%. By FY25, Dreamfolks was a &#8377;1,292-crore revenue business.</p>
+
+  <p>All of this, without raising a single rupee of external venture funding. Every rupee of growth was funded by the business itself.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth (&#8377; Crore) — FY21 to FY25</div>
+    <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:12px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY21</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:8.2%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:8px; min-width:64px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;106 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY22</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:21.8%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:8px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;282 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY23</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:59.8%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:8px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;773 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY24</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:87.8%; height:100%; background:linear-gradient(90deg,#0d2535,#1a3a4a); border-radius:4px; display:flex; align-items:center; padding-left:8px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;1,135 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY25</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:100%; height:100%; background:linear-gradient(90deg,#0a1218,#0d2535); border-radius:4px; display:flex; align-items:center; padding-left:8px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;1,292 Cr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#bbb; text-align:center; font-style:italic;">12x revenue growth in 4 years &middot; Source: StockAnalysis / NSE filings</div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Legacy</div>
+  <h2>What 13 years of invisible infrastructure built</h2>
+
+  <p>Dreamfolks is now expanding beyond airport lounges. The same platform that processes lounge access is being extended to airport spas, F&amp;B outlets, and meet-and-greet services. The company is becoming the full-stack airport experience platform for India's premium credit card holders — not just the lounge gateway, but the entire premium travel benefit ecosystem.</p>
+
+  <p>India's domestic air passenger traffic is hitting all-time records. The number of premium credit cards in circulation keeps growing. RuPay — India's own card network — is expanding its travel benefits, and Dreamfolks is the natural platform partner for that too. Every tailwind in Indian aviation and Indian consumer finance points toward the company's continued relevance.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">What 13 Years of Invisible Infrastructure Built</div>
+    <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:16px;">
+      <div style="background:#fff; border:1px solid #e8e4dc; border-radius:12px; padding:20px; display:flex; gap:14px; align-items:center;">
+        <div style="width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,#c0872a,#e8a830); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Inter',sans-serif; font-size:1.6rem; font-weight:800; color:#0f1f2a; line-height:1;">90%+</div>
+          <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; text-transform:uppercase; letter-spacing:1px; margin-top:4px;">India lounge market share</div>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid #e8e4dc; border-radius:12px; padding:20px; display:flex; gap:14px; align-items:center;">
+        <div style="width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,#1a3a4a,#2a6080); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Inter',sans-serif; font-size:1.6rem; font-weight:800; color:#0f1f2a; line-height:1;">850+</div>
+          <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; text-transform:uppercase; letter-spacing:1px; margin-top:4px;">International lounges, 100+ countries</div>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid #e8e4dc; border-radius:12px; padding:20px; display:flex; gap:14px; align-items:center;">
+        <div style="width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,#c0872a,#e8a830); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Inter',sans-serif; font-size:1.6rem; font-weight:800; color:#0f1f2a; line-height:1;">55%</div>
+          <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; text-transform:uppercase; letter-spacing:1px; margin-top:4px;">IPO listing premium, Aug 2022</div>
+        </div>
+      </div>
+      <div style="background:#fff; border:1px solid #e8e4dc; border-radius:12px; padding:20px; display:flex; gap:14px; align-items:center;">
+        <div style="width:44px; height:44px; border-radius:10px; background:linear-gradient(135deg,#1a3a4a,#2a6080); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <div>
+          <div style="font-family:'Inter',sans-serif; font-size:1.6rem; font-weight:800; color:#0f1f2a; line-height:1;">&#8377;0</div>
+          <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; text-transform:uppercase; letter-spacing:1px; margin-top:4px;">External VC funding raised ever</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>The most powerful businesses are often the ones nobody talks about at dinner. Not the flashy app everyone downloads, not the brand with the billboard at the airport — but the invisible layer that makes all of it work. Liberatha Peter Kallat did not build a lounge. She did not build an airline. She built the infrastructure that connects them, quietly, without fanfare, without venture capital, without anyone outside the industry even knowing her name. In a country where founders are celebrated for the size of their funding rounds, she is a reminder that the truest moats are often the ones that nobody can see. The boring infrastructure. The invisible layer. The unsexy middleware. That is where monopolies are born.</p>
+  </div>
+
+  <div class="disclaimer">
+    This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.
+  </div>
+
+</div>
+</body>
+</html>
