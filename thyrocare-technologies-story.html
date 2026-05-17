@@ -1,0 +1,453 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Farmer's Son Who Built India's Largest Thyroid Lab | Thyrocare Technologies</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fafaf8;
+    color: #1a1a1a;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%);
+    color: #fff;
+    padding: 90px 40px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px; right: -60px; bottom: -60px;
+    background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero .tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 22px; position: relative;
+  }
+  .hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem; font-weight: 700; line-height: 1.2;
+    max-width: 740px; margin: 0 auto 24px; position: relative;
+  }
+  .hero .subtitle {
+    font-family: 'Inter', sans-serif; font-size: 1.05rem;
+    color: #b0c4d8; max-width: 600px; margin: 0 auto;
+    line-height: 1.65; position: relative;
+  }
+  .hero .meta {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px;
+    text-transform: uppercase; position: relative;
+  }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+  .section-label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Merriweather', serif; font-size: 1.7rem;
+    font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3;
+  }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+
+  .pull-quote {
+    border-left: 4px solid #f0c040;
+    padding: 20px 28px; margin: 42px 0;
+    background: #fffdf0; border-radius: 0 10px 10px 0;
+  }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+    color: #999; margin-top: 12px; letter-spacing: 1px;
+    text-transform: uppercase; font-style: normal; display: block;
+  }
+
+  .infographic {
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 34px 32px; margin: 46px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .infographic-title {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #aaa; margin-bottom: 30px; text-align: center;
+  }
+
+  .founder-block {
+    display: flex; gap: 28px; align-items: flex-start;
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .founder-photo {
+    flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px;
+    overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-initials {
+    font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800;
+    color: #f0c040; display: none;
+  }
+  .founder-info .founder-name {
+    font-family: 'Inter', sans-serif; font-size: 1rem;
+    font-weight: 800; color: #0f1f2a; margin-bottom: 4px;
+  }
+  .founder-info .founder-title {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 14px;
+  }
+  .founder-info p {
+    font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    color: #555; line-height: 1.65; margin: 0;
+  }
+
+  .trivia-badge {
+    background: linear-gradient(135deg, #0f2027, #1a3a4a);
+    color: #fff; border-radius: 12px; padding: 22px 28px;
+    margin: 40px 0; display: flex; gap: 20px; align-items: flex-start;
+  }
+  .trivia-badge .badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .trivia-badge .badge-label {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 6px;
+  }
+  .trivia-badge .badge-text {
+    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    color: #c8d8e8; line-height: 1.6; margin: 0;
+  }
+
+  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
+  .legacy-card.blue { border-left-color: #1a3a4a; }
+  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
+  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+
+  .closing-card {
+    background: linear-gradient(160deg, #0a1a24, #1a3a4a);
+    color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px;
+  }
+  .closing-card .label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 16px;
+  }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+
+  .disclaimer {
+    font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb;
+    text-align: center; margin-top: 40px; line-height: 1.6;
+    padding: 18px; border-top: 1px solid #e4e0d8;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">Underdog Origin &nbsp;&middot;&nbsp; Diagnostics &nbsp;&middot;&nbsp; Founder Story</div>
+  <h1>He Ate One Meal a Day as a Child. He Built a Lab That Tests Millions of Indians Every Year.</h1>
+  <div class="subtitle">A landless farmer's son from Tamil Nadu quit a secure government job with &#8377;1 lakh in savings and reinvented how India gets tested. The price of a thyroid test dropped from &#8377;600 to &#8377;150. The rest is history.</div>
+  <div class="meta">Thyrocare Technologies Ltd &nbsp;&middot;&nbsp; May 2026</div>
+</div>
+
+<div class="content">
+
+  <div class="section-label">The Beginning</div>
+  <h2>A Village, a Platform, and a Boy Who Refused to Stop</h2>
+
+  <p>There is a railway platform somewhere near Coimbatore where a young boy sat for hours &mdash; not waiting for a train, but studying. Physics. Chemistry. Mathematics. The bus fare was too expensive. The train pass was a student concession. So every day, Arokiaswamy Velumani would arrive early, spread his books on the concrete floor, and study while the world moved around him.</p>
+
+  <p>His father owned no land. His mother sold milk and earned <strong>Rs 3 a day</strong>. When the time came to pay college fees, she pawned her bangles. That is the economy this story begins in &mdash; not one of privilege or connections or a head start, but of a family scraping hard enough to keep one boy in school.</p>
+
+  <p>Velumani was that boy. And he never forgot it.</p>
+
+  <div class="founder-block">
+    <div class="founder-photo">
+      <img src="https://static.toiimg.com/thumb/msid-127856767,imgsize-321061,width-400,resizemode-4/127856767.jpg"
+           alt="Dr Arokiaswamy Velumani, Founder of Thyrocare Technologies"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.founder-initials').style.display='flex';" />
+      <div class="founder-initials" style="display:none; align-items:center; justify-content:center; width:100%; height:100%;">AV</div>
+    </div>
+    <div class="founder-info">
+      <div class="founder-name">Dr Arokiaswamy Velumani</div>
+      <div class="founder-title">Founder &amp; Former CMD, Thyrocare Technologies Ltd</div>
+      <p>Born into a landless farming family in Tamil Nadu, he studied on railway platforms and worked as a lab assistant before earning his PhD in thyroid biochemistry from BARC. In 1996, with Rs 1 lakh in savings and no investors, he founded what would become India's largest thyroid testing laboratory &mdash; and eventually sold it for Rs 4,546 crore.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Making of a Scientist</div>
+  <h2>Fourteen Years of Quiet Work at BARC</h2>
+
+  <p>After his BSc, Velumani joined a pharmaceutical company in Coimbatore at a salary of Rs 150 a month. He sent most of it home. When that company shut down, he got a job as a lab assistant at the Bhabha Atomic Research Centre &mdash; BARC &mdash; in Mumbai. It was the kind of institution that gives a bright young man something rare: time to learn without the noise of commerce.</p>
+
+  <p>Over fourteen years, he worked his way up. He specialised in thyroid biochemistry &mdash; the science of how the thyroid gland regulates metabolism, growth, and nearly every function of the human body. He earned his PhD. He became a scientist. And somewhere in those years among centrifuges and sample vials, he saw something that troubled him: <strong>thyroid testing was expensive, inaccessible, and deeply fragmented</strong>.</p>
+
+  <p>A thyroid test in 1995 cost around Rs 600. For a country where millions of people &mdash; particularly women &mdash; suffered from undiagnosed thyroid disorders, that price was a wall. Velumani, who had grown up on the wrong side of many such walls, decided he would knock this one down.</p>
+
+  <div class="pull-quote">
+    <p>"I had a secure government job, a pension, and a future anyone would envy. But I could see that the test price was the problem. If I could centralise the processing, I could cut it by 75%. I had to try."</p>
+    <span class="attr">Dr Arokiaswamy Velumani, reflecting on his 1995 decision</span>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Leap</div>
+  <h2>One Lakh Rupees, One Room, One Big Idea</h2>
+
+  <p>In 1995, Velumani resigned from BARC. He took his provident fund &mdash; Rs 1 lakh &mdash; and set up a tiny thyroid testing lab in Navi Mumbai. No investors. No co-founder. No marketing budget. Just a scientist who understood thyroid biochemistry better than almost anyone in India, and a conviction that diagnostics could be made affordable.</p>
+
+  <p>The early years were brutal. The market didn't trust a lone scientist in Navi Mumbai. Doctors were used to sending samples to established labs. Revenue was negligible. There was no investor line at his door &mdash; the diagnostics industry didn't seem fundable, and a single-scientist operation in an unfashionable part of the city didn't inspire confidence.</p>
+
+  <p>Velumani's wife Sumathi ran the household on almost nothing while he built the lab. He has spoken about those years with unguarded emotion &mdash; not just the financial hardship, but the psychological weight of choosing uncertainty over security when you have nothing to fall back on.</p>
+
+  <div class="trivia-badge">
+    <div class="badge-icon">&#9733;</div>
+    <div>
+      <div class="badge-label">Market Record &middot; 2016 IPO</div>
+      <p class="badge-text">When Thyrocare went public in 2016, its IPO was <strong style="color:#f0c040;">oversubscribed 72 times</strong>. The boy from the railway platform had built something the entire Indian market wanted a piece of.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Turning Point</div>
+  <h2>The Hub-and-Spoke Model That Changed Everything</h2>
+
+  <p>The insight that transformed Thyrocare from a struggling single lab into India's diagnostics revolution was deceptively simple: <strong>centralise the processing, decentralise the collection</strong>.</p>
+
+  <p>Most diagnostic labs at the time operated independently &mdash; each franchise collected samples and processed them in-house. Equipment was expensive to maintain. Quality varied. Prices were high. Velumani's idea was to invert this entirely. Build one world-class central processing laboratory. Fly samples in from across the country. Process them at scale. Pass the cost savings on to the customer.</p>
+
+  <p>The hub-and-spoke model meant that a franchise in Kolkata, Coimbatore, or Kanpur didn't need a centrifuge. They just needed to collect the sample, package it correctly, and ship it to the Navi Mumbai hub. Thyrocare would handle the rest &mdash; and charge Rs 150 for a test that elsewhere cost Rs 600.</p>
+
+  <p>The economics were brutal in the right direction. Centralisation allowed Thyrocare to process enormous volumes at low marginal cost. Volume allowed further price cuts. Lower prices unlocked a market that barely existed before &mdash; the millions of middle-class Indians who knew they should get tested but couldn't justify the cost.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">The Thyrocare Journey &mdash; 1995 to 2026</div>
+    <div style="position:relative; padding-left:32px;">
+      <div style="position:absolute; left:15px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,#c0872a,#1a3a4a);"></div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#c0872a; border:3px solid #fff; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">1995</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Velumani resigns from BARC, takes Rs 1 lakh PF savings and sets up a thyroid lab in Navi Mumbai</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#c0872a; border:3px solid #fff; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">1996</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Thyrocare Technologies formally incorporated; hub-and-spoke model conceived and deployed</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#c0872a; border:3px solid #fff; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">2000s</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Thyroid test price slashed from Rs 600 to Rs 150; franchise network expands rapidly across India</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#c0872a; border:3px solid #fff; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">2010s</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Expands beyond thyroid to full preventive health packages; crosses 1,000 centres; enters Nepal, Bangladesh and Middle East</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#1a3a4a; border:3px solid #fff; box-shadow:0 0 0 2px #1a3a4a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#1a3a4a; margin-bottom:4px;">2016</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">IPO oversubscribed 72x &mdash; one of the most enthusiastically received healthcare listings in NSE/BSE history</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#1a3a4a; border:3px solid #fff; box-shadow:0 0 0 2px #1a3a4a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#1a3a4a; margin-bottom:4px;">2021</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Velumani sells majority stake to PharmEasy for Rs 4,546 Cr &mdash; from Rs 1 lakh savings to a four-thousand-crore exit</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:0;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#1a3a4a; border:3px solid #fff; box-shadow:0 0 0 2px #1a3a4a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#1a3a4a; margin-bottom:4px;">FY2025</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Revenue grows 20% year-on-year; shares climb 20% in April 2026 &mdash; the franchise revolution continues</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Network</div>
+  <h2>1,000 Centres. One Central Lab. A Revolution in Reach.</h2>
+
+  <p>By the time Thyrocare went public in 2016, the company had built what might be India's most elegant B2B franchise model in healthcare. The central processing laboratory in Navi Mumbai became one of the highest-volume diagnostic facilities in Asia. Samples arrived daily from across India &mdash; packaged, labelled, and shipped by franchise partners who needed no medical processing equipment of their own.</p>
+
+  <p>This asset-light model meant Thyrocare could scale without proportionally scaling costs. Each new franchise added revenue without requiring Thyrocare to build another lab. The marginal cost of one more collection centre was negligible. The marginal revenue was real.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">The Thyrocare Franchise Network</div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#1a3a4a,#2a6080); color:#fff; font-family:'Inter',sans-serif; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">IN</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">India Network</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">1,000+ collection centres across all major states</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#c0872a,#e8a830); color:#fff; font-family:'Inter',sans-serif; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">PE</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">PharmEasy</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Acquired majority stake for Rs 4,546 Cr in 2021</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#2a4060,#1a3a4a); color:#fff; font-family:'Inter',sans-serif; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">GX</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Global Presence</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Operations in Nepal, Bangladesh and Middle East</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#0f2027,#1a3a4a); color:#fff; font-family:'Inter',sans-serif; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">HL</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Hub Lab, Navi Mumbai</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Central processing for all franchise samples &mdash; one of Asia's highest-volume diagnostic labs</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#c0872a,#e8a830); color:#fff; font-family:'Inter',sans-serif; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">TK</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Thyrocare 2.0</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Post-PharmEasy revival &mdash; 20% revenue growth in FY2025, new management momentum</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#1a3a4a,#2a6080); color:#fff; font-family:'Inter',sans-serif; font-size:18px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">Rx</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Preventive Health</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Expanded from thyroid tests to full preventive health packages for every income bracket</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">Revenue Growth</div>
+  <h2>From a One-Room Lab to a &#8377;6,249 Crore Market Cap</h2>
+
+  <p>Thyrocare's financials tell the story of a company that compounded quietly for decades. The hub-and-spoke model generated operating leverage &mdash; as volumes grew, margins expanded. The asset-light franchise structure meant capital wasn't trapped in equipment across hundreds of locations. Free cash flow funded the next wave of growth.</p>
+
+  <p>By FY2025, Thyrocare was reporting 20% revenue growth &mdash; and investors noticed. Shares climbed 20% in April 2026 alone, as the diagnostic market boomed post-COVID and Thyrocare's reinvigorated management proved the underlying business model remained as robust as ever.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth &mdash; Estimated &#8377; Crore &middot; FY2019 to FY2025</div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY19</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:52%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">~&#8377;340 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY20</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:58%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">~&#8377;380 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY21</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:72%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">~&#8377;470 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY22</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:80%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">~&#8377;526 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY23</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:72%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">~&#8377;460 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY24</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:82%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">~&#8377;540 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY25</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:28px; position:relative;">
+          <div style="width:100%; height:100%; background:linear-gradient(90deg,#0d2535,#1a3a4a); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">~&#8377;650 Cr (est.) &middot; +20% YoY</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#bbb; text-align:center; margin-top:12px; font-style:italic;">Revenue estimates based on publicly available data and management commentary &middot; Not audited</div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">What It Built</div>
+  <h2>The Numbers Behind Thirty Years of Stubbornness</h2>
+
+  <div class="infographic">
+    <div class="infographic-title">What 30 Years of Affordable Diagnostics Built</div>
+    <div class="legacy-grid">
+      <div class="legacy-card">
+        <div class="legacy-number">1,000+</div>
+        <div class="legacy-label">Collection centres across India, Nepal, Bangladesh &amp; Middle East</div>
+      </div>
+      <div class="legacy-card">
+        <div class="legacy-number">72x</div>
+        <div class="legacy-label">IPO oversubscription in 2016 &mdash; one of India's most-wanted healthcare listings</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">&#8377;4,546 Cr</div>
+        <div class="legacy-label">PharmEasy acquisition value in 2021 &mdash; from Rs 1 lakh savings to four-and-a-half thousand crores</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">20%</div>
+        <div class="legacy-label">Revenue growth in FY2025 &mdash; proof that the hub-and-spoke model still compounds</div>
+      </div>
+    </div>
+  </div>
+
+  <p>The competitors &mdash; Dr Lal PathLabs, Metropolis Healthcare, SRL Diagnostics, Vijaya Diagnostics &mdash; are formidable. But none of them started from where Thyrocare started, and none of them cut the price of a thyroid test by 75% simply because a scientist believed affordability was the right thing to do. That origin story is baked into the company's DNA in a way that can't be replicated by a well-funded competitor.</p>
+
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>The most durable competitive advantages are sometimes disguised as beliefs. Velumani didn't just build a cheaper lab &mdash; he built a different philosophy about who diagnostics should serve. When your founding conviction is that healthcare belongs to everyone and not just those who can afford it, you make decisions that incumbent players won't. You cut prices when others raise them. You fly samples to one hub instead of building expensive local labs. You grow a franchise network while staying asset-light. The railway platform boy had studied enough to know that the real test in life &mdash; like the real test in diagnostics &mdash; is not who can afford to take it, but who has the courage to make it available to all.</p>
+  </div>
+
+  <div class="disclaimer">
+    This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.
+  </div>
+
+</div>
+</body>
+</html>
