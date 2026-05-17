@@ -1,0 +1,467 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chemistry Nobody Sees | Camlin Fine Sciences Ltd</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fafaf8;
+    color: #1a1a1a;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%);
+    color: #fff;
+    padding: 90px 40px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px; right: -60px; bottom: -60px;
+    background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero .tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 22px; position: relative;
+  }
+  .hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem; font-weight: 700; line-height: 1.2;
+    max-width: 740px; margin: 0 auto 24px; position: relative;
+  }
+  .hero .subtitle {
+    font-family: 'Inter', sans-serif; font-size: 1.05rem;
+    color: #b0c4d8; max-width: 600px; margin: 0 auto;
+    line-height: 1.65; position: relative;
+  }
+  .hero .meta {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px;
+    text-transform: uppercase; position: relative;
+  }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+  .section-label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Merriweather', serif; font-size: 1.7rem;
+    font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3;
+  }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+
+  .pull-quote {
+    border-left: 4px solid #f0c040;
+    padding: 20px 28px; margin: 42px 0;
+    background: #fffdf0; border-radius: 0 10px 10px 0;
+  }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+    color: #999; margin-top: 12px; letter-spacing: 1px;
+    text-transform: uppercase; font-style: normal; display: block;
+  }
+
+  .infographic {
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 34px 32px; margin: 46px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .infographic-title {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #aaa; margin-bottom: 30px; text-align: center;
+  }
+
+  .founder-block {
+    display: flex; gap: 28px; align-items: flex-start;
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .founder-photo {
+    flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px;
+    overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-initials {
+    font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800; color: #f0c040;
+  }
+  .founder-info .founder-name {
+    font-family: 'Inter', sans-serif; font-size: 1rem;
+    font-weight: 800; color: #0f1f2a; margin-bottom: 4px;
+  }
+  .founder-info .founder-title {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 14px;
+  }
+  .founder-info p {
+    font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    color: #555; line-height: 1.65; margin: 0;
+  }
+
+  .trivia-badge {
+    background: linear-gradient(135deg, #0f2027, #1a3a4a);
+    color: #fff; border-radius: 12px; padding: 22px 28px;
+    margin: 40px 0; display: flex; gap: 20px; align-items: flex-start;
+  }
+  .trivia-badge .badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .trivia-badge .badge-label {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 6px;
+  }
+  .trivia-badge .badge-text {
+    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    color: #c8d8e8; line-height: 1.6; margin: 0;
+  }
+
+  .timeline-wrap { overflow-x: auto; padding-bottom: 8px; }
+  .timeline { min-width: 560px; position: relative; padding: 12px 0 0; }
+  .timeline-line {
+    position: absolute; top: 22px; left: 20px; right: 20px; height: 3px;
+    background: linear-gradient(90deg, #c0872a, #1a3a4a, #0d5c8a);
+    border-radius: 2px; z-index: 0;
+  }
+  .timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 1; }
+  .timeline-item { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 0 4px; }
+  .timeline-dot {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #fff; border: 3px solid #c0872a; margin-bottom: 10px; flex-shrink: 0;
+  }
+  .timeline-dot.key {
+    background: #c0872a; width: 20px; height: 20px; border-color: #c0872a;
+    box-shadow: 0 0 0 3px rgba(192,135,42,0.2);
+  }
+  .timeline-dot.blue {
+    background: #1a3a4a; border-color: #1a3a4a;
+    box-shadow: 0 0 0 3px rgba(26,58,74,0.2);
+  }
+  .timeline-year { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #c0872a; margin-bottom: 5px; }
+  .timeline-year.blue { color: #1a3a4a; }
+  .timeline-text { font-family: 'Inter', sans-serif; font-size: 11px; color: #666; text-align: center; line-height: 1.45; max-width: 82px; }
+
+  .bar-chart { display: flex; align-items: flex-end; gap: 10px; height: 180px; padding: 0 8px; margin-bottom: 10px; }
+  .bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
+  .bar-value { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #333; margin-bottom: 4px; }
+  .bar { width: 100%; border-radius: 5px 5px 0 0; }
+  .bar-label { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; margin-top: 8px; }
+  .chart-note { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; font-style: italic; }
+
+  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
+  .legacy-card.blue { border-left-color: #1a3a4a; }
+  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
+  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+
+  .closing-card {
+    background: linear-gradient(160deg, #0a1a24, #1a3a4a);
+    color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px;
+  }
+  .closing-card .label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 16px;
+  }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+
+  .disclaimer {
+    font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb;
+    text-align: center; margin-top: 40px; line-height: 1.6;
+    padding: 18px; border-top: 1px solid #e4e0d8;
+  }
+
+  .client-monogram-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px;
+  }
+  .client-monogram-card {
+    background: #f7f5f0; border-radius: 12px; padding: 20px; text-align: center; border: 1px solid #ece8e0;
+  }
+  .client-monogram {
+    width: 48px; height: 48px; border-radius: 10px; color: #fff;
+    font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 800;
+    display: flex; align-items: center; justify-content: center; margin: 0 auto 10px;
+  }
+  .client-monogram-name { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #0f1f2a; }
+  .client-monogram-desc { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; margin-top: 3px; line-height: 1.4; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">Quiet Giant &nbsp;&middot;&nbsp; Specialty Chemicals &nbsp;&middot;&nbsp; Global Exports</div>
+  <h1>The Chemistry Nobody Sees</h1>
+  <div class="subtitle">The same family that put a geometry box in every Indian schoolbag quietly built one of the world&#8217;s most important food preservation companies &#8212; and almost nobody noticed.</div>
+  <div class="meta">Camlin Fine Sciences Ltd &nbsp;&middot;&nbsp; May 2026</div>
+</div>
+
+<div class="content">
+
+  <div class="section-label">The Origin</div>
+  <h2>You Know the Brand. You Don&#8217;t Know the Business.</h2>
+
+  <p>Ask any Indian who grew up in the 1980s or 1990s about Camlin, and you&#8217;ll get the same answer. The geometry box. The erasers. The crayons in a tin with the golden logo. Camlin was the brand of Indian childhood &#8212; dependable, familiar, everywhere.</p>
+
+  <p>But hidden inside the same Camlin conglomerate, almost invisible to the consumer world, was a division making something entirely different. Not pens. Not stationery. <strong>Food antioxidants.</strong> BHA, BHT, TBHQ &#8212; the molecules that keep packaged biscuits from turning rancid, extend the shelf life of cooking oils, and preserve the crunch in your potato chips. This division was serving global food manufacturers while generations of Indian children were drawing with Camlin pencils and never connecting the two.</p>
+
+  <p>In 2002, that division was carved out and listed separately as <strong>Camlin Fine Sciences Ltd (CFS)</strong>. What followed was one of the most understated global success stories in Indian specialty chemicals &#8212; a company that went from a domestic chemicals unit to an exporter reaching <strong>90+ countries</strong>, competing directly against BASF and SI Group, and manufacturing an ingredient found inside billions of packaged food items consumed every day around the world.</p>
+
+  <div class="founder-block">
+    <div class="founder-photo">
+      <img src="https://www.camlinfs.com/investor-relations/bodBannerImg/Ashish%20Dandekar%20banner.jpg"
+           alt="Ashish Dandekar, Chairman and Managing Director"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.founder-initials').style.display='flex';" />
+      <div class="founder-initials" style="display:none; width:100%; height:100%; align-items:center; justify-content:center;">AD</div>
+    </div>
+    <div class="founder-info">
+      <div class="founder-name">Ashish S. Dandekar</div>
+      <div class="founder-title">Chairman &amp; Managing Director, Camlin Fine Sciences Ltd</div>
+      <p>Son of Subhash Dandekar, the man who built Camlin into a household name, Ashish inherited something far less glamorous and far more consequential: the industrial chemicals business. Educated at Temple University in the US with a background spanning R&amp;D, business planning and marketing, Ashish turned a domestic antioxidants unit into a global specialty chemicals player with manufacturing in India, Italy and Mexico.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Business Nobody Talks About</div>
+  <h2>Preserving the World&#8217;s Food, One Molecule at a Time</h2>
+
+  <p>Most consumers have never heard of BHA, BHT or TBHQ. But walk into any supermarket in the world &#8212; in Germany, Brazil, the United States, or South Korea &#8212; and you will almost certainly encounter these molecules on an ingredient label. They are <strong>synthetic antioxidants</strong>, and their job is simple: stop fat from oxidising. Without them, edible oils turn rancid within days, biscuits go stale, and packaged snacks lose both flavour and safety.</p>
+
+  <p>Camlin Fine Sciences does not just make these antioxidants. It formulates them into <strong>blended antioxidant solutions</strong> &#8212; proprietary mixes tailored to specific food applications, temperatures and regulatory requirements across different countries. A blended solution for a bakery in Texas has a different composition from one for a frying oil manufacturer in Malaysia. This is not commodity chemistry. This is knowledge-intensive specialty work, and CFS spent decades building the expertise to do it at scale.</p>
+
+  <div class="trivia-badge">
+    <div class="badge-icon">&#9733;</div>
+    <div>
+      <div class="badge-label">The Apple Preserving Secret</div>
+      <p class="badge-text">Camlin Fine Sciences is among the world&#8217;s largest manufacturers of <strong style="color:#f0c040;">diphenylamine (DPA)</strong> &#8212; the chemical sprayed on apples in cold storage to prevent their skin from browning and blistering. The next time you eat an apple months after harvest that still looks perfect, there is a reasonable chance CFS chemistry kept it that way.</p>
+    </div>
+  </div>
+
+  <p>Then there is DPA &#8212; diphenylamine. This is a completely different category: an agrochemical used in post-harvest apple storage. When apples come out of cold storage after six or eight months, a condition called superficial scald can turn the skin brown and make them unsaleable. DPA prevents this. It is used by apple growers and cold storage facilities across the Northern Hemisphere, and CFS became one of the world&#8217;s significant DPA manufacturers &#8212; an almost absurdly niche product that almost nobody outside the apple supply chain has ever heard of.</p>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Journey</div>
+  <h2>From Mumbai to Ravenna: Building a Global Footprint</h2>
+
+  <p>The story of Camlin Fine Sciences is not a straight line. It is a series of bold, sometimes counterintuitive moves by a management team that was willing to make uncomfortable bets.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">The Camlin Fine Sciences Journey</div>
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">1973</div>
+            <div class="timeline-text">Industrial chemicals division formed within Camlin Group</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2002</div>
+            <div class="timeline-text">Carved out and listed separately as Camlin Fine Sciences</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2008</div>
+            <div class="timeline-text">Begins systematic export push to global food manufacturers</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2011</div>
+            <div class="timeline-text">Acquires Borregaard Italia SpA in Ravenna &#8212; European manufacturing credibility secured</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2016</div>
+            <div class="timeline-text">Expands into North American blends; sets up Dresen Quimica in Mexico</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">2021</div>
+            <div class="timeline-text">Enters vanillin and aroma chemicals &#8212; new growth pillar</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">2025</div>
+            <div class="timeline-text">Revenue crosses Rs 1,666 Cr; exports to 90+ countries</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p>The single most important move in Camlin Fine Sciences&#8217; history came in 2011. The company acquired <strong>Borregaard Italia SpA</strong>, a hydroquinone and catechol manufacturing facility in Ravenna, Italy. This was not just a capacity addition. It was a strategic masterstroke. Overnight, CFS had a <strong>European-standard manufacturing facility</strong> that met the exacting food safety and quality regulations of the EU market. For global FMCG supply chains that were suspicious of sourcing food-grade chemicals from an Indian company, the Italian plant was the answer to every objection.</p>
+
+  <p>This is how you break into markets that are built on trust and regulatory compliance. You do not argue that you are good enough. You show up with proof. The Ravenna plant was CFS&#8217;s proof.</p>
+
+  <div class="pull-quote">
+    <p>&#8220;The question was never whether we could make the chemistry. The question was whether the world would trust chemistry made in India. We went to Italy to answer that question.&#8221;</p>
+    <span class="attr">Camlin Fine Sciences &#8212; Strategic Rationale, Borregaard Acquisition</span>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Competition</div>
+  <h2>Going Up Against Goliaths &#8212; and Winning Market Share</h2>
+
+  <p>Camlin Fine Sciences does not compete in a gentle market. Its primary competitors in food antioxidants are <strong>BASF</strong> &#8212; the German chemical giant with revenues of over &#8364;70 billion &#8212; and <strong>SI Group</strong> from the United States, a specialist chemicals company with decades of entrenched relationships in global food manufacturing. In DPA, the competition includes established European producers and increasingly aggressive Chinese manufacturers willing to compete purely on price.</p>
+
+  <p>The Chinese threat is real and persistent. Chinese commodity antioxidant producers have driven down prices aggressively, and CFS has had to navigate this by moving up the value chain &#8212; away from pure commodity BHA/BHT and toward <strong>formulated blends</strong> with proprietary compositions, better technical service, and the ability to meet country-specific regulatory requirements that commodity Chinese suppliers often cannot. This is the classic specialty chemicals playbook: escape the commodity trap by becoming indispensable.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Global Reach &#8212; Markets and Partners</div>
+    <div class="client-monogram-grid">
+      <div class="client-monogram-card">
+        <div class="client-monogram" style="background:linear-gradient(135deg,#1a3a4a,#2a6080);">EU</div>
+        <div class="client-monogram-name">European Union</div>
+        <div class="client-monogram-desc">Italy plant gives EU-compliant food-grade supply</div>
+      </div>
+      <div class="client-monogram-card">
+        <div class="client-monogram" style="background:linear-gradient(135deg,#c0872a,#e8a830);">NA</div>
+        <div class="client-monogram-name">North America</div>
+        <div class="client-monogram-desc">Blends division growing 17&#8211;18% YoY; Dresen Mexico operations</div>
+      </div>
+      <div class="client-monogram-card">
+        <div class="client-monogram" style="background:linear-gradient(135deg,#2a6080,#1a3a4a);">AP</div>
+        <div class="client-monogram-name">Asia Pacific</div>
+        <div class="client-monogram-desc">CFS Pahang Asia; growing FMCG supply relationships</div>
+      </div>
+      <div class="client-monogram-card">
+        <div class="client-monogram" style="background:linear-gradient(135deg,#0f2027,#1a3a4a);">DPA</div>
+        <div class="client-monogram-name">Apple Storage</div>
+        <div class="client-monogram-desc">DPA for post-harvest apple preservation globally</div>
+      </div>
+      <div class="client-monogram-card">
+        <div class="client-monogram" style="background:linear-gradient(135deg,#1a3a4a,#0d5c8a);">AR</div>
+        <div class="client-monogram-name">Aroma Division</div>
+        <div class="client-monogram-desc">Rs 176 Cr revenue; vanillin and flavour chemicals</div>
+      </div>
+      <div class="client-monogram-card">
+        <div class="client-monogram" style="background:linear-gradient(135deg,#c0872a,#0f2027);">90+</div>
+        <div class="client-monogram-name">Countries Served</div>
+        <div class="client-monogram-desc">Export network spanning 90+ countries worldwide</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Numbers</div>
+  <h2>From a Chemical Unit to a Rs 1,666 Crore Global Exporter</h2>
+
+  <p>The financial trajectory of Camlin Fine Sciences is the story of a company that compounded steadily even as it navigated commodity cycles, currency swings, and the challenge of competing globally from an Indian base. Revenue has grown from roughly <strong>Rs 892 crore in FY19</strong> to <strong>Rs 1,666 crore in FY25</strong>, a near-doubling in six years.</p>
+
+  <p>FY25 was notable for strong core business growth: revenue rose 15% year-on-year, and EBITDA climbed to Rs 208 crore from Rs 184 crore. The North American blends business grew 17&#8211;18% in the year. The Aroma division contributed Rs 176 crore. These are not the numbers of a sleepy legacy chemical company &#8212; they are the numbers of a business that has been systematically building out global capability.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth (Rs Crore) &#8212; FY19 to FY25</div>
+    <div class="bar-chart">
+      <div class="bar-group">
+        <div class="bar-value">892</div>
+        <div class="bar" style="height:96px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div>
+        <div class="bar-label">FY19</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">1,049</div>
+        <div class="bar" style="height:113px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div>
+        <div class="bar-label">FY20</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">1,187</div>
+        <div class="bar" style="height:128px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div>
+        <div class="bar-label">FY21</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">1,412</div>
+        <div class="bar" style="height:152px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div>
+        <div class="bar-label">FY22</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">1,682</div>
+        <div class="bar" style="height:180px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div>
+        <div class="bar-label">FY23</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">1,439</div>
+        <div class="bar" style="height:155px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div>
+        <div class="bar-label">FY24</div>
+      </div>
+      <div class="bar-group">
+        <div class="bar-value">1,666</div>
+        <div class="bar" style="height:179px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div>
+        <div class="bar-label">FY25</div>
+      </div>
+    </div>
+    <div class="chart-note">Consolidated revenue &middot; Approximate figures &middot; Source: Company reports, investor presentations</div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Legacy</div>
+  <h2>What 50 Years of Quiet Building Produced</h2>
+
+  <p>There are two kinds of great businesses. The first kind shouts its greatness from billboards and press releases. The second kind just compounds &#8212; building capability, entering new markets, solving problems nobody else wants to solve &#8212; and lets the results do the talking.</p>
+
+  <p>Camlin Fine Sciences is firmly in the second category. There is no celebrity founder on stage at TED conferences. No viral brand moment. No breathless startup press coverage. Just a family from Mumbai that decided to become experts in food preservation chemistry, built a manufacturing facility in Italy to earn global trust, set up operations in Mexico to serve the Americas, entered the DPA business to capture an ultra-niche but critical agrochemical application, and scaled steadily until they were serving customers in more than 90 countries.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">What 50+ Years of Specialty Chemistry Built</div>
+    <div class="legacy-grid">
+      <div class="legacy-card">
+        <div class="legacy-number">90+</div>
+        <div class="legacy-label">Countries Receiving CFS Exports</div>
+      </div>
+      <div class="legacy-card">
+        <div class="legacy-number">Rs 1,666 Cr</div>
+        <div class="legacy-label">Revenue FY25 (Consolidated)</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">4</div>
+        <div class="legacy-label">Continents with Manufacturing or Blending Operations</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">2011</div>
+        <div class="legacy-label">Italy Acquisition &#8212; The Credibility Pivot</div>
+      </div>
+    </div>
+  </div>
+
+  <p>The stationery business that made Camlin a household name was eventually demerged and sold. The Camlin brand on pens and geometry boxes no longer belongs to the same corporate family. But Camlin Fine Sciences &#8212; the quiet, unglamorous, deeply technical chemicals business &#8212; lives on, exporting molecules that are present in billions of food products consumed daily around the planet.</p>
+
+  <p>Nobody puts a Camlin Fine Sciences sticker on their pantry. But the chemistry is there, doing its job, every single day.</p>
+
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>The most enduring businesses are often built in categories that consumers never think about. Camlin Fine Sciences is not famous because its work is invisible &#8212; and its work is invisible because it works perfectly. The lesson here is about the power of technical depth: pick a problem that the world cannot live without solving, build the expertise to solve it better than anyone else, invest in the credentials that earn global trust, and compound quietly for decades. The geometry box gets the nostalgia. The food antioxidant gets the revenues. Greatness does not always announce itself.</p>
+  </div>
+
+  <div class="disclaimer">
+    This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.
+  </div>
+
+</div>
+</body>
+</html>
