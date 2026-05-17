@@ -1,0 +1,154 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Date on Every Pack | Control Print Limited</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #fafaf8; color: #1a1a1a; font-family: 'Merriweather', Georgia, serif; font-size: 18px; line-height: 1.85; }
+  .hero { background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%); color: #fff; padding: 90px 40px 80px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -60px; left: -60px; right: -60px; bottom: -60px; background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%); pointer-events: none; }
+  .hero .tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #f0c040; margin-bottom: 22px; position: relative; }
+  .hero h1 { font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 700; line-height: 1.2; max-width: 740px; margin: 0 auto 24px; position: relative; }
+  .hero .subtitle { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #b0c4d8; max-width: 600px; margin: 0 auto; line-height: 1.65; position: relative; }
+  .hero .meta { font-family: 'Inter', sans-serif; font-size: 12px; color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px; text-transform: uppercase; position: relative; }
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+  .section-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c0872a; margin-bottom: 10px; }
+  h2 { font-family: 'Merriweather', serif; font-size: 1.7rem; font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3; }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+  .pull-quote { border-left: 4px solid #f0c040; padding: 20px 28px; margin: 42px 0; background: #fffdf0; border-radius: 0 10px 10px 0; }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: #999; margin-top: 12px; letter-spacing: 1px; text-transform: uppercase; font-style: normal; display: block; }
+  .infographic { background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 34px 32px; margin: 46px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+  .infographic-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #aaa; margin-bottom: 30px; text-align: center; }
+  .founder-block { display: flex; gap: 28px; align-items: flex-start; background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
+  .founder-photo { flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 800; color: #f0c040; }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-info .founder-name { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 800; color: #0f1f2a; margin-bottom: 4px; }
+  .founder-info .founder-title { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #c0872a; margin-bottom: 14px; }
+  .founder-info p { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #555; line-height: 1.65; margin: 0; }
+  .milestone-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; }
+  .milestone-card { background: #f7f5f0; border-radius: 10px; padding: 18px 16px; border-top: 3px solid #c0872a; }
+  .milestone-card.blue { border-top-color: #1a3a4a; }
+  .milestone-year { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 800; color: #c0872a; margin-bottom: 6px; }
+  .milestone-year.blue { color: #1a3a4a; }
+  .milestone-text { font-family: 'Inter', sans-serif; font-size: 12px; color: #555; line-height: 1.5; }
+  .customers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .customer-card { background: #f7f5f0; border-radius: 10px; padding: 16px 14px; text-align: center; border: 1px solid #ece8e0; }
+  .customer-mono { width: 48px; height: 48px; border-radius: 10px; background: linear-gradient(135deg,#1a3a4a,#2a6080); color: #fff; font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 10px; }
+  .customer-name { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #0f1f2a; margin-bottom: 4px; }
+  .customer-desc { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; line-height: 1.4; }
+  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
+  .legacy-card.blue { border-left-color: #1a3a4a; }
+  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
+  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+  .hbar-chart { display: flex; flex-direction: column; gap: 10px; }
+  .hbar-row { display: flex; align-items: center; gap: 12px; }
+  .hbar-year { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; width: 32px; text-align: right; flex-shrink: 0; }
+  .hbar-track { flex: 1; background: #f0ece4; border-radius: 4px; height: 28px; position: relative; }
+  .hbar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; padding-left: 10px; }
+  .hbar-fill span { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #fff; }
+  .closing-card { background: linear-gradient(160deg, #0a1a24, #1a3a4a); color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px; }
+  .closing-card .label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #f0c040; margin-bottom: 16px; }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+  .disclaimer { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 40px; line-height: 1.6; padding: 18px; border-top: 1px solid #e4e0d8; }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="tag">Industrial Manufacturing &nbsp;&middot;&nbsp; Razor-and-Blade Model &nbsp;&middot;&nbsp; Underdog Origin</div>
+  <h1>Every Expiry Date in Your Home Was Printed by a Machine You&#8217;ve Never Heard Of</h1>
+  <div class="subtitle">One Mumbai entrepreneur spotted a niche the multinationals ignored and spent thirty years building the dominant domestic brand &#8212; one installed machine at a time.</div>
+  <div class="meta">Control Print Limited &nbsp;&middot;&nbsp; May 2026</div>
+</div>
+<div class="content">
+  <div class="section-label">The Invisible Industry</div>
+  <h2>Before a Product Leaves the Factory, a Machine Stamps Its Story on the Pack</h2>
+  <p>Think about the last product you picked up at a pharmacy, supermarket, or kirana store. Somewhere on the packaging is a date: manufacturing date, expiry date, batch number, MRP. You read it in a second and moved on. But that date was put there by an industrial coding machine working at speeds of up to <strong>80,000 decisions per second</strong> &#8212; ejecting microscopic ink droplets, deflecting them electrically, printing characters on a moving production line with no human hand involved.</p>
+  <p>In 1991, <strong>Basant Kabra</strong> &#8212; a chemical engineer from Mumbai &#8212; looked at this industry and saw a problem. The machines doing this work across India&#8217;s FMCG, pharma, and food factories were all imported from global companies: Domino (UK), Videojet (USA), Markem-Imaje (France). No domestic company was supplying them. Kabra decided to change that, starting <strong>Control Print Limited</strong> with the conviction that Indian manufacturers deserved a local, service-responsive alternative.</p>
+  <div class="founder-block">
+    <div class="founder-photo"><img src="https://controlprint.com/wp-content/uploads/basant-kabra.jpg" alt="Basant Kabra" onerror="this.style.display='none'; this.parentElement.innerHTML='BK';" /></div>
+    <div class="founder-info">
+      <div class="founder-name">Basant Kabra</div>
+      <div class="founder-title">Founder &amp; CMD, Control Print Limited</div>
+      <p>A chemical engineer by training, Basant Kabra founded Control Print in 1991 with the insight that India&#8217;s entire FMCG and pharma manufacturing sector depended on imported coding machines for a function as basic as printing dates. He built Control Print on service proximity &#8212; the idea that a domestic company could respond to a production line emergency faster than any global supplier. Over four decades, he turned that service advantage into 60,000+ installed machines. His son Shiva Kabra now leads marketing and strategy.</p>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">The Business Model</div>
+  <h2>The Machine Is Almost Free. The Ink Is the Business.</h2>
+  <p>Control Print&#8217;s genius is not the machine itself &#8212; it is the model underneath it. Like Gillette selling razors cheaply to capture the blade revenue, Control Print sells its coding machines at low or breakeven margins to get them onto production lines. Once installed, the machine needs <strong>inks, solvents, ribbons, and laser consumables</strong> &#8212; and those consumables generate recurring, high-margin revenue year after year.</p>
+  <p>The economics are almost self-reinforcing. A production line manager will not switch a coding machine mid-run. The requalification process &#8212; recalibrating the machine, retraining operators, testing on the production line &#8212; takes weeks and creates real risk of line downtime. The installed machine is essentially permanent until it physically fails. This gives Control Print sticky, predictable annuity-like income from every machine it has placed on a factory floor.</p>
+  <div style="border-left:4px solid #f0c040; background:#fffdf0; border-radius:0 10px 10px 0; padding:20px 24px; margin:36px 0;">
+    <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:2px; color:#c0872a; text-transform:uppercase; margin-bottom:8px;">The Number That Locks In The Moat</div>
+    <div style="font-family:'Inter',sans-serif; font-size:1rem; color:#333; line-height:1.65;">Control Print has over <strong>60,000 installed coding machines</strong> running inside Indian factories. Each one generates recurring consumables revenue every year &#8212; and switching costs make replacement almost unthinkable once installed on a live production line.</div>
+  </div>
+  <p>The turning point came when <strong>Amul</strong> &#8212; India&#8217;s most quality-obsessed dairy cooperative &#8212; chose Control Print machines for its production lines. That single reference customer changed everything. If Amul trusted Control Print, the credibility barrier with every other FMCG quality manager in India had effectively been broken.</p>
+  <div class="pull-quote">
+    <p>&#8220;Winning Amul was not just a contract. It was a signal to every quality manager in Indian FMCG that a domestic machine could meet the standard they required. After Amul, the doors opened.&#8221;</p>
+    <span class="attr">&#8212; Control Print company narrative</span>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">The Journey</div>
+  <h2>Thirty-Five Years of Grinding Against Global Giants</h2>
+  <div class="infographic">
+    <div class="infographic-title">Control Print &#8212; Key Milestones</div>
+    <div class="milestone-cards">
+      <div class="milestone-card"><div class="milestone-year">1991</div><div class="milestone-text">Founded in Mumbai &#8212; first domestic coding machine company</div></div>
+      <div class="milestone-card"><div class="milestone-year">1998</div><div class="milestone-text">Listed on BSE; first major FMCG reference customer won</div></div>
+      <div class="milestone-card"><div class="milestone-year">2005</div><div class="milestone-text">Amul partnership &#8212; the credibility breakthrough</div></div>
+      <div class="milestone-card"><div class="milestone-year">2012</div><div class="milestone-text">25,000 machines installed milestone across India</div></div>
+      <div class="milestone-card"><div class="milestone-year">2022</div><div class="milestone-text">Acquires Netherlands-based Markprint BV &#8212; goes global</div></div>
+      <div class="milestone-card blue"><div class="milestone-year blue">2025</div><div class="milestone-text">60,000+ installed machines; ~&#8377;430 Cr revenue</div></div>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">Who Runs on Control Print</div>
+  <h2>The Factories Behind India&#8217;s Most Familiar Products</h2>
+  <div class="infographic">
+    <div class="infographic-title">Key Sectors &amp; Clients</div>
+    <div class="customers-grid">
+      <div class="customer-card"><div class="customer-mono">AM</div><div class="customer-name">Amul</div><div class="customer-desc">Dairy FMCG &#8212; the reference win that opened India&#8217;s FMCG sector</div></div>
+      <div class="customer-card"><div class="customer-mono">PH</div><div class="customer-name">Pharma Sector</div><div class="customer-desc">Batch coding mandated by CDSCO regulations on all drug packaging</div></div>
+      <div class="customer-card"><div class="customer-mono">FB</div><div class="customer-name">Food &amp; Beverage</div><div class="customer-desc">Biscuits, snacks, beverages &#8212; every pack needs a date and batch number</div></div>
+      <div class="customer-card"><div class="customer-mono">AG</div><div class="customer-name">Agrochemicals</div><div class="customer-desc">Pesticide coding mandated by CIB&amp;RC &#8212; growing segment</div></div>
+      <div class="customer-card"><div class="customer-mono">AU</div><div class="customer-name">Automotive</div><div class="customer-desc">Component traceability coding &#8212; rising regulatory demand</div></div>
+      <div class="customer-card"><div class="customer-mono">MK</div><div class="customer-name">Markprint BV</div><div class="customer-desc">Netherlands &#8212; acquired 2022, giving Control Print EU market access</div></div>
+    </div>
+  </div>
+  <hr class="section-divider">
+  <div class="section-label">The Numbers</div>
+  <h2>Revenue That Grew One Machine at a Time</h2>
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth &#8212; &#8377; Crore (FY20&#8211;FY25)</div>
+    <div class="hbar-chart">
+      <div class="hbar-row"><div class="hbar-year">FY20</div><div class="hbar-track"><div class="hbar-fill" style="width:52%; background:linear-gradient(90deg,#c0872a,#e8a830);"><span>&#8377;225 Cr</span></div></div></div>
+      <div class="hbar-row"><div class="hbar-year">FY21</div><div class="hbar-track"><div class="hbar-fill" style="width:48%; background:linear-gradient(90deg,#c0872a,#e8a830);"><span>&#8377;208 Cr</span></div></div></div>
+      <div class="hbar-row"><div class="hbar-year">FY22</div><div class="hbar-track"><div class="hbar-fill" style="width:60%; background:linear-gradient(90deg,#c0872a,#e8a830);"><span>&#8377;260 Cr</span></div></div></div>
+      <div class="hbar-row"><div class="hbar-year">FY23</div><div class="hbar-track"><div class="hbar-fill" style="width:72%; background:linear-gradient(90deg,#0d2535,#1a3a4a);"><span>&#8377;312 Cr</span></div></div></div>
+      <div class="hbar-row"><div class="hbar-year">FY24</div><div class="hbar-track"><div class="hbar-fill" style="width:85%; background:linear-gradient(90deg,#0d2535,#1a3a4a);"><span>&#8377;369 Cr</span></div></div></div>
+      <div class="hbar-row"><div class="hbar-year">FY25</div><div class="hbar-track"><div class="hbar-fill" style="width:100%; background:linear-gradient(90deg,#0d2535,#1a3a4a);"><span>~&#8377;430 Cr</span></div></div></div>
+    </div>
+    <div class="chart-note">Approximate figures sourced from company reports &middot; FY21 decline reflects COVID production shutdowns</div>
+  </div>
+  <div class="infographic">
+    <div class="infographic-title">What 35 Years of One Niche Built</div>
+    <div class="legacy-grid">
+      <div class="legacy-card"><div class="legacy-number">60,000+</div><div class="legacy-label">Installed machines across Indian factories &#8212; each generating recurring consumables revenue</div></div>
+      <div class="legacy-card"><div class="legacy-number">~&#8377;700 Cr</div><div class="legacy-label">Market capitalisation &#8212; a quiet industrial compounder with sticky recurring revenue</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">4</div><div class="legacy-label">Global giants competed against &#8212; Domino, Videojet, Markem-Imaje, Leibinger &#8212; and Control Print is still standing</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">1</div><div class="legacy-label">Listed domestic coding machine company in India &#8212; no listed peer in its exact category</div></div>
+    </div>
+  </div>
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>Basant Kabra did not invent the coding machine. He did not discover a new technology. He found a niche &#8212; unglamorous, invisible, essential &#8212; that global companies dominated because no Indian entrepreneur had bothered to compete. He competed. He won Amul. He proved that a domestic company could meet the quality bar. And then he let the model do the rest: 60,000 machines, each one a small annuity, each one nearly impossible to remove once installed. The best businesses are sometimes built not on disruption but on relentless commitment to the unglamorous things that every factory must get done.</p>
+  </div>
+  <div class="disclaimer">This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.</div>
+</div>
+</body>
+</html>
