@@ -2,159 +2,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Invisible Backbone | MTAR Technologies</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #fafaf8; color: #1a1a1a; font-family: 'Merriweather', Georgia, serif; font-size: 18px; line-height: 1.85; }
-  .hero { background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%); color: #fff; padding: 90px 40px 80px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -60px; left: -60px; right: -60px; bottom: -60px; background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%); pointer-events: none; }
-  .hero .tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #f0c040; margin-bottom: 22px; position: relative; }
-  .hero h1 { font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 700; line-height: 1.2; max-width: 740px; margin: 0 auto 24px; position: relative; }
-  .hero .subtitle { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #b0c4d8; max-width: 600px; margin: 0 auto; line-height: 1.65; position: relative; }
-  .hero .meta { font-family: 'Inter', sans-serif; font-size: 12px; color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px; text-transform: uppercase; position: relative; }
-  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
-  .section-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c0872a; margin-bottom: 10px; }
-  h2 { font-family: 'Merriweather', serif; font-size: 1.7rem; font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3; }
-  p { margin-bottom: 22px; color: #2c2c2c; }
-  strong { color: #0f1f2a; font-weight: 700; }
-  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
-  .pull-quote { border-left: 4px solid #f0c040; padding: 20px 28px; margin: 42px 0; background: #fffdf0; border-radius: 0 10px 10px 0; }
-  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
-  .pull-quote .attr { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: #999; margin-top: 12px; letter-spacing: 1px; text-transform: uppercase; font-style: normal; display: block; }
-  .infographic { background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 34px 32px; margin: 46px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
-  .infographic-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #aaa; margin-bottom: 30px; text-align: center; }
-  .founder-block { display: flex; gap: 28px; align-items: flex-start; background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
-  .founder-photo { flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 800; color: #f0c040; }
-  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .founder-info .founder-name { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 800; color: #0f1f2a; margin-bottom: 4px; }
-  .founder-info .founder-title { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #c0872a; margin-bottom: 14px; }
-  .founder-info p { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #555; line-height: 1.65; margin: 0; }
-  .timeline-wrap { overflow-x: auto; padding-bottom: 8px; }
-  .timeline { min-width: 560px; position: relative; padding: 12px 0 0; }
-  .timeline-line { position: absolute; top: 22px; left: 20px; right: 20px; height: 3px; background: linear-gradient(90deg, #c0872a, #1a3a4a, #0d5c8a); border-radius: 2px; z-index: 0; }
-  .timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 1; }
-  .timeline-item { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 0 4px; }
-  .timeline-dot { width: 16px; height: 16px; border-radius: 50%; background: #fff; border: 3px solid #c0872a; margin-bottom: 10px; flex-shrink: 0; }
-  .timeline-dot.key { background: #c0872a; width: 20px; height: 20px; border-color: #c0872a; box-shadow: 0 0 0 3px rgba(192,135,42,0.2); }
-  .timeline-dot.blue { background: #1a3a4a; border-color: #1a3a4a; box-shadow: 0 0 0 3px rgba(26,58,74,0.2); }
-  .timeline-year { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #c0872a; margin-bottom: 5px; }
-  .timeline-year.blue { color: #1a3a4a; }
-  .timeline-text { font-family: 'Inter', sans-serif; font-size: 11px; color: #666; text-align: center; line-height: 1.45; max-width: 82px; }
-  .bar-chart { display: flex; align-items: flex-end; gap: 10px; height: 180px; padding: 0 8px; margin-bottom: 10px; }
-  .bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
-  .bar-value { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #333; margin-bottom: 4px; }
-  .bar { width: 100%; border-radius: 5px 5px 0 0; }
-  .bar-label { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; margin-top: 8px; }
-  .chart-note { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; font-style: italic; }
-  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
-  .legacy-card.blue { border-left-color: #1a3a4a; }
-  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
-  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
-  .clients-trust { display: flex; flex-direction: column; gap: 10px; }
-  .client-row { display: flex; align-items: center; gap: 14px; }
-  .client-year { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #c0872a; width: 36px; flex-shrink: 0; text-align: right; }
-  .client-bar { flex: 1; background: #f7f5f0; border-radius: 8px; padding: 12px 16px; border-left: 3px solid #c0872a; }
-  .client-bar.blue { border-left-color: #1a3a4a; }
-  .client-name { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #0f1f2a; }
-  .client-desc { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; margin-left: 10px; }
-  .closing-card { background: linear-gradient(160deg, #0a1a24, #1a3a4a); color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px; }
-  .closing-card .label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #f0c040; margin-bottom: 16px; }
-  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
-  .disclaimer { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 40px; line-height: 1.6; padding: 18px; border-top: 1px solid #e4e0d8; }
-</style>
+<title>Nobody's heard of this Hyderabad company. But without them,  | Mtar Technologies Ltd</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafaf8;color:#1a1a1a;font-family:'Merriweather',Georgia,serif;font-size:18px;line-height:1.85}
+.hero{background:linear-gradient(160deg,#0a1a24 0%,#1a3a4a 50%,#0f2027 100%);color:#fff;padding:90px 40px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;left:-60px;right:-60px;bottom:-60px;background:radial-gradient(ellipse at 30% 50%,rgba(240,192,64,.06) 0%,transparent 60%),radial-gradient(ellipse at 70% 20%,rgba(42,96,128,.15) 0%,transparent 50%);pointer-events:none}
+.hero .tag{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f0c040;margin-bottom:22px;position:relative}
+.hero h1{font-family:'Merriweather',serif;font-size:3rem;font-weight:700;line-height:1.2;max-width:740px;margin:0 auto 24px;position:relative}
+.hero .subtitle{font-family:'Inter',sans-serif;font-size:1.05rem;color:#b0c4d8;max-width:600px;margin:0 auto;line-height:1.65;position:relative}
+.hero .meta{font-family:'Inter',sans-serif;font-size:12px;color:#5a7f98;margin-top:30px;letter-spacing:1.5px;text-transform:uppercase;position:relative}
+.content{max-width:720px;margin:0 auto;padding:64px 24px 80px}
+.section-label{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c0872a;margin-bottom:10px}
+h2{font-family:'Merriweather',serif;font-size:1.7rem;font-weight:700;margin-bottom:24px;color:#0f1f2a;line-height:1.3}
+p{margin-bottom:22px;color:#2c2c2c}
+strong{color:#0f1f2a;font-weight:700}
+.section-divider{border:none;border-top:1px solid #e4e0d8;margin:52px 0}
+.pull-quote{border-left:4px solid #f0c040;padding:20px 28px;margin:42px 0;background:#fffdf0;border-radius:0 10px 10px 0}
+.pull-quote p{font-size:1.15rem;font-style:italic;color:#333;margin:0;line-height:1.75}
+.pull-quote .attr{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#999;margin-top:12px;letter-spacing:1px;text-transform:uppercase;font-style:normal;display:block}
+.infographic{background:#fff;border:1px solid #e8e4dc;border-radius:14px;padding:34px 32px;margin:46px 0;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.infographic-title{font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#aaa;margin-bottom:30px;text-align:center}
+.founder-block{display:flex;gap:28px;align-items:flex-start;background:#fff;border:1px solid #e8e4dc;border-radius:14px;padding:30px;margin:40px 0;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.founder-photo{flex-shrink:0;width:120px;height:140px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#1a3a4a,#0f2027);border:3px solid #f0c040;display:flex;align-items:center;justify-content:center}
+.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.founder-photo .initials{font-family:'Inter',sans-serif;font-size:2rem;font-weight:800;color:#f0c040}
+.founder-info .founder-name{font-family:'Inter',sans-serif;font-size:1rem;font-weight:800;color:#0f1f2a;margin-bottom:4px}
+.founder-info .founder-title{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c0872a;margin-bottom:14px}
+.founder-info p{font-family:'Inter',sans-serif;font-size:.9rem;color:#555;line-height:1.65;margin:0}
+.trivia-badge{background:linear-gradient(135deg,#0f2027,#1a3a4a);color:#fff;border-radius:12px;padding:22px 28px;margin:40px 0;display:flex;gap:20px;align-items:flex-start}
+.trivia-badge .badge-icon{font-size:2rem;line-height:1;flex-shrink:0;margin-top:2px}
+.trivia-badge .badge-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#f0c040;margin-bottom:6px}
+.trivia-badge .badge-text{font-family:'Inter',sans-serif;font-size:.95rem;color:#c8d8e8;line-height:1.6;margin:0}
+.timeline-wrap{overflow-x:auto;padding-bottom:8px}
+.timeline{min-width:560px;position:relative;padding:12px 0 0}
+.timeline-line{position:absolute;top:22px;left:20px;right:20px;height:3px;background:linear-gradient(90deg,#c0872a,#1a3a4a,#0d5c8a);border-radius:2px;z-index:0}
+.timeline-items{display:flex;justify-content:space-between;position:relative;z-index:1}
+.timeline-item{display:flex;flex-direction:column;align-items:center;flex:1;padding:0 4px}
+.timeline-dot{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #c0872a;margin-bottom:10px;flex-shrink:0}
+.timeline-dot.key{background:#c0872a;width:20px;height:20px;border-color:#c0872a;box-shadow:0 0 0 3px rgba(192,135,42,.2)}
+.timeline-dot.blue{background:#1a3a4a;border-color:#1a3a4a;box-shadow:0 0 0 3px rgba(26,58,74,.2)}
+.timeline-year{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#c0872a;margin-bottom:5px}
+.timeline-year.blue{color:#1a3a4a}
+.timeline-text{font-family:'Inter',sans-serif;font-size:11px;color:#666;text-align:center;line-height:1.45;max-width:82px}
+.legacy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.legacy-card{background:#f7f5f0;border-radius:10px;padding:20px 18px;border-left:4px solid #c0872a}
+.legacy-card.blue{border-left-color:#1a3a4a}
+.legacy-number{font-family:'Inter',sans-serif;font-size:1.85rem;font-weight:800;color:#0f1f2a;line-height:1;margin-bottom:6px}
+.legacy-label{font-family:'Inter',sans-serif;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;line-height:1.4}
+.closing-card{background:linear-gradient(160deg,#0a1a24,#1a3a4a);color:#fff;border-radius:14px;padding:42px 40px;margin-top:52px}
+.closing-card .label{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#f0c040;margin-bottom:16px}
+.closing-card p{font-family:'Merriweather',serif;font-size:1.05rem;color:#c8d8e8;line-height:1.85;margin-bottom:0}
+.disclaimer{font-family:'Inter',sans-serif;font-size:11px;color:#bbb;text-align:center;margin-top:40px;line-height:1.6;padding:18px;border-top:1px solid #e4e0d8}</style>
 </head>
 <body>
 <div class="hero">
-  <div class="tag">Precision Engineering &nbsp;&middot;&nbsp; Space &amp; Defence &nbsp;&middot;&nbsp; Quiet Giant</div>
-  <h1>Nobody&#8217;s Heard of This Hyderabad Company. ISRO&#8217;s Rockets Might Not Fly Without It.</h1>
-  <div class="subtitle">Two public-sector engineers bet their careers on a private company making India&#8217;s most critical components. Fifty-five years later, that bet shaped the country&#8217;s space age.</div>
-  <div class="meta">MTAR Technologies Ltd &nbsp;&middot;&nbsp; May 2026</div>
+  <div class="tag">Quiet Giant &nbsp;&#183;&nbsp; Hyderabad &nbsp;&#183;&nbsp; MTARTECH</div>
+  <h1>Nobody's heard of this Hyderabad company. But without them, ISRO's rockets might not launch and India's nuclear plants might not run.</h1>
+  <div class="subtitle">In 1969, two public-sector engineers in Hyderabad made a quiet, audacious bet: that a private company could make the most precise, mission-critical parts in India — components for nuclear reactors and...</div>
+  <div class="meta">Mtar Technologies Ltd &nbsp;&#183;&nbsp; May 2025</div>
 </div>
 <div class="content">
   <div class="section-label">The Beginning</div>
-  <h2>A Quiet Bet in Hyderabad, 1970</h2>
-  <p>In 1969, two mechanical engineers &mdash; <strong>P. Ravindra Reddy</strong> and <strong>K. Satyanarayana Reddy</strong> &mdash; made a decision that their colleagues thought was foolish. They were comfortable, secure employees in India&#8217;s public sector. They had pensions, government backing, and the implicit guarantee of the state. They walked away from all of it.</p>
-  <p>Their idea was radical for its time: that a small private company in Hyderabad could manufacture precision components for nuclear reactors and space rockets &mdash; products that India&#8217;s government had always assumed only state-owned entities could make. Not because private companies lacked the talent. Because nobody had ever tried.</p>
-  <p>They started MTAR in 1970 with a seed capital of roughly &#8377;3 lakh and set up a small machine shop in Balanagar, an industrial cluster on the outskirts of Hyderabad. Their first customer was not a commercial business. It was NPCIL &mdash; the Nuclear Power Corporation of India &mdash; and the contract was for coolant channel assemblies: the precision tubes that carry coolant through the core of a nuclear reactor. Get it wrong, and it is a catastrophe. There was no margin for error, and no playbook to follow.</p>
+  <h2>Where It All Started</h2>
+  <p>In 1969, two public-sector engineers in Hyderabad made a quiet, audacious bet: that a private company could make the most precise, mission-critical parts in India — components for nuclear reactors and space rockets. P. Ravindra Reddy and K. Satyanarayana Reddy started MTAR in 1970 with zero precedent. Their first contract: coolant channel assemblies for nuclear reactor cores. ISRO and NPCIL became clients. Over 30 years later, MTAR parts have flown on GSLV and PSLV rockets. Nobody's heard of them. The rockets couldn't launch without them.</p>
+  <p>P. Ravindra Reddy was a public sector engineer born in Alluru village, Nellore district, Andhra Pradesh; graduated in mechanical engineering in 1958; left the public sector to start a precision manufacturing firm with his friend K. Satyanarayana Reddy in 1969 Hyderabad</p>
   <div class="founder-block">
-    <div class="founder-photo"><img src="https://mtartech.com/wp-content/uploads/leadership-photo.jpg" alt="P. Ravindra Reddy" onerror="this.style.display='none'; this.parentElement.innerHTML='PR';" /></div>
+    <div class="founder-photo">
+      <img src="https://www.mtartechnologiesltd.com/about/founder.jpg" alt="P. Ravindra Reddy and K. Satyanarayana Reddy"
+           onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'initials\'>PR</div>';" />
+    </div>
     <div class="founder-info">
-      <div class="founder-name">P. Ravindra Reddy</div>
-      <div class="founder-title">Founder &amp; Chairman, MTAR Technologies (1938&#8211;2016)</div>
-      <p>Born in Alluru village, Nellore district, Andhra Pradesh, Ravindra Reddy graduated in mechanical engineering and spent years in the public sector before making the leap into private precision manufacturing in 1969. He believed India&#8217;s most demanding manufacturing contracts did not have to be government monopolies. He spent the next four decades proving it &mdash; building MTAR into the most trusted private precision engineering company in India before passing away in January 2016.</p>
+      <div class="founder-name">P. Ravindra Reddy and K. Satyanarayana Reddy</div>
+      <div class="founder-title">Founder, Mtar Technologies Ltd</div>
+      <p>P. Ravindra Reddy was a public sector engineer born in Alluru village, Nellore district, Andhra Pradesh; graduated in mechanical engineering in 1958; left the public sector to start a precision manufacturing firm with his friend K. Satyanarayana Reddy in 1969 Hyderabad</p>
     </div>
   </div>
-  <hr class="section-divider">
-  <div class="section-label">The Moat Nobody Talks About</div>
-  <h2>Trust Built Over Decades Cannot Be Replicated in Quarters</h2>
-  <p>What MTAR built over fifty-five years is not just a factory. It is a trust relationship with India&#8217;s most demanding institutions &mdash; ISRO, NPCIL, and DRDO &mdash; each of which requires not just precise engineering but an entire quality culture: documented processes, zero-defect manufacturing, and the willingness to be audited at any time.</p>
-  <p>MTAR&#8217;s parts have flown on every GSLV and PSLV rocket that ISRO has launched. They manufacture the liquid propulsion systems at the heart of these rockets. A failure in these components is not a recall &mdash; it is a mission loss. This is not a relationship any institution gives to a new entrant. It took MTAR thirty years to earn it, and it cannot be reproduced in three.</p>
+  <hr class="section-divider" />
+  <div class="section-label">The Challenge</div>
+  <h2>What They Were Up Against</h2>
+  <p>Entering the most demanding precision engineering field in India with no private sector precedent; building quality systems rigorous enough to satisfy ISRO's and NPCIL's zero-tolerance requirements without the institutional backing that public sector companies enjoyed</p>
+  <p>The turning point came when First contract to manufacture coolant channel assemblies for nuclear reactors — establishing MTAR as a trusted private precision partner for India's most critical infrastructure, a trust that took decades to build and is now irreplaceable</p>
+  <div class="trivia-badge">
+    <div class="badge-icon">&#9733;</div>
+    <div>
+      <div class="badge-label">Did You Know</div>
+      <p class="badge-text">MTAR Technologies makes precision parts for both ISRO rockets and nuclear reactors — and 62% of their revenue now comes from supplying hot boxes to a US clean energy startup (Bloom Energy) that makes solid oxide fuel cells</p>
+    </div>
+  </div>
+  <div class="infographic">
+    <div class="infographic-title">The Mtar Journey</div>
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">1970</div><div class="timeline-text">Founded in Hyderabad</div></div>
+          <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">Early years</div><div class="timeline-text">Entering the most demanding precision engineering field in I...</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">Turning point</div><div class="timeline-text">First contract to manufacture coolant channel assemblies for...</div></div>
+          <div class="timeline-item"><div class="timeline-dot blue"></div><div class="timeline-year">2015+</div><div class="timeline-text">Scale &amp; recognition</div></div>
+          <div class="timeline-item"><div class="timeline-dot blue"></div><div class="timeline-year">Today</div><div class="timeline-text">India's leading private-sector precision engineering company...</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="section-divider" />
+  <div class="section-label">The Business</div>
+  <h2>What the Model Actually Is</h2>
+  <p>Precision engineering for critical national infrastructure — how 50 years of zero-defect manufacturing earns a private company the contracts that governments normally keep in-house, and how that trust becomes an unassailable economic moat</p>
+  <p>India's space economy is expanding rapidly post-ISRO's Chandrayaan and Gaganyaan missions; global clean energy transition accelerating; MTAR sits at the intersection of both megatrends</p>
   <div class="pull-quote">
-    <p>&#8220;The moment you are ISRO&#8217;s trusted supplier for precision propulsion components, you are not just a vendor. You become infrastructure &mdash; as indispensable as the launchpad itself.&#8221;</p>
-    <span class="attr">&#8212; Observed by analysts covering MTAR&#8217;s 2021 IPO</span>
-  </div>
-  <p>Then came an extraordinary twist. In the early 2010s, MTAR began supplying hot boxes &mdash; precision fuel cell components &mdash; to <strong>Bloom Energy</strong>, a Silicon Valley clean energy company making solid oxide fuel cells. By FY2025, Bloom Energy accounted for roughly <strong>62% of MTAR&#8217;s total revenue</strong>. A Hyderabad precision engineering company, built on ISRO contracts, had become a critical supplier to America&#8217;s clean energy transition.</p>
-  <div style="background:linear-gradient(160deg,#0a1a24,#1a3a4a); border-radius:14px; padding:32px; text-align:center; margin:40px 0;">
-    <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f0c040; margin-bottom:14px;">The Number That Surprises Everyone</div>
-    <div style="font-family:'Merriweather',serif; font-size:1.3rem; color:#fff; line-height:1.6; max-width:520px; margin:0 auto;">MTAR Technologies &mdash; an ISRO parts supplier from Hyderabad &mdash; now earns <strong style="color:#f0c040;">62% of its revenue from Bloom Energy</strong>, a US clean energy startup making fuel cells for commercial buildings.</div>
-  </div>
-  <hr class="section-divider">
-  <div class="section-label">The Journey</div>
-  <h2>Fifty-Five Years, One Commitment at a Time</h2>
-  <div class="infographic">
-    <div class="infographic-title">The MTAR Technologies Timeline</div>
-    <div class="timeline-wrap"><div class="timeline"><div class="timeline-line"></div><div class="timeline-items">
-      <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">1970</div><div class="timeline-text">Founded in Balanagar, Hyderabad with &#8377;3L capital</div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">1975</div><div class="timeline-text">First NPCIL contract &#8212; nuclear coolant channel assemblies</div></div>
-      <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">1985</div><div class="timeline-text">ISRO partnership begins &#8212; liquid propulsion parts for PSLV</div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2007</div><div class="timeline-text">DRDO defence programmes added to portfolio</div></div>
-      <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">2012</div><div class="timeline-text">Bloom Energy partnership begins &#8212; clean energy pivot</div></div>
-      <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">2021</div><div class="timeline-text">IPO on NSE &amp; BSE &#8212; &#8377;596 Cr raised</div></div>
-      <div class="timeline-item"><div class="timeline-dot blue"></div><div class="timeline-year blue">2025</div><div class="timeline-text">&#8377;681 Cr revenue, market cap ~&#8377;14,839 Cr</div></div>
-    </div></div></div>
-  </div>
-  <hr class="section-divider">
-  <div class="section-label">Who Trusts MTAR</div>
-  <h2>The Clients That Cannot Afford to Be Wrong</h2>
-  <div class="infographic">
-    <div class="infographic-title">MTAR&#8217;s Key Client Relationships</div>
-    <div class="clients-trust">
-      <div class="client-row"><div class="client-year">1985</div><div class="client-bar"><span class="client-name">ISRO</span><span class="client-desc">Indian Space Research Organisation &middot; Liquid propulsion for GSLV &amp; PSLV rockets</span></div></div>
-      <div class="client-row"><div class="client-year">1975</div><div class="client-bar"><span class="client-name">NPCIL</span><span class="client-desc">Nuclear Power Corporation of India &middot; Coolant channel assemblies for reactor cores</span></div></div>
-      <div class="client-row"><div class="client-year">2007</div><div class="client-bar"><span class="client-name">DRDO</span><span class="client-desc">Defence Research &amp; Development Organisation &middot; Strategic defence components</span></div></div>
-      <div class="client-row"><div class="client-year">2012</div><div class="client-bar blue"><span class="client-name">Bloom Energy</span><span class="client-desc">USA &middot; Solid oxide fuel cell hot boxes &middot; 62% of MTAR revenue (FY25)</span></div></div>
-    </div>
-  </div>
-  <hr class="section-divider">
-  <div class="section-label">The Numbers</div>
-  <h2>Revenue That Tells a Quiet Story of Scale</h2>
-  <div class="infographic">
-    <div class="infographic-title">Revenue Growth &mdash; &#8377; Crore (FY19&#8211;FY25)</div>
-    <div class="bar-chart">
-      <div class="bar-group"><div class="bar-value">&#8377;179</div><div class="bar" style="height:47px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY19</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;212</div><div class="bar" style="height:56px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY20</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;247</div><div class="bar" style="height:65px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY21</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;338</div><div class="bar" style="height:89px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY22</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;530</div><div class="bar" style="height:140px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY23</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;624</div><div class="bar" style="height:165px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div><div class="bar-label">FY24</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;681</div><div class="bar" style="height:180px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div><div class="bar-label">FY25</div></div>
-    </div>
-    <div class="chart-note">~25% CAGR FY19&#8211;FY25 &middot; Source: Company filings (approximate figures)</div>
+    <p>"MTAR Technologies makes precision parts for both ISRO rockets and nuclear reactors — and 62% of their revenue now comes from supplying hot boxes to a US clean energy startup (Bloom Energy) that makes solid oxide fuel cells"</p>
+    <span class="attr">&#8212; Mtar Technologies Ltd, Key Fact</span>
   </div>
   <div class="infographic">
-    <div class="infographic-title">What 55 Years of Zero-Defect Manufacturing Built</div>
+    <div class="infographic-title">Key Data Points</div>
     <div class="legacy-grid">
-      <div class="legacy-card"><div class="legacy-number">55 yrs</div><div class="legacy-label">Trusted ISRO &amp; NPCIL partner &#8212; India&#8217;s longest-standing private precision engineering relationship</div></div>
-      <div class="legacy-card"><div class="legacy-number">&#8377;14,839 Cr</div><div class="legacy-label">Market capitalisation &#8212; pricing in the irreplaceability of the ISRO moat</div></div>
-      <div class="legacy-card blue"><div class="legacy-number">62%</div><div class="legacy-label">Revenue share from Bloom Energy &#8212; an ISRO supplier at the heart of US clean energy</div></div>
-      <div class="legacy-card blue"><div class="legacy-number">3</div><div class="legacy-label">Megatrends served simultaneously &#8212; space, nuclear energy, clean energy transition</div></div>
+      <div class="legacy-card"><div class="legacy-number">Est. 1970</div><div class="legacy-label">Founded in Hyderabad</div></div>
+      <div class="legacy-card"><div class="legacy-number">MTARTECH</div><div class="legacy-label">Listed on NSE & BSE</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">~₹14,839 Cr</div><div class="legacy-label">Approx Market Cap</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">Top 3</div><div class="legacy-label">Competitors: Paras Defence & Space Technologies, Astr...</div></div>
     </div>
   </div>
+  <hr class="section-divider" />
+  <div class="section-label">Why It Matters Now</div>
+  <h2>The Bigger Picture</h2>
+  <p>India's leading private-sector precision engineering company for nuclear and space; key private partner for ISRO, DRDO, NPCIL; India's only listed company with this combination of clients</p>
+  <p>India's space economy is expanding rapidly post-ISRO's Chandrayaan and Gaganyaan missions; global clean energy transition accelerating; MTAR sits at the intersection of both megatrends</p>
+  <p>1) The Bloom Energy partnership — how an ISRO supplier became a critical clean energy manufacturer; 2) How MTAR earns and maintains ISRO's trust over 30+ years; 3) India's private defence and space manufacturing story — the new wave of companies entering where only HAL and DRDO played before</p>
   <div class="closing-card">
     <div class="label">The Lesson</div>
-    <p>There is a category of business that never gets written about in business magazines &#8212; not because it has failed, but because it has succeeded so completely at staying invisible. MTAR Technologies is that business. Two engineers left the comfort of government employment, chose the hardest possible customers, and spent fifty years earning trust that cannot be bought, marketed, or replicated. The rockets fly. The reactors run. Nobody mentions MTAR. That is, precisely, the point &#8212; and it is also the most durable competitive advantage a company can build.</p>
+    <p>Supplies precision parts to ISRO (GSLV, PSLV), DRDO, NPCIL; 62% of revenue from Bloom Energy (US clean energy fuel cells); market cap ~₹14,839 Cr; revenue ₹681 Cr FY2025; over 30 years as ISRO's precision engineering partner</p>
   </div>
   <div class="disclaimer">This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.</div>
 </div>

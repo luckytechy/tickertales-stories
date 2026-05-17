@@ -2,152 +2,136 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Bank That Said Yes | Repco Home Finance Limited</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #fafaf8; color: #1a1a1a; font-family: 'Merriweather', Georgia, serif; font-size: 18px; line-height: 1.85; }
-  .hero { background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%); color: #fff; padding: 90px 40px 80px; text-align: center; position: relative; overflow: hidden; }
-  .hero::before { content: ''; position: absolute; top: -60px; left: -60px; right: -60px; bottom: -60px; background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%); pointer-events: none; }
-  .hero .tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #f0c040; margin-bottom: 22px; position: relative; }
-  .hero h1 { font-family: 'Merriweather', serif; font-size: 3rem; font-weight: 700; line-height: 1.2; max-width: 740px; margin: 0 auto 24px; position: relative; }
-  .hero .subtitle { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #b0c4d8; max-width: 600px; margin: 0 auto; line-height: 1.65; position: relative; }
-  .hero .meta { font-family: 'Inter', sans-serif; font-size: 12px; color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px; text-transform: uppercase; position: relative; }
-  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
-  .section-label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #c0872a; margin-bottom: 10px; }
-  h2 { font-family: 'Merriweather', serif; font-size: 1.7rem; font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3; }
-  p { margin-bottom: 22px; color: #2c2c2c; }
-  strong { color: #0f1f2a; font-weight: 700; }
-  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
-  .pull-quote { border-left: 4px solid #f0c040; padding: 20px 28px; margin: 42px 0; background: #fffdf0; border-radius: 0 10px 10px 0; }
-  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
-  .pull-quote .attr { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; color: #999; margin-top: 12px; letter-spacing: 1px; text-transform: uppercase; font-style: normal; display: block; }
-  .infographic { background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 34px 32px; margin: 46px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
-  .infographic-title { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #aaa; margin-bottom: 30px; text-align: center; }
-  .founder-block { display: flex; gap: 28px; align-items: flex-start; background: #fff; border: 1px solid #e8e4dc; border-radius: 14px; padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05); }
-  .founder-photo { flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px; overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040; display: flex; align-items: center; justify-content: center; font-family: 'Inter', sans-serif; font-size: 2.5rem; font-weight: 800; color: #f0c040; }
-  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-  .founder-info .founder-name { font-family: 'Inter', sans-serif; font-size: 1rem; font-weight: 800; color: #0f1f2a; margin-bottom: 4px; }
-  .founder-info .founder-title { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: #c0872a; margin-bottom: 14px; }
-  .founder-info p { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #555; line-height: 1.65; margin: 0; }
-  .vertical-timeline { position: relative; padding-left: 32px; }
-  .vt-line { position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, #c0872a, #1a3a4a); }
-  .vt-item { position: relative; margin-bottom: 28px; }
-  .vt-dot { position: absolute; left: -23px; top: 4px; width: 16px; height: 16px; border-radius: 50%; background: #c0872a; border: 3px solid #fff; box-shadow: 0 0 0 2px #c0872a; }
-  .vt-dot.blue { background: #1a3a4a; box-shadow: 0 0 0 2px #1a3a4a; }
-  .vt-year { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; color: #c0872a; margin-bottom: 4px; }
-  .vt-year.blue { color: #1a3a4a; }
-  .vt-text { font-family: 'Inter', sans-serif; font-size: 13px; color: #333; line-height: 1.5; }
-  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
-  .legacy-card.blue { border-left-color: #1a3a4a; }
-  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
-  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
-  .borrower-types { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-  .borrower-card { background: #f7f5f0; border-radius: 10px; padding: 16px; text-align: center; border: 1px solid #ece8e0; }
-  .borrower-icon { font-size: 1.8rem; margin-bottom: 8px; }
-  .borrower-name { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; color: #0f1f2a; margin-bottom: 4px; }
-  .borrower-note { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; line-height: 1.4; }
-  .bar-chart { display: flex; align-items: flex-end; gap: 10px; height: 180px; padding: 0 8px; margin-bottom: 10px; }
-  .bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end; }
-  .bar-value { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; color: #333; margin-bottom: 4px; }
-  .bar { width: 100%; border-radius: 5px 5px 0 0; }
-  .bar-label { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; margin-top: 8px; }
-  .chart-note { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 10px; font-style: italic; }
-  .closing-card { background: linear-gradient(160deg, #0a1a24, #1a3a4a); color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px; }
-  .closing-card .label { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: #f0c040; margin-bottom: 16px; }
-  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
-  .disclaimer { font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb; text-align: center; margin-top: 40px; line-height: 1.6; padding: 18px; border-top: 1px solid #e4e0d8; }
-</style>
+<title>The bank said no. The NBFC said no. Repco said yes. Here's h | Repco Home Finance Ltd</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#fafaf8;color:#1a1a1a;font-family:'Merriweather',Georgia,serif;font-size:18px;line-height:1.85}
+.hero{background:linear-gradient(160deg,#0a1a24 0%,#1a3a4a 50%,#0f2027 100%);color:#fff;padding:90px 40px 80px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-60px;left:-60px;right:-60px;bottom:-60px;background:radial-gradient(ellipse at 30% 50%,rgba(240,192,64,.06) 0%,transparent 60%),radial-gradient(ellipse at 70% 20%,rgba(42,96,128,.15) 0%,transparent 50%);pointer-events:none}
+.hero .tag{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#f0c040;margin-bottom:22px;position:relative}
+.hero h1{font-family:'Merriweather',serif;font-size:3rem;font-weight:700;line-height:1.2;max-width:740px;margin:0 auto 24px;position:relative}
+.hero .subtitle{font-family:'Inter',sans-serif;font-size:1.05rem;color:#b0c4d8;max-width:600px;margin:0 auto;line-height:1.65;position:relative}
+.hero .meta{font-family:'Inter',sans-serif;font-size:12px;color:#5a7f98;margin-top:30px;letter-spacing:1.5px;text-transform:uppercase;position:relative}
+.content{max-width:720px;margin:0 auto;padding:64px 24px 80px}
+.section-label{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c0872a;margin-bottom:10px}
+h2{font-family:'Merriweather',serif;font-size:1.7rem;font-weight:700;margin-bottom:24px;color:#0f1f2a;line-height:1.3}
+p{margin-bottom:22px;color:#2c2c2c}
+strong{color:#0f1f2a;font-weight:700}
+.section-divider{border:none;border-top:1px solid #e4e0d8;margin:52px 0}
+.pull-quote{border-left:4px solid #f0c040;padding:20px 28px;margin:42px 0;background:#fffdf0;border-radius:0 10px 10px 0}
+.pull-quote p{font-size:1.15rem;font-style:italic;color:#333;margin:0;line-height:1.75}
+.pull-quote .attr{font-family:'Inter',sans-serif;font-size:12px;font-weight:600;color:#999;margin-top:12px;letter-spacing:1px;text-transform:uppercase;font-style:normal;display:block}
+.infographic{background:#fff;border:1px solid #e8e4dc;border-radius:14px;padding:34px 32px;margin:46px 0;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.infographic-title{font-family:'Inter',sans-serif;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#aaa;margin-bottom:30px;text-align:center}
+.founder-block{display:flex;gap:28px;align-items:flex-start;background:#fff;border:1px solid #e8e4dc;border-radius:14px;padding:30px;margin:40px 0;box-shadow:0 2px 16px rgba(0,0,0,.05)}
+.founder-photo{flex-shrink:0;width:120px;height:140px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#1a3a4a,#0f2027);border:3px solid #f0c040;display:flex;align-items:center;justify-content:center}
+.founder-photo img{width:100%;height:100%;object-fit:cover;object-position:top}
+.founder-photo .initials{font-family:'Inter',sans-serif;font-size:2rem;font-weight:800;color:#f0c040}
+.founder-info .founder-name{font-family:'Inter',sans-serif;font-size:1rem;font-weight:800;color:#0f1f2a;margin-bottom:4px}
+.founder-info .founder-title{font-family:'Inter',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#c0872a;margin-bottom:14px}
+.founder-info p{font-family:'Inter',sans-serif;font-size:.9rem;color:#555;line-height:1.65;margin:0}
+.trivia-badge{background:linear-gradient(135deg,#0f2027,#1a3a4a);color:#fff;border-radius:12px;padding:22px 28px;margin:40px 0;display:flex;gap:20px;align-items:flex-start}
+.trivia-badge .badge-icon{font-size:2rem;line-height:1;flex-shrink:0;margin-top:2px}
+.trivia-badge .badge-label{font-family:'Inter',sans-serif;font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#f0c040;margin-bottom:6px}
+.trivia-badge .badge-text{font-family:'Inter',sans-serif;font-size:.95rem;color:#c8d8e8;line-height:1.6;margin:0}
+.timeline-wrap{overflow-x:auto;padding-bottom:8px}
+.timeline{min-width:560px;position:relative;padding:12px 0 0}
+.timeline-line{position:absolute;top:22px;left:20px;right:20px;height:3px;background:linear-gradient(90deg,#c0872a,#1a3a4a,#0d5c8a);border-radius:2px;z-index:0}
+.timeline-items{display:flex;justify-content:space-between;position:relative;z-index:1}
+.timeline-item{display:flex;flex-direction:column;align-items:center;flex:1;padding:0 4px}
+.timeline-dot{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid #c0872a;margin-bottom:10px;flex-shrink:0}
+.timeline-dot.key{background:#c0872a;width:20px;height:20px;border-color:#c0872a;box-shadow:0 0 0 3px rgba(192,135,42,.2)}
+.timeline-dot.blue{background:#1a3a4a;border-color:#1a3a4a;box-shadow:0 0 0 3px rgba(26,58,74,.2)}
+.timeline-year{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;color:#c0872a;margin-bottom:5px}
+.timeline-year.blue{color:#1a3a4a}
+.timeline-text{font-family:'Inter',sans-serif;font-size:11px;color:#666;text-align:center;line-height:1.45;max-width:82px}
+.legacy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.legacy-card{background:#f7f5f0;border-radius:10px;padding:20px 18px;border-left:4px solid #c0872a}
+.legacy-card.blue{border-left-color:#1a3a4a}
+.legacy-number{font-family:'Inter',sans-serif;font-size:1.85rem;font-weight:800;color:#0f1f2a;line-height:1;margin-bottom:6px}
+.legacy-label{font-family:'Inter',sans-serif;font-size:12px;color:#999;text-transform:uppercase;letter-spacing:1px;line-height:1.4}
+.closing-card{background:linear-gradient(160deg,#0a1a24,#1a3a4a);color:#fff;border-radius:14px;padding:42px 40px;margin-top:52px}
+.closing-card .label{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#f0c040;margin-bottom:16px}
+.closing-card p{font-family:'Merriweather',serif;font-size:1.05rem;color:#c8d8e8;line-height:1.85;margin-bottom:0}
+.disclaimer{font-family:'Inter',sans-serif;font-size:11px;color:#bbb;text-align:center;margin-top:40px;line-height:1.6;padding:18px;border-top:1px solid #e4e0d8}</style>
 </head>
 <body>
 <div class="hero">
-  <div class="tag">Housing Finance &nbsp;&middot;&nbsp; Financial Inclusion &nbsp;&middot;&nbsp; Underdog Origin</div>
-  <h1>The Bank Said No. The NBFC Said No. Repco Said Yes.</h1>
-  <div class="subtitle">A Chennai housing finance company built a profitable &#8377;16,000 crore loan book by lending to people the entire Indian banking system had turned away &#8212; and invented a new way to assess them.</div>
-  <div class="meta">Repco Home Finance Limited &nbsp;&middot;&nbsp; May 2026</div>
+  <div class="tag">Underdog Origin / Financial Inclusion &nbsp;&#183;&nbsp; Chennai, Tamil Nadu &nbsp;&#183;&nbsp; REPCOHOME</div>
+  <h1>The bank said no. The NBFC said no. Repco said yes. Here's how a Chennai housing finance company built a profitable business lending to people the entire banking system had turned away.</h1>
+  <div class="subtitle">Repco Home Finance was set up in 2000 as a subsidiary of Repco Bank — a bank founded to serve Indian repatriates from Sri Lanka and Myanmar displaced during ethnic tensions who had come back to India ...</div>
+  <div class="meta">Repco Home Finance Ltd &nbsp;&#183;&nbsp; May 2025</div>
 </div>
 <div class="content">
-  <div class="section-label">An Unusual Origin</div>
-  <h2>Born from Displacement, Built for the Excluded</h2>
-  <p>Repco Home Finance&#8217;s story begins not in a boardroom but in the aftermath of ethnic violence. <strong>Repco Bank</strong> &#8212; the parent company &#8212; was founded as the Repatriates Co-operative Bank, specifically to serve Indian repatriates expelled from Sri Lanka and Myanmar during the ethnic tensions of the 1970s and 1980s. These were Indian-origin people who had lived abroad for generations and were forced to return to India with almost nothing. No assets. No documentation. No credit history. No mainstream bank would touch them.</p>
-  <p>Repco Bank was created to serve exactly those people &#8212; the ones the system had excluded. That founding philosophy &#8212; that creditworthiness is not always captured by documents &#8212; ran deep in the institution&#8217;s culture. When Repco Home Finance was spun off in 2000, it inherited that same DNA. And it found an even larger version of the same excluded population waiting for it.</p>
+  <div class="section-label">The Beginning</div>
+  <h2>Where It All Started</h2>
+  <p>Repco Home Finance was set up in 2000 as a subsidiary of Repco Bank — a bank founded to serve Indian repatriates from Sri Lanka and Myanmar displaced during ethnic tensions who had come back to India with no assets and no documentation. From this unusual origin, Repco discovered a massive gap: self-employed Indians — carpenters, vegetable vendors, small shop owners, auto drivers — who earned decent money but could not prove it on paper. Every bank and NBFC had turned them away. Repco learned to lend to them anyway, using field officers who assessed income from business footfall and local reputation rather than salary slips. Today 80%+ of Repco's loan book is borrowers that every PSU bank would reject.</p>
+  <p>Repco Bank was founded to serve Indian repatriates from Sri Lanka and Myanmar who returned to India with nothing and could not access mainstream banking; from this unusual origin, Repco Home Finance was created in 2000 and discovered a massive underserved market in self-employed informal income borrowers</p>
   <div class="founder-block">
-    <div class="founder-photo">RH</div>
+    <div class="founder-photo">
+      <img src="https://www.repcohomefinanceltd.com/about/founder.jpg" alt="Established as subsidiary of Repco Bank (Repatriates Co-operative Bank)"
+           onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'initials\'>EA</div>';" />
+    </div>
     <div class="founder-info">
-      <div class="founder-name">Repco Home Finance Limited</div>
-      <div class="founder-title">Established 2000 &nbsp;&middot;&nbsp; Subsidiary of Repco Bank</div>
-      <p>Repco Home Finance was carved out of Repco Bank &#8212; itself founded to serve Indian repatriates from Sri Lanka and Myanmar who returned to India with no assets and no documentation after ethnic violence in the 1970s and 1980s. The company&#8217;s entire founding logic was financial inclusion &#8212; learning to assess creditworthiness for people the mainstream system had rejected. Current MD &amp; CEO T. Karunakaran brings over 33 years of housing finance experience to scaling this model.</p>
+      <div class="founder-name">Established as subsidiary of Repco Bank (Repatriates Co-operative Bank)</div>
+      <div class="founder-title">Founder, Repco Home Finance Ltd</div>
+      <p>Repco Bank was founded to serve Indian repatriates from Sri Lanka and Myanmar who returned to India with nothing and could not access mainstream banking; from this unusual origin, Repco Home Finance was created in 2000 and discovered a massive underserved market in self-employed informal income borr</p>
     </div>
   </div>
-  <hr class="section-divider">
-  <div class="section-label">The Insight</div>
-  <h2>80% of India Earns Without a Salary Slip &#8212; and Every Bank Turns Them Away</h2>
-  <p>When Repco Home Finance launched in 2000, the home loan market in India was built for one type of borrower: the salaried employee. Form 16, salary slips, bank statements &#8212; the entire underwriting process assumed you worked for an employer who deducted TDS and deposited your salary into an account. If you were a carpenter, a vegetable vendor, a small shop owner, an auto driver, a kirana operator &#8212; you earned well, possibly more than a mid-level salaried employee. But you earned in cash. Every bank, every NBFC, every housing finance company sent you away.</p>
-  <p>Repco built its business around <strong>those borrowers</strong>. Not as charity &#8212; as deliberate strategy. The founders understood that if you could accurately assess the income of a self-employed borrower using field-based observation rather than paper documentation, you had access to an enormous, underserved market with very little competition.</p>
-  <div style="background:linear-gradient(160deg,#0a1a24,#1a3a4a); border-radius:14px; padding:32px; text-align:center; margin:40px 0;">
-    <div style="font-family:'Inter',sans-serif; font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:#f0c040; margin-bottom:14px;">Who Repco Lends To</div>
-    <div style="font-family:'Merriweather',serif; font-size:1.3rem; color:#fff; line-height:1.6; max-width:520px; margin:0 auto;">Over <strong style="color:#f0c040;">80% of Repco&#8217;s loan book</strong> is self-employed borrowers with no formal income documentation &#8212; the exact customers every PSU bank and most NBFCs automatically reject.</div>
+  <hr class="section-divider" />
+  <div class="section-label">The Challenge</div>
+  <h2>What They Were Up Against</h2>
+  <p>Building loan underwriting for borrowers with no salary slips, no formal income proof, and no credit history — the entire Indian banking system was designed for salaried employees; Repco had to invent its own credit assessment methodology from scratch</p>
+  <p>The turning point came when Developing the field assessment model — branch managers doing physical visits to the borrower's business, estimating cash flows from inventory and footfall, and building a credit profile from real-world observation rather than paper documents; this became Repco's core underwriting IP</p>
+  <div class="trivia-badge">
+    <div class="badge-icon">&#9733;</div>
+    <div>
+      <div class="badge-label">Did You Know</div>
+      <p class="badge-text">Repco Bank — Repco Home Finance's parent — was founded specifically to serve Indian repatriates from Sri Lanka and Myanmar displaced during ethnic tensions in the 1970s and 1980s; the bank's entire identity was built around serving people mainstream India had excluded</p>
+    </div>
   </div>
   <div class="infographic">
-    <div class="infographic-title">Who Repco Serves &#8212; Borrower Profiles</div>
-    <div class="borrower-types">
-      <div class="borrower-card"><div class="borrower-icon">&#128296;</div><div class="borrower-name">Carpenters &amp; Craftsmen</div><div class="borrower-note">High daily earnings, zero paper trail, multiple income sources</div></div>
-      <div class="borrower-card"><div class="borrower-icon">&#127978;</div><div class="borrower-name">Small Shop Owners</div><div class="borrower-note">Kirana, textile, hardware &#8212; steady cash flows, informal books</div></div>
-      <div class="borrower-card"><div class="borrower-icon">&#128661;</div><div class="borrower-name">Auto Drivers</div><div class="borrower-note">Predictable daily income from known routes and regular customers</div></div>
-      <div class="borrower-card"><div class="borrower-icon">&#127807;</div><div class="borrower-name">Vegetable Vendors</div><div class="borrower-note">Market traders with consistent footfall and local relationships</div></div>
-      <div class="borrower-card"><div class="borrower-icon">&#127959;</div><div class="borrower-name">Construction Workers</div><div class="borrower-note">Skilled trades &#8212; masons, electricians, plumbers &#8212; high cash incomes</div></div>
-      <div class="borrower-card"><div class="borrower-icon">&#129523;</div><div class="borrower-name">Tailors &amp; Artisans</div><div class="borrower-note">Cottage industry workers with steady but undocumented income</div></div>
+    <div class="infographic-title">The Repco Journey</div>
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">2000</div><div class="timeline-text">Founded in Chennai, Tamil Nadu</div></div>
+          <div class="timeline-item"><div class="timeline-dot key"></div><div class="timeline-year">Early years</div><div class="timeline-text">Building loan underwriting for borrowers with no salary slip...</div></div>
+          <div class="timeline-item"><div class="timeline-dot"></div><div class="timeline-year">Turning point</div><div class="timeline-text">Developing the field assessment model — branch managers doin...</div></div>
+          <div class="timeline-item"><div class="timeline-dot blue"></div><div class="timeline-year">2015+</div><div class="timeline-text">Scale &amp; recognition</div></div>
+          <div class="timeline-item"><div class="timeline-dot blue"></div><div class="timeline-year">Today</div><div class="timeline-text">Leading housing finance company focused on self-employed bor...</div></div>
+        </div>
+      </div>
     </div>
   </div>
-  <hr class="section-divider">
-  <div class="section-label">The Method</div>
-  <h2>When You Cannot Read the Documents, Read the Business</h2>
-  <p>Repco&#8217;s credit assessment model is built on what the company calls field underwriting &#8212; a process that sounds simple but requires significant institutional knowledge to execute consistently. Instead of asking for salary slips, Repco&#8217;s field officers visit the borrower&#8217;s place of business. They look at inventory levels, assess customer footfall, speak to neighbouring shopkeepers, and observe the physical evidence of business activity. They build an income estimate from observation, not from paper.</p>
+  <hr class="section-divider" />
+  <div class="section-label">The Business</div>
+  <h2>What the Model Actually Is</h2>
+  <p>Informal sector credit underwriting — how lenders can assess creditworthiness without salary slips or bank statements; why relationship-based field assessment creates durable borrower loyalty and historically lower NPAs than paper-first or digital-first models in this segment</p>
+  <p>India's housing shortage deepest in the self-employed segment; PMAY housing scheme extending eligibility; RBI watching informal sector NBFCs closely</p>
   <div class="pull-quote">
-    <p>&#8220;The borrower with a salary slip is easy to underwrite. The carpenter who earns &#8377;50,000 a month in cash is not &#8212; but refusing to lend to him is not prudence. It is ignorance dressed up as caution.&#8221;</p>
-    <span class="attr">&#8212; Observed in Repco Home Finance investor communications</span>
-  </div>
-  <hr class="section-divider">
-  <div class="section-label">The Journey</div>
-  <h2>Twenty-Five Years of Lending Where Others Wouldn&#8217;t</h2>
-  <div class="infographic">
-    <div class="infographic-title">Repco Home Finance &#8212; Key Milestones</div>
-    <div class="vertical-timeline">
-      <div class="vt-line"></div>
-      <div class="vt-item"><div class="vt-dot"></div><div class="vt-year">1969</div><div class="vt-text">Repco Bank founded &#8212; India&#8217;s first co-operative bank for repatriates from Sri Lanka and Myanmar</div></div>
-      <div class="vt-item"><div class="vt-dot key"></div><div class="vt-year">2000</div><div class="vt-text">Repco Home Finance established &#8212; focused on self-employed, informal income borrowers in South India</div></div>
-      <div class="vt-item"><div class="vt-dot"></div><div class="vt-year">2004</div><div class="vt-text">NHB recognition and first external funding &#8212; validates the model</div></div>
-      <div class="vt-item"><div class="vt-dot key"></div><div class="vt-year">2013</div><div class="vt-text">IPO on NSE &amp; BSE &#8212; raises capital to scale branch network across South India</div></div>
-      <div class="vt-item"><div class="vt-dot"></div><div class="vt-year">2018</div><div class="vt-text">Loan book crosses &#8377;10,000 Cr &#8212; decade of compound growth in an underserved niche</div></div>
-      <div class="vt-item"><div class="vt-dot blue"></div><div class="vt-year blue">2025</div><div class="vt-text">&#8377;16,000+ Cr loan book, ~&#8377;2,800 Cr market cap; 80%+ self-employed borrower portfolio</div></div>
-    </div>
+    <p>"Repco Bank — Repco Home Finance's parent — was founded specifically to serve Indian repatriates from Sri Lanka and Myanmar displaced during ethnic tensions in the 1970s and 1980s; the bank's entire identity was built around serving people mainstream India had excluded"</p>
+    <span class="attr">&#8212; Repco Home Finance Ltd, Key Fact</span>
   </div>
   <div class="infographic">
-    <div class="infographic-title">Loan Book Growth &#8212; &#8377; Crore (FY19&#8211;FY25, Approximate)</div>
-    <div class="bar-chart">
-      <div class="bar-group"><div class="bar-value">&#8377;9,800</div><div class="bar" style="height:110px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY19</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;10,500</div><div class="bar" style="height:117px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY20</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;11,200</div><div class="bar" style="height:126px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY21</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;12,100</div><div class="bar" style="height:136px; background:linear-gradient(180deg,#c0872a,#e8a830);"></div><div class="bar-label">FY22</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;13,500</div><div class="bar" style="height:152px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div><div class="bar-label">FY23</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;14,900</div><div class="bar" style="height:168px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div><div class="bar-label">FY24</div></div>
-      <div class="bar-group"><div class="bar-value">&#8377;16,000+</div><div class="bar" style="height:180px; background:linear-gradient(180deg,#0d2535,#1a3a4a);"></div><div class="bar-label">FY25</div></div>
-    </div>
-    <div class="chart-note">Approximate AUM figures &middot; Source: Company filings and investor presentations</div>
-  </div>
-  <div class="infographic">
-    <div class="infographic-title">What 25 Years of Inclusive Lending Built</div>
+    <div class="infographic-title">Key Data Points</div>
     <div class="legacy-grid">
-      <div class="legacy-card"><div class="legacy-number">&#8377;16,000+ Cr</div><div class="legacy-label">Loan book &#8212; built entirely on borrowers mainstream banks refused</div></div>
-      <div class="legacy-card"><div class="legacy-number">80%+</div><div class="legacy-label">Self-employed borrower share &#8212; the highest of any listed housing finance company</div></div>
-      <div class="legacy-card blue"><div class="legacy-number">25 yrs</div><div class="legacy-label">Track record in informal income lending &#8212; a capability that cannot be replicated quickly</div></div>
-      <div class="legacy-card blue"><div class="legacy-number">South India</div><div class="legacy-label">Dominant geography &#8212; deepest branch network in Tamil Nadu, AP, Karnataka &amp; Telangana</div></div>
+      <div class="legacy-card"><div class="legacy-number">Est. 2000</div><div class="legacy-label">Founded in Chennai, Tamil Nadu</div></div>
+      <div class="legacy-card"><div class="legacy-number">REPCOHOME</div><div class="legacy-label">Listed on NSE and BSE</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">~Rs 2,800 Cr</div><div class="legacy-label">Approx Market Cap</div></div>
+      <div class="legacy-card blue"><div class="legacy-number">Top 3</div><div class="legacy-label">Competitors: Aavas Financiers, Home First Finance Co....</div></div>
     </div>
   </div>
+  <hr class="section-divider" />
+  <div class="section-label">Why It Matters Now</div>
+  <h2>The Bigger Picture</h2>
+  <p>Leading housing finance company focused on self-employed borrowers in South India; 80%+ of loan book is non-salaried borrowers</p>
+  <p>India's housing shortage deepest in the self-employed segment; PMAY housing scheme extending eligibility; RBI watching informal sector NBFCs closely</p>
+  <p>How informal sector credit underwriting works on the ground; NPA management in informal sector lending post-COVID; comparison with Aavas Financiers and Home First Finance; why digital-first lenders struggle in this exact segment</p>
   <div class="closing-card">
     <div class="label">The Lesson</div>
-    <p>Every mainstream institution saw a risk when a carpenter without a salary slip asked for a home loan. Repco saw a market. The difference was not recklessness &#8212; it was method. By developing field-based credit assessment rooted in real observation of real businesses, Repco built an underwriting capability that no paper-first lender could match. The origin of this capability traces back to a cooperative bank founded for displaced repatriates &#8212; people the system had failed first. Sometimes, the businesses that learn to serve the excluded become the ones who cannot be replaced.</p>
+    <p>80%+ of loan book is self-employed borrowers with no formal income documentation (verify); Rs 16,000+ Cr loan book; entire business traces its roots to Indian repatriates from Sri Lanka who mainstream India had excluded</p>
   </div>
   <div class="disclaimer">This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.</div>
 </div>
