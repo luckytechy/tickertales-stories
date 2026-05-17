@@ -1,0 +1,474 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Chemical Inside Every Indian Tyre | NOCIL Ltd</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fafaf8;
+    color: #1a1a1a;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%);
+    color: #fff;
+    padding: 90px 40px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px; right: -60px; bottom: -60px;
+    background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero .tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 22px; position: relative;
+  }
+  .hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem; font-weight: 700; line-height: 1.2;
+    max-width: 740px; margin: 0 auto 24px; position: relative;
+  }
+  .hero .subtitle {
+    font-family: 'Inter', sans-serif; font-size: 1.05rem;
+    color: #b0c4d8; max-width: 600px; margin: 0 auto;
+    line-height: 1.65; position: relative;
+  }
+  .hero .meta {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px;
+    text-transform: uppercase; position: relative;
+  }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+  .section-label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Merriweather', serif; font-size: 1.7rem;
+    font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3;
+  }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+
+  .pull-quote {
+    border-left: 4px solid #f0c040;
+    padding: 20px 28px; margin: 42px 0;
+    background: #fffdf0; border-radius: 0 10px 10px 0;
+  }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+    color: #999; margin-top: 12px; letter-spacing: 1px;
+    text-transform: uppercase; font-style: normal; display: block;
+  }
+
+  .infographic {
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 34px 32px; margin: 46px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .infographic-title {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #aaa; margin-bottom: 30px; text-align: center;
+  }
+
+  .founder-block {
+    display: flex; gap: 28px; align-items: flex-start;
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .founder-photo {
+    flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px;
+    overflow: hidden; background: #1a3a4a; border: 3px solid #f0c040;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-initials {
+    font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800;
+    color: #f0c040; letter-spacing: 2px;
+  }
+  .founder-info .founder-name {
+    font-family: 'Inter', sans-serif; font-size: 1rem;
+    font-weight: 800; color: #0f1f2a; margin-bottom: 4px;
+  }
+  .founder-info .founder-title {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 14px;
+  }
+  .founder-info p {
+    font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    color: #555; line-height: 1.65; margin: 0;
+  }
+
+  .trivia-badge {
+    background: linear-gradient(135deg, #0f2027, #1a3a4a);
+    color: #fff; border-radius: 12px; padding: 22px 28px;
+    margin: 40px 0; display: flex; gap: 20px; align-items: flex-start;
+  }
+  .trivia-badge .badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .trivia-badge .badge-label {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 6px;
+  }
+  .trivia-badge .badge-text {
+    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    color: #c8d8e8; line-height: 1.6; margin: 0;
+  }
+
+  .customers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .customer-card {
+    background: #f7f5f0; border-radius: 12px; padding: 20px;
+    text-align: center; border: 1px solid #ece8e0;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+  }
+  .customer-monogram {
+    width: 52px; height: 52px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 800; color: #fff;
+  }
+  .customer-name { font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; color: #0f1f2a; }
+  .customer-desc { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; line-height: 1.4; }
+
+  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
+  .legacy-card.blue { border-left-color: #1a3a4a; }
+  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
+  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+
+  .closing-card {
+    background: linear-gradient(160deg, #0a1a24, #1a3a4a);
+    color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px;
+  }
+  .closing-card .label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 16px;
+  }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+
+  .disclaimer {
+    font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb;
+    text-align: center; margin-top: 40px; line-height: 1.6;
+    padding: 18px; border-top: 1px solid #e4e0d8;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">Quiet Giant &nbsp;&middot;&nbsp; B2B Monopoly &nbsp;&middot;&nbsp; Specialty Chemicals</div>
+  <h1>There Is a Chemical in Every Indian Tyre That Stops the Rubber from Cracking. One Company Makes Almost All of It.</h1>
+  <div class="subtitle">NOCIL Ltd has controlled India's rubber chemicals market for six decades. You have almost certainly never heard of them.</div>
+  <div class="meta">NOCIL Ltd &nbsp;&middot;&nbsp; May 2026</div>
+</div>
+
+<div class="content">
+
+  <div class="section-label">The Invisible Ingredient</div>
+  <h2>Every Tyre on Every Road in India Contains It</h2>
+
+  <p>Think about the last time you changed a tyre. You probably thought about the brand stamped on the sidewall — MRF, Ceat, Apollo, JK. You did not think about the rubber. And you certainly did not think about the chemicals mixed into the rubber that determine whether it cracks in six months or lasts six years.</p>
+
+  <p>That is precisely where NOCIL Ltd lives. <strong>Invisible. Essential. Irreplaceable.</strong></p>
+
+  <p>Every kilogram of tyre rubber requires antioxidants, accelerators, and anti-degradants — chemicals that prevent the rubber from oxidizing under heat, cracking under stress, and failing under the weight of millions of kilometres. Without them, the most premium tyres in the world would disintegrate within weeks of use.</p>
+
+  <p>In India, one company makes approximately <strong>75% of all these rubber chemicals</strong>. That company is NOCIL. It was founded in 1961. It is headquartered in Mumbai. It has revenues of over &#8377;1,300 crore. And not one retail investor in a thousand has heard of them.</p>
+
+  <div class="founder-block">
+    <div class="founder-photo">
+      <img src="https://www.nocil.com/images/management/hrishikesh-mafatlal.jpg" alt="Hrishikesh A. Mafatlal, Executive Chairman, NOCIL"
+           onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=founder-initials>HM</div>';" />
+    </div>
+    <div class="founder-info">
+      <div class="founder-name">Hrishikesh A. Mafatlal</div>
+      <div class="founder-title">Executive Chairman, NOCIL Ltd</div>
+      <p>Heir to the Arvind Mafatlal Group — a conglomerate that built its first fortune in textiles — Hrishikesh Mafatlal chose to bet on chemicals at a time when the tyre industry was booming and rubber science was still opaque to most Indian industrialists. Under the Mafatlal Group's stewardship, NOCIL was carved out of a diversified conglomerate and methodically transformed into India's dominant rubber chemicals franchise, backed by manufacturing bases in Navi Mumbai and Dahej, Gujarat.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Origin</div>
+  <h2>Born in the Mafatlal Empire, Raised in the Shadows</h2>
+
+  <p>The year was 1961. India's automobile industry was in its infancy. Nehru's industrial policy had just sanctioned foreign collaborations, and rubber chemicals — then almost entirely imported — were about to become a strategic priority as domestic tyre manufacturing scaled.</p>
+
+  <p>NOCIL, then called National Organic Chemical Industries Ltd, was incorporated as part of the sprawling Mafatlal Group. The Mafatlals were primarily known for textiles — their mills in Ahmedabad and Mumbai were household names. But the family had an instinct for adjacent industries, and rubber chemicals offered something rare: a captive market with no domestic competition.</p>
+
+  <p>The business model was almost brutally simple. Tyre manufacturers cannot do without rubber chemicals. The chemicals are less than 3% of the cost of a tyre. Which means tyre makers have very little incentive to switch suppliers over small price differences — but enormous incentive to maintain supply continuity. <strong>Once you win a customer in this business, you keep them.</strong></p>
+
+  <div class="trivia-badge">
+    <div class="badge-icon">&#9733;</div>
+    <div>
+      <div class="badge-label">India's Invisible Monopoly</div>
+      <p class="badge-text">NOCIL controls approximately <strong style="color:#f0c040;">~75% of India's domestic rubber chemicals market</strong>. Its products cost less than 3% of a tyre's manufacturing cost — making them too critical to risk switching, but too small a line item to ever negotiate hard on. Every major Indian tyre company is a customer.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Journey</div>
+  <h2>Six Decades of Quiet Accumulation</h2>
+
+  <p>NOCIL's story is not one of dramatic pivots or founder heroics. It is a story of <strong>patient, compounding dominance</strong> — the kind that is invisible until suddenly it is everywhere.</p>
+
+  <p>Through the 1970s and 1980s, as India's tyre industry grew on the back of government vehicle programmes and two-wheeler proliferation, NOCIL supplied the chemicals. It built deep relationships with each of the major tyre houses. It expanded its product catalogue across accelerators, antioxidants, and specialty chemicals, creating what investors would later call a "sticky" customer base.</p>
+
+  <p>Then came liberalisation in 1991. Suddenly, global players — Lanxess from Germany, Flexsys (later Eastman Chemical) from the United States — were free to compete. And the real threat arrived from China: state-subsidised producers flooding the Indian market with rubber chemicals at prices no domestic manufacturer could match.</p>
+
+  <p>For nearly a decade, NOCIL navigated this squeeze. It invested in expanding capacity even as margins compressed. It modernised its Navi Mumbai plant. It began setting up a second facility in Dahej, Gujarat's petrochemical hub, betting that scale would be its shield.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">The NOCIL Journey — 1961 to Present</div>
+    <div style="position:relative; padding-left:32px;">
+      <div style="position:absolute; left:15px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,#c0872a,#1a3a4a);"></div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#c0872a; border:3px solid #fff; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">1961</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">NOCIL incorporated as part of the Mafatlal Group; begins manufacturing rubber chemicals for India's nascent tyre industry</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#fff; border:3px solid #c0872a; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">1970s&#8211;80s</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Becomes the dominant supplier as India's tyre industry expands; wins anchor relationships with MRF, Apollo, CEAT, and JK Tyre</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#fff; border:3px solid #c0872a; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">1991</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Liberalisation opens Indian markets to Lanxess (Germany) and Flexsys/Eastman (USA); Chinese imports begin undercutting domestic prices</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#c0872a; border:3px solid #fff; box-shadow:0 0 0 2px #c0872a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#c0872a; margin-bottom:4px;">2014&#8211;18</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Capacity expansion at Navi Mumbai and Dahej; revenue jumps from &#8377;715 Cr to &#8377;964 Cr as NOCIL doubles down on scale</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#1a3a4a; border:3px solid #fff; box-shadow:0 0 0 2px #1a3a4a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#1a3a4a; margin-bottom:4px;">2019&#8211;20</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Anti-dumping duties imposed on Chinese rubber chemical imports — a watershed moment that restored pricing power and market share</div>
+      </div>
+
+      <div style="position:relative; margin-bottom:28px;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#1a3a4a; border:3px solid #fff; box-shadow:0 0 0 2px #1a3a4a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#1a3a4a; margin-bottom:4px;">2022</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">Revenue peaks at &#8377;1,617 Cr — highest in company history — as the anti-dumping shield and post-COVID auto boom converge</div>
+      </div>
+
+      <div style="position:relative;">
+        <div style="position:absolute; left:-23px; top:4px; width:16px; height:16px; border-radius:50%; background:#1a3a4a; border:3px solid #fff; box-shadow:0 0 0 2px #1a3a4a;"></div>
+        <div style="font-family:'Inter',sans-serif; font-size:12px; font-weight:700; color:#1a3a4a; margin-bottom:4px;">2025&#8211;26</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; color:#333; line-height:1.5;">New Dahej capacity expansion underway (&#8377;221 Cr CWIP); EV tyre opportunity emerging; anti-dumping duties remain in force</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Turning Point</div>
+  <h2>The Battle Against Chinese Dumping &#8212; and Why NOCIL Won</h2>
+
+  <p>By 2017, Chinese producers had become an existential threat. State-backed Chinese chemical companies were exporting rubber chemicals to India at prices that bore no relation to their actual cost of production. They were dumping — selling below cost to capture market share — and it was working.</p>
+
+  <p>NOCIL fought back the only way a domestic manufacturer can against a sovereign-backed competitor: through India's trade remedy system. The company, working with the tyre industry, built a case before the Directorate General of Trade Remedies (DGTR). The argument was documented, the price data was compiled, and the legal petitions were filed.</p>
+
+  <p>In 2019&#8211;20, <strong>anti-dumping duties were imposed on Chinese rubber chemical imports</strong>. The duties were not small. They were substantial enough to make Chinese imports uncompetitive overnight, restoring NOCIL's pricing power and allowing it to accelerate the capacity expansion that had been bleeding margins for years.</p>
+
+  <div class="pull-quote">
+    <p>"The chemicals cost less than 3% of a tyre. But without them, the tyre fails. That asymmetry — tiny in cost, massive in consequence — is the entire business model."</p>
+    <span class="attr">The NOCIL Principle</span>
+  </div>
+
+  <p>What followed was a surge. Revenue climbed from &#8377;846 crore in FY2020 to &#8377;1,571 crore in FY2022 and peaked at &#8377;1,617 crore in FY2023. Tyre makers, no longer able to hedge with Chinese alternatives, deepened their commitments to NOCIL. The capacity that had been a burden during the competitive years became a moat the moment the duties landed.</p>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Clients</div>
+  <h2>Every Name on Every Tyre Is a NOCIL Customer</h2>
+
+  <p>NOCIL does not need a sales pitch. It needs a supply chain. The four companies that produce the overwhelming majority of tyres sold in India are NOCIL's anchor customers — and have been for decades.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">NOCIL's Customer Ecosystem</div>
+    <div class="customers-grid">
+      <div class="customer-card">
+        <div class="customer-monogram" style="background:linear-gradient(135deg,#c0001a,#8b0000);">MRF</div>
+        <div class="customer-name">MRF Ltd</div>
+        <div class="customer-desc">India's largest tyre company &middot; &#8377;24,000+ Cr revenue &middot; Every MRF tyre runs on NOCIL chemistry</div>
+      </div>
+      <div class="customer-card">
+        <div class="customer-monogram" style="background:linear-gradient(135deg,#1a3a8a,#0d2050);">CE</div>
+        <div class="customer-name">CEAT Ltd</div>
+        <div class="customer-desc">RPG Group flagship &middot; One of India's top 3 tyre makers &middot; Passenger &amp; commercial segments</div>
+      </div>
+      <div class="customer-card">
+        <div class="customer-monogram" style="background:linear-gradient(135deg,#d4820a,#8b5200);">AP</div>
+        <div class="customer-name">Apollo Tyres</div>
+        <div class="customer-desc">India's second largest tyre company &middot; Global operations &middot; &#8377;25,000+ Cr revenue</div>
+      </div>
+      <div class="customer-card">
+        <div class="customer-monogram" style="background:linear-gradient(135deg,#1a3a4a,#0f2027);">JK</div>
+        <div class="customer-name">JK Tyre</div>
+        <div class="customer-desc">One of India's oldest tyre brands &middot; Truck, bus &amp; passenger tyres &middot; Pan-India presence</div>
+      </div>
+    </div>
+  </div>
+
+  <p>This is not a diversified client list assembled to reduce concentration risk. These are the same four customers NOCIL has served for decades. The relationship is symbiotic: tyre makers cannot risk supply disruption for a component that is critical but cheap. NOCIL cannot grow beyond its customer base. Both parties have every incentive to maintain a long-term, low-drama partnership.</p>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Numbers</div>
+  <h2>What Revenue Actually Tells You About a Monopoly</h2>
+
+  <p>NOCIL's financial journey is a textbook in what happens when you combine a near-monopoly position with commodity input prices and an anti-dumping shield.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth (&#8377; Crore) &#8212; FY2020 to FY2026</div>
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY20</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:30px; position:relative;">
+          <div style="width:52%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;846 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY21</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:30px; position:relative;">
+          <div style="width:57%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;925 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY22</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:30px; position:relative;">
+          <div style="width:97%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;1,571 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY23</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:30px; position:relative;">
+          <div style="width:100%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;1,617 Cr &#8212; Peak</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY24</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:30px; position:relative;">
+          <div style="width:89%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;1,445 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY25</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:30px; position:relative;">
+          <div style="width:86%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;1,393 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY26</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:30px; position:relative;">
+          <div style="width:80%; height:100%; background:linear-gradient(90deg,#0d2535,#1a3a4a); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;1,303 Cr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#bbb; text-align:center; margin-top:14px; font-style:italic;">Source: Screener.in consolidated figures &middot; FY2026 is full-year ended March 2026</div>
+  </div>
+
+  <p>The recent revenue softness &#8212; from the FY2023 peak of &#8377;1,617 crore down to &#8377;1,303 crore in FY2026 &#8212; reflects a combination of softer tyre demand, global chemical price deflation, and renewed pressure from Chinese imports as anti-dumping duties face periodic review. But the company remains debt-free, cash generative, and is in the middle of a significant capacity expansion at Dahej with &#8377;221 crore of capital work in progress.</p>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Next Horizon</div>
+  <h2>EV Tyres, Dahej Expansion, and the Durability of the Moat</h2>
+
+  <p>Here is something most people miss about the electric vehicle transition: <strong>EV tyres require more rubber chemicals, not less</strong>. Electric vehicles are heavier than their internal combustion equivalents (because of the battery pack), which puts greater stress on tyres. EV-specific tyres require higher load ratings, greater heat resistance, and more sophisticated rubber chemistry. For NOCIL, the EV transition is not a threat &#8212; it is a tailwind.</p>
+
+  <p>The company is investing accordingly. Its Dahej expansion &#8212; India's premier petrochemical manufacturing hub &#8212; will add significant capacity over the next two years, positioning NOCIL to serve both domestic tyre makers and, potentially, global customers looking to reduce dependence on Chinese rubber chemical supply chains.</p>
+
+  <p>The geopolitical context matters here. As India decouples from China across manufacturing segments, and as global tyre makers seek alternative supply chains for critical inputs, NOCIL sits at an interesting intersection: the only scaled domestic producer of rubber chemicals in a country that is rapidly becoming a major tyre manufacturing hub.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">What 65 Years of Quiet Dominance Built</div>
+    <div class="legacy-grid">
+      <div class="legacy-card">
+        <div class="legacy-number">~75%</div>
+        <div class="legacy-label">Domestic Market Share in Rubber Chemicals</div>
+      </div>
+      <div class="legacy-card">
+        <div class="legacy-number">&#8377;1,303 Cr</div>
+        <div class="legacy-label">Revenue FY2026 (Consolidated)</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">20+</div>
+        <div class="legacy-label">Rubber Chemical Varieties &#8212; Accelerators, Antioxidants &amp; Specialty</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">Debt-Free</div>
+        <div class="legacy-label">Near-Zero Borrowings &#8212; Balance Sheet Strength Through Cycles</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Paradox</div>
+  <h2>Why the Most Critical Companies Are the Least Famous</h2>
+
+  <p>NOCIL is not famous because it was never supposed to be. It does not sell to you. It sells to the company that sells to the company that sells to you. It is three steps removed from the consumer &#8212; and three steps removed from the retail investor's attention.</p>
+
+  <p>The companies that build the deepest moats in Indian business are often exactly this kind: <strong>B2B specialists with near-monopoly positions in categories so technical that competitors rarely bother to enter, and so unglamorous that investors rarely bother to look.</strong></p>
+
+  <p>MRF is famous. The chemical that keeps MRF's rubber from cracking is not. But one of them has a 75% market share and no credible domestic competitor. One of them is irreplaceable to every tyre maker in India. And one of them has been compounding quietly for 65 years while the world looked elsewhere.</p>
+
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>The most durable businesses are often the ones you never hear about &#8212; because they sit behind the brands you trust, supplying the ingredient that makes everything else possible. NOCIL did not build a consumer brand. It built something more valuable: a technical dependency so embedded in India's tyre supply chain that switching it out would be more trouble than any tyre maker would ever consider. The lesson is not just about specialty chemicals. It is about the power of being indispensable to people who are themselves indispensable &#8212; and doing it quietly, for six decades, without anyone noticing.</p>
+  </div>
+
+  <div class="disclaimer">
+    This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.
+  </div>
+
+</div>
+</body>
+</html>
