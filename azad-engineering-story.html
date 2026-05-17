@@ -1,0 +1,474 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Class 10 Dropout Who Makes Parts for Rolls-Royce | Azad Engineering</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #fafaf8;
+    color: #1a1a1a;
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.85;
+  }
+
+  .hero {
+    background: linear-gradient(160deg, #0a1a24 0%, #1a3a4a 50%, #0f2027 100%);
+    color: #fff;
+    padding: 90px 40px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; left: -60px; right: -60px; bottom: -60px;
+    background: radial-gradient(ellipse at 30% 50%, rgba(240,192,64,0.06) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 20%, rgba(42,96,128,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero .tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 22px; position: relative;
+  }
+  .hero h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 3rem; font-weight: 700; line-height: 1.2;
+    max-width: 740px; margin: 0 auto 24px; position: relative;
+  }
+  .hero .subtitle {
+    font-family: 'Inter', sans-serif; font-size: 1.05rem;
+    color: #b0c4d8; max-width: 600px; margin: 0 auto;
+    line-height: 1.65; position: relative;
+  }
+  .hero .meta {
+    font-family: 'Inter', sans-serif; font-size: 12px;
+    color: #5a7f98; margin-top: 30px; letter-spacing: 1.5px;
+    text-transform: uppercase; position: relative;
+  }
+
+  .content { max-width: 720px; margin: 0 auto; padding: 64px 24px 80px; }
+
+  .section-label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 10px;
+  }
+  h2 {
+    font-family: 'Merriweather', serif; font-size: 1.7rem;
+    font-weight: 700; margin-bottom: 24px; color: #0f1f2a; line-height: 1.3;
+  }
+  p { margin-bottom: 22px; color: #2c2c2c; }
+  strong { color: #0f1f2a; font-weight: 700; }
+
+  .section-divider { border: none; border-top: 1px solid #e4e0d8; margin: 52px 0; }
+
+  .pull-quote {
+    border-left: 4px solid #f0c040;
+    padding: 20px 28px; margin: 42px 0;
+    background: #fffdf0; border-radius: 0 10px 10px 0;
+  }
+  .pull-quote p { font-size: 1.15rem; font-style: italic; color: #333; margin: 0; line-height: 1.75; }
+  .pull-quote .attr {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600;
+    color: #999; margin-top: 12px; letter-spacing: 1px;
+    text-transform: uppercase; font-style: normal; display: block;
+  }
+
+  .infographic {
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 34px 32px; margin: 46px 0;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .infographic-title {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #aaa; margin-bottom: 30px; text-align: center;
+  }
+
+  .founder-block {
+    display: flex; gap: 28px; align-items: flex-start;
+    background: #fff; border: 1px solid #e8e4dc; border-radius: 14px;
+    padding: 30px; margin: 40px 0; box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+  }
+  .founder-photo {
+    flex-shrink: 0; width: 120px; height: 140px; border-radius: 10px;
+    overflow: hidden; background: linear-gradient(135deg,#1a3a4a,#0f2027); border: 3px solid #f0c040;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .founder-initials {
+    font-family: 'Inter', sans-serif; font-size: 2rem; font-weight: 800;
+    color: #f0c040; display: none;
+  }
+  .founder-info .founder-name {
+    font-family: 'Inter', sans-serif; font-size: 1rem;
+    font-weight: 800; color: #0f1f2a; margin-bottom: 4px;
+  }
+  .founder-info .founder-title {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: #c0872a; margin-bottom: 14px;
+  }
+  .founder-info p {
+    font-family: 'Inter', sans-serif; font-size: 0.9rem;
+    color: #555; line-height: 1.65; margin: 0;
+  }
+
+  .trivia-badge {
+    background: linear-gradient(135deg, #0f2027, #1a3a4a);
+    color: #fff; border-radius: 12px; padding: 22px 28px;
+    margin: 40px 0; display: flex; gap: 20px; align-items: flex-start;
+  }
+  .trivia-badge .badge-icon { font-size: 2rem; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .trivia-badge .badge-label {
+    font-family: 'Inter', sans-serif; font-size: 10px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 6px;
+  }
+  .trivia-badge .badge-text {
+    font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    color: #c8d8e8; line-height: 1.6; margin: 0;
+  }
+
+  .timeline-wrap { overflow-x: auto; padding-bottom: 8px; }
+  .timeline { min-width: 560px; position: relative; padding: 12px 0 0; }
+  .timeline-line {
+    position: absolute; top: 22px; left: 20px; right: 20px; height: 3px;
+    background: linear-gradient(90deg, #c0872a, #1a3a4a, #0d5c8a);
+    border-radius: 2px; z-index: 0;
+  }
+  .timeline-items { display: flex; justify-content: space-between; position: relative; z-index: 1; }
+  .timeline-item { display: flex; flex-direction: column; align-items: center; flex: 1; padding: 0 4px; }
+  .timeline-dot {
+    width: 16px; height: 16px; border-radius: 50%;
+    background: #fff; border: 3px solid #c0872a; margin-bottom: 10px; flex-shrink: 0;
+  }
+  .timeline-dot.key {
+    background: #c0872a; width: 20px; height: 20px; border-color: #c0872a;
+    box-shadow: 0 0 0 3px rgba(192,135,42,0.2);
+  }
+  .timeline-dot.blue {
+    background: #1a3a4a; border-color: #1a3a4a;
+    box-shadow: 0 0 0 3px rgba(26,58,74,0.2);
+  }
+  .timeline-year { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #c0872a; margin-bottom: 5px; }
+  .timeline-year.blue { color: #1a3a4a; }
+  .timeline-text { font-family: 'Inter', sans-serif; font-size: 11px; color: #666; text-align: center; line-height: 1.45; max-width: 82px; }
+
+  .customers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .customer-card {
+    background: #f7f5f0; border-radius: 10px; padding: 16px 14px;
+    text-align: center; border: 1px solid #ece8e0;
+  }
+  .customer-name { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; color: #0f1f2a; margin-bottom: 4px; }
+  .customer-desc { font-family: 'Inter', sans-serif; font-size: 11px; color: #999; line-height: 1.4; }
+
+  .legacy-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .legacy-card { background: #f7f5f0; border-radius: 10px; padding: 20px 18px; border-left: 4px solid #c0872a; }
+  .legacy-card.blue { border-left-color: #1a3a4a; }
+  .legacy-number { font-family: 'Inter', sans-serif; font-size: 1.85rem; font-weight: 800; color: #0f1f2a; line-height: 1; margin-bottom: 6px; }
+  .legacy-label { font-family: 'Inter', sans-serif; font-size: 12px; color: #999; text-transform: uppercase; letter-spacing: 1px; line-height: 1.4; }
+
+  .closing-card {
+    background: linear-gradient(160deg, #0a1a24, #1a3a4a);
+    color: #fff; border-radius: 14px; padding: 42px 40px; margin-top: 52px;
+  }
+  .closing-card .label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 700;
+    letter-spacing: 2.5px; text-transform: uppercase;
+    color: #f0c040; margin-bottom: 16px;
+  }
+  .closing-card p { font-family: 'Merriweather', serif; font-size: 1.05rem; color: #c8d8e8; line-height: 1.85; margin-bottom: 0; }
+
+  .disclaimer {
+    font-family: 'Inter', sans-serif; font-size: 11px; color: #bbb;
+    text-align: center; margin-top: 40px; line-height: 1.6;
+    padding: 18px; border-top: 1px solid #e4e0d8;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="tag">Underdog Origin &nbsp;&middot;&nbsp; Aerospace &nbsp;&middot;&nbsp; Precision Manufacturing</div>
+  <h1>He Failed His Class 10 Exams. Then He Built Parts for Rolls-Royce.</h1>
+  <div class="subtitle">Rakesh Chopdar dropped out of school at 16, spent 12 years learning machines by touch, and built India's most precise aerospace manufacturer from a 200 sq meter shed in Hyderabad.</div>
+  <div class="meta">Azad Engineering Ltd &nbsp;&middot;&nbsp; May 2026</div>
+</div>
+
+<div class="content">
+
+  <div class="section-label">The Origin</div>
+  <h2>A Workshop, a Dropout, and a Dream Measured in Microns</h2>
+
+  <p>The year is 1992. A young boy in Hyderabad opens his Class 10 results. He has failed. His classmates move on to higher education, to engineering colleges, to the structured ladder of academic achievement that India prizes above all else. He does not.</p>
+
+  <p>Instead, Rakesh Chopdar walks into his father's small machine shop in Balanagar industrial area &mdash; the gritty, oil-stained heart of Hyderabad's manufacturing belt &mdash; and picks up a tool. He is 16 years old. He has no degree, no blueprint, and no obvious future in a country where credentials are currency.</p>
+
+  <p>What he has is time, curiosity, and an almost obsessive attention to detail. For twelve years &mdash; while his peers collected engineering certificates &mdash; he learned to read metal. He learned to feel the difference between a component machined to 10 microns of tolerance and one machined to 5. He learned what happens when precision fails: engines stop, turbines crack, aircraft don't fly. He learned that in this particular corner of manufacturing, there is no room for almost.</p>
+
+  <div class="founder-block">
+    <div class="founder-photo">
+      <img src="https://azad.in/wp-content/uploads/2025/10/rakesh-chopdhar.png"
+           alt="Rakesh Chopdar, Chairman and CEO, Azad Engineering"
+           onerror="this.style.display='none'; this.parentElement.querySelector('.founder-initials').style.display='block';" />
+      <div class="founder-initials">RC</div>
+    </div>
+    <div class="founder-info">
+      <div class="founder-name">Rakesh Chopdar</div>
+      <div class="founder-title">Chairman &amp; CEO, Azad Engineering Ltd</div>
+      <p>A first-generation entrepreneur who turned a Class 10 dropout story into India's most credentialed aerospace components manufacturer. He spent 12 years mastering CNC precision machining by hand before founding Azad Engineering in 2008 &mdash; with no formal degree, no venture capital, and no domestic aerospace ecosystem to plug into. Today he employs over 1,500 people and his components spin inside jet engines trusted by Rolls-Royce, GE Aviation, and Pratt &amp; Whitney.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Founding</div>
+  <h2>One Shed. One Machine. One Impossible Ambition.</h2>
+
+  <p>In 2008, Rakesh Chopdar did something that looked, from the outside, like madness. He rented a 200 square meter shed in the Balanagar industrial area of Hyderabad. He bought a single second-hand CNC machine. And he decided he was going to manufacture components for jet engines &mdash; the most demanding precision machining work on earth.</p>
+
+  <p>Aerospace is not a forgiving industry. Jet engine components &mdash; turbine blades, aerofoils, nozzle guide vanes &mdash; operate at temperatures above 1,400 degrees Celsius. They spin at tens of thousands of RPM. A deviation of just a few microns can cascade into catastrophic failure. Global aerospace OEMs don't give second chances, and they don't give first chances to unknown Indian startups run by school dropouts from Hyderabad.</p>
+
+  <p>But Rakesh Chopdar had spent twelve years earning something that no college could have given him: the ability to machine metal to tolerances that aerospace demanded. And he was willing to prove it, one component at a time, without the luxury of brand name, industry network, or institutional backing.</p>
+
+  <div class="trivia-badge">
+    <div class="badge-icon">&#9733;</div>
+    <div>
+      <div class="badge-label">The Remarkable Fact</div>
+      <p class="badge-text">Azad Engineering started in a <strong style="color:#f0c040;">200 sq meter shed with a single second-hand CNC machine</strong> in 2008. Today it operates 350+ state-of-the-art machines across a 25,000 sq.m facility &mdash; with two new plants under development adding 175,000 sq.m. more. That is a tenfold capacity expansion from a company that didn't exist 17 years ago.</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Journey</div>
+  <h2>From Balanagar to the World's Jet Engines</h2>
+
+  <p>The early years were brutal. Azad Engineering had no pedigree. Every global certification in aerospace &mdash; AS9100D, NADCAP (the gold standard for special processes in aerospace) &mdash; had to be earned from scratch, without a mentor, without a domestic ecosystem, and without anyone in India who had done it before at this scale from a greenfield SME.</p>
+
+  <p>The turning point came with a first order from a European firm to manufacture aerofoils for thermal power turbines. It was a test &mdash; a chance for an Indian SME with no name recognition to prove it could hold tolerances that European giants had spent decades perfecting. Azad passed. Then passed again. Then again. Each successful delivery unlocked the next door.</p>
+
+  <p>GE Aviation came. Then Rolls-Royce. Then Pratt &amp; Whitney, Honeywell, Siemens, Boeing, Mitsubishi, Toshiba. These are not companies that give their business lightly. They audit suppliers for years. They demand certifications that take a decade to earn. They trust only manufacturers who can prove, batch after batch, that a component machined in Hyderabad will perform identically to one machined anywhere else on earth.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">The Azad Engineering Journey &mdash; 2008 to 2025</div>
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        <div class="timeline-items">
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2008</div>
+            <div class="timeline-text">Founded in 200 sq m shed, Balanagar, with one second-hand CNC machine</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2012</div>
+            <div class="timeline-text">First European order &mdash; aerofoils for thermal turbines; AS9100D certification earned</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2015</div>
+            <div class="timeline-text">GE Aviation qualifies Azad as a supplier; NADCAP certification achieved</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-year">2018</div>
+            <div class="timeline-text">Rolls-Royce and Pratt &amp; Whitney onboarded; facility expands to 25,000 sq.m</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot key"></div>
+            <div class="timeline-year">2021</div>
+            <div class="timeline-text">Revenue crosses &#8377;125 Cr; Sachin Tendulkar invests</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">Dec 2023</div>
+            <div class="timeline-text">IPO on NSE &amp; BSE; market cap hits &#8377;5,500 Cr at listing</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">2024</div>
+            <div class="timeline-text">Rolls-Royce defence partnership; DRDO collaboration; revenue &#8377;373 Cr</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot blue"></div>
+            <div class="timeline-year blue">FY25</div>
+            <div class="timeline-text">Revenue &#8377;568 Cr; net profit &#8377;122 Cr; 1,500+ employees, 350+ machines</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Science</div>
+  <h2>What It Actually Means to Machine a Jet Engine Part</h2>
+
+  <p>Most people have never thought about what holds a jet engine together. But consider this: a modern gas turbine engine contains hundreds of precision-machined components &mdash; turbine blades, vanes, discs, seals &mdash; that must withstand temperatures hotter than molten lava, while spinning at 10,000 RPM, for thousands of hours without failure.</p>
+
+  <p>The tolerance for error is measured in <strong>microns</strong>. One micron is one thousandth of a millimeter &mdash; roughly one-fifteenth the width of a human hair. Azad Engineering machines to these tolerances. Not approximately. Exactly.</p>
+
+  <p>The components they make go into jet engines powering commercial aircraft, military hardware, and massive gas turbines generating electricity for cities. A batch that fails quality inspection doesn't just get returned &mdash; it triggers audits, supplier reviews, and potentially the loss of a customer relationship that took five years to build.</p>
+
+  <p>This is why Rakesh Chopdar's achievement is so staggering. He learned this craft in his father's workshop, without an engineering degree, in a country where aerospace precision manufacturing was barely a cottage industry. Then he built a company that the world's most demanding OEMs trust with their most critical components.</p>
+
+  <div class="pull-quote">
+    <p>"To strike opportunities, seek passion instead of luck."</p>
+    <span class="attr">&mdash; Rakesh Chopdar, Chairman &amp; CEO, Azad Engineering</span>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Clients</div>
+  <h2>The Names That Said Yes</h2>
+
+  <p>Every name on Azad's client roster is a testament to a decade-long process of earning trust. These are not companies that issue purchase orders casually. They are the most demanding manufacturers on earth, with zero tolerance for supplier failure &mdash; because their products carry human lives.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Global OEM Partners</div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:14px;">
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#0a1a24,#1a3a4a); color:#fff; font-family:'Inter',sans-serif; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">RR</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Rolls-Royce</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Aerospace &amp; Defence &middot; UK</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#1a3a4a,#2a6080); color:#fff; font-family:'Inter',sans-serif; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">GE</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">GE Aviation</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Jet Engines &middot; USA</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#c0872a,#e8a830); color:#fff; font-family:'Inter',sans-serif; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">P&amp;W</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Pratt &amp; Whitney</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Aircraft Engines &middot; USA</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#0f2027,#1a3a4a); color:#fff; font-family:'Inter',sans-serif; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">HW</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Honeywell</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Aerospace Systems &middot; USA</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#1a3a4a,#0d5c8a); color:#fff; font-family:'Inter',sans-serif; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">SE</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Siemens</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">Power Turbines &middot; Germany</div>
+      </div>
+      <div style="background:#f7f5f0; border-radius:12px; padding:20px; text-align:center; border:1px solid #ece8e0;">
+        <div style="width:48px; height:48px; border-radius:10px; background:linear-gradient(135deg,#2a6080,#1a3a4a); color:#fff; font-family:'Inter',sans-serif; font-size:15px; font-weight:800; display:flex; align-items:center; justify-content:center; margin:0 auto 10px;">BG</div>
+        <div style="font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#0f1f2a;">Boeing + More</div>
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; margin-top:3px;">20+ Global OEMs Total</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Numbers</div>
+  <h2>What 17 Years of Precision Built</h2>
+
+  <p>Revenue tells only part of the story. In a business where every contract requires years of qualification, where every new customer relationship begins with exhaustive audits, where margins are a function of how few other companies on earth can do what you do &mdash; the trajectory of Azad's growth is a proxy for trust earned, one component at a time.</p>
+
+  <div class="infographic">
+    <div class="infographic-title">Revenue Growth (&#8377; Crore) &mdash; FY2021 to FY2025</div>
+    <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:12px;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY21</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:32px; position:relative;">
+          <div style="width:22%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;125 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY22</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:32px; position:relative;">
+          <div style="width:42%; height:100%; background:linear-gradient(90deg,#c0872a,#e8a830); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;242 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY23</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:32px; position:relative;">
+          <div style="width:58%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;328 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY24</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:32px; position:relative;">
+          <div style="width:66%; height:100%; background:linear-gradient(90deg,#1a3a4a,#2a6080); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;373 Cr</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div style="font-family:'Inter',sans-serif; font-size:11px; color:#999; width:36px; text-align:right; flex-shrink:0;">FY25</div>
+        <div style="flex:1; background:#f0ece4; border-radius:4px; height:32px; position:relative;">
+          <div style="width:100%; height:100%; background:linear-gradient(90deg,#0a1a24,#1a3a4a); border-radius:4px; display:flex; align-items:center; padding-left:10px;">
+            <span style="font-family:'Inter',sans-serif; font-size:11px; font-weight:700; color:#fff;">&#8377;568 Cr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="font-family:'Inter',sans-serif; font-size:11px; color:#bbb; text-align:center; font-style:italic;">~46% CAGR over 4 years &middot; Source: Azad Engineering Annual Reports, public disclosures</div>
+  </div>
+
+  <div class="infographic">
+    <div class="infographic-title">What 17 Years of Precision Built</div>
+    <div class="legacy-grid">
+      <div class="legacy-card">
+        <div class="legacy-number">&#8377;5,500 Cr</div>
+        <div class="legacy-label">Market Cap at IPO &middot; December 2023</div>
+      </div>
+      <div class="legacy-card">
+        <div class="legacy-number">1,500+</div>
+        <div class="legacy-label">Employees &middot; from 1 man in a shed</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">350+</div>
+        <div class="legacy-label">State-of-the-Art CNC Machines</div>
+      </div>
+      <div class="legacy-card blue">
+        <div class="legacy-number">20+</div>
+        <div class="legacy-label">Global OEM Clients &middot; Rolls-Royce to Boeing</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="section-label">The Bigger Picture</div>
+  <h2>India's Aerospace Moment &mdash; And Why It Matters</h2>
+
+  <p>India currently accounts for barely 1% of global aerospace exports. The global aerospace components market is worth hundreds of billions of dollars. The gap between those two numbers is the opportunity &mdash; and it is precisely the gap that Azad Engineering is positioned to close.</p>
+
+  <p>The company has a partnership with DRDO for turbo-gas generator engines. It signed a defence partnership with Rolls-Royce in 2024. It is building two new plants that will expand its capacity tenfold. With India's defence self-reliance push and global aerospace supply chains actively seeking China-plus-one alternatives, Azad sits at an extraordinary intersection of timing and capability.</p>
+
+  <p>Sachin Tendulkar &mdash; not known for casual investments &mdash; chose to back this company. That tells you something. So does the fact that Rolls-Royce, GE, Pratt &amp; Whitney, and Honeywell all chose to source from a company in Balanagar, Hyderabad, when they could have sourced from anywhere on earth.</p>
+
+  <p>They chose Azad because precision is non-negotiable &mdash; and in precision, Rakesh Chopdar has spent a lifetime becoming non-negotiable.</p>
+
+  <div class="closing-card">
+    <div class="label">The Lesson</div>
+    <p>Rakesh Chopdar did not succeed despite failing his Class 10 exams &mdash; in some strange way, he succeeded because of what came after. Twelve years in a workshop, learning metal with his hands instead of learning theory from textbooks, gave him a depth of mastery that no curriculum could have delivered. The world's most demanding customers &mdash; the ones who stake human lives on the quality of a component &mdash; chose him. Not because of his credentials. Because of his craft. There is a lesson in that for every system that measures human potential by the marks on a report card.</p>
+  </div>
+
+  <div class="disclaimer">
+    This story is AI-generated and may contain errors or inaccuracies. It is written for inspiration and education only and is <strong>not investment advice</strong>. Past performance of a company does not guarantee future results. Please verify all facts independently and consult a qualified financial advisor before making any investment decisions. All financial figures are approximate and sourced from publicly available information.
+  </div>
+
+</div>
+</body>
+</html>
