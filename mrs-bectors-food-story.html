@@ -1,0 +1,289 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>She Baked in Her Kitchen for 40 Years. Then McDonald's Came Knocking. | Ticker Tales</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --dark: #0F0F0F;
+  --dark-2: #1A1A1A;
+  --dark-3: #242424;
+  --text: #F0EDE6;
+  --text-muted: #9A9080;
+}
+body { font-family: 'Inter', sans-serif; background: var(--dark); color: var(--text); line-height: 1.7; font-size: 16px; }
+.hero {
+  min-height: 90vh; display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 80px 24px 60px;
+  background: linear-gradient(160deg, #0f0a06 0%, #1c1208 50%, #0f0a06 100%);
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; top: -40%; left: 50%; transform: translateX(-50%);
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(201,168,76,0.09) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-tag {
+  display: inline-block; background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.35); color: var(--gold);
+  font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+  padding: 7px 18px; border-radius: 30px; margin-bottom: 28px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif; font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+  font-weight: 900; line-height: 1.18; max-width: 820px; margin: 0 auto 24px; color: #fff;
+}
+.hero h1 em { font-style: italic; color: var(--gold-light); }
+.hero-subtitle { max-width: 600px; margin: 0 auto; color: var(--text-muted); font-size: 1.05rem; font-weight: 300; line-height: 1.8; }
+.hero-divider { width: 48px; height: 3px; background: var(--gold); margin: 30px auto 0; border-radius: 2px; }
+.container { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+section { padding: 70px 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.founder-block {
+  display: flex; align-items: center; gap: 32px;
+  background: var(--dark-2); border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 16px; padding: 32px; margin-bottom: 40px;
+}
+.founder-photo {
+  width: 88px; height: 88px; border-radius: 50%; overflow: hidden;
+  border: 3px solid var(--gold); flex-shrink: 0;
+  background: linear-gradient(135deg, #2a1800 0%, #3a2200 100%);
+  display: flex; align-items: center; justify-content: center;
+}
+.founder-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.founder-initials { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light); }
+.founder-info h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 4px; }
+.founder-title { font-size: 0.82rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.founder-info p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.65; }
+.trivia-badge {
+  background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
+  border: 1px solid rgba(201,168,76,0.25); border-left: 4px solid var(--gold);
+  border-radius: 12px; padding: 22px 26px; margin: 40px 0;
+}
+.trivia-label { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.trivia-badge p { font-size: 0.97rem; color: var(--text-muted); line-height: 1.7; }
+.section-label { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; line-height: 1.3; margin-bottom: 22px; color: #fff; }
+p { color: var(--text-muted); margin-bottom: 18px; font-size: 1.02rem; }
+p:last-child { margin-bottom: 0; }
+.timeline { position: relative; padding-left: 36px; margin-top: 20px; }
+.timeline::before { content: ''; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,0.1)); }
+.timeline-item { position: relative; margin-bottom: 36px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot { position: absolute; left: -33px; top: 4px; width: 14px; height: 14px; border-radius: 50%; background: var(--dark); border: 2.5px solid var(--gold); }
+.timeline-year { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; color: var(--gold); text-transform: uppercase; margin-bottom: 6px; }
+.timeline-event { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 600; color: #fff; margin-bottom: 6px; line-height: 1.4; }
+.timeline-detail { font-size: 0.92rem; color: var(--text-muted); line-height: 1.65; }
+.pull-quote { text-align: center; padding: 50px 30px; background: var(--dark-2); border-radius: 16px; margin: 40px 0; position: relative; }
+.pull-quote::before { content: '\201C'; font-family: 'Playfair Display', serif; font-size: 6rem; color: var(--gold); opacity: 0.18; position: absolute; top: 10px; left: 30px; line-height: 1; }
+.pull-quote p { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 600; font-style: italic; line-height: 1.55; color: var(--text); max-width: 620px; margin: 0 auto; }
+.pull-quote-attr { margin-top: 16px; font-size: 0.85rem; color: var(--gold); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+.chart-wrap { background: #100a04; border: 1px solid rgba(201,168,76,0.15); border-radius: 16px; padding: 36px; margin-top: 20px; }
+.chart-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; color: var(--gold-light); margin-bottom: 8px; }
+.chart-subtitle { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 32px; letter-spacing: 0.3px; }
+.bar-chart { display: flex; align-items: flex-end; gap: 10px; height: 160px; }
+.bar-group { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; height: 100%; justify-content: flex-end; }
+.bar { width: 100%; background: linear-gradient(to top, var(--gold), var(--gold-light)); border-radius: 4px 4px 0 0; min-height: 8px; }
+.bar-label { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+.bar-value { font-size: 10px; color: var(--gold); font-weight: 600; }
+.clients-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin-top: 20px; }
+.client-chip { background: var(--dark-2); border: 1px solid rgba(201,168,76,0.18); border-radius: 10px; padding: 14px 16px; text-align: center; font-size: 0.88rem; color: var(--text-muted); font-weight: 500; }
+.client-chip strong { display: block; color: var(--gold-light); font-size: 0.92rem; margin-bottom: 3px; }
+.legacy-card { background: var(--dark-2); border: 1px solid rgba(201,168,76,0.25); border-radius: 16px; padding: 36px; margin-top: 20px; }
+.legacy-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 24px; margin-top: 10px; }
+.legacy-item { text-align: center; }
+.legacy-number { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--gold-light); line-height: 1.2; margin-bottom: 6px; }
+.legacy-desc { font-size: 0.83rem; color: var(--text-muted); line-height: 1.5; }
+.lesson-card { background: linear-gradient(135deg, #1a1200 0%, #2a1e00 50%, #1a1200 100%); border: 1px solid rgba(201,168,76,0.35); border-radius: 16px; padding: 48px 40px; text-align: center; margin-top: 20px; }
+.lesson-icon { font-size: 2.4rem; margin-bottom: 20px; }
+.lesson-title { font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 700; color: var(--gold-light); margin-bottom: 18px; }
+.lesson-card p { font-size: 1.05rem; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.8; }
+.lesson-card strong { color: var(--gold-light); font-weight: 600; }
+.story-footer { text-align: center; padding: 48px 24px; background: var(--dark-2); border-top: 1px solid rgba(255,255,255,0.06); }
+.story-footer p { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px; }
+.back-link { display: inline-block; padding: 12px 28px; background: transparent; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; border-radius: 30px; font-size: 0.9rem; font-weight: 500; letter-spacing: 0.5px; transition: background 0.2s, color 0.2s; }
+.back-link:hover { background: var(--gold); color: var(--dark); }
+@media (max-width: 600px) {
+  .founder-block { flex-direction: column; text-align: center; }
+  .pull-quote p { font-size: 1.1rem; }
+  .lesson-card { padding: 36px 24px; }
+  .bar-chart { gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div>
+    <div class="hero-tag">Founder Origin &middot; Ludhiana &middot; B2B Food &middot; Women in Business</div>
+    <h1>She Baked in Her Kitchen for 40 Years. <em>Then McDonald's Came Knocking.</em></h1>
+    <p class="hero-subtitle">No business plan. No investors. No culinary school. Just recipes that Ludhiana couldn't stop eating &mdash; until the world's biggest fast food chain decided she was the only one they trusted with their buns.</p>
+    <div class="hero-divider"></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <section>
+    <div class="section-label">Chapter One</div>
+    <h2>The Homemaker Who Didn't Know She Was Building a Company</h2>
+
+    <div class="founder-block">
+      <div class="founder-photo">
+        <img src="https://www.mrsb.in/images/founder-rajni-bector.jpg" alt="Rajni Bector"
+             onerror="this.style.display='none';this.parentElement.innerHTML='<div class=\'founder-initials\'>RB</div>';" />
+      </div>
+      <div class="founder-info">
+        <h3>Rajni Bector</h3>
+        <div class="founder-title">Founder &middot; Mrs. Bector's Food Specialities</div>
+        <p>She started baking in her Ludhiana kitchen in 1956 with no formal training, no business plan, and no investors. When McDonald's chose her as their Indian bread supplier four decades later, she became one of India's most unlikely industrial food entrepreneurs.</p>
+      </div>
+    </div>
+
+    <p>In 1956, Rajni Bector was a homemaker in Ludhiana with an extraordinary gift for baking. She wasn't trying to start a company. She was simply making biscuits and bread the way she knew how &mdash; carefully, consistently, and with the kind of attention to taste that made her recipes unmistakable to anyone who tried them.</p>
+
+    <p>Neighbours asked for more. Then friends of neighbours. Then people who heard about the recipes from friends of neighbours. What started as home baking slowly, organically, became a local legend. The recipes spread because they deserved to spread.</p>
+
+    <p>For decades, the business grew the old-fashioned way &mdash; on reputation, on word of mouth, on the simple fact that the product was genuinely better. No marketing department. No distribution strategy. Just baking that spoke for itself.</p>
+
+    <p>Then, in the mid-1990s, McDonald's arrived in India. They needed a local supplier for their bread buns &mdash; and they needed that supplier to meet the most demanding food quality standards in the world. They found Mrs. Bector's.</p>
+
+    <div class="trivia-badge">
+      <div class="trivia-label">&#127828; The Trivia You Need</div>
+      <p>Every McDonald's burger bun served in India &mdash; every single one &mdash; comes from a factory that traces its origins to <strong style="color: var(--text);">a homemaker's kitchen in Ludhiana in 1956</strong>. When Mrs. Bector's went public in December 2020, the IPO was subscribed <strong style="color: var(--text);">198 times</strong> &mdash; one of the highest subscription rates in Indian IPO history that year.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">Chapter Two</div>
+    <h2>The McDonald's Test &mdash; and Why It Changed Everything</h2>
+
+    <p>Getting chosen by McDonald's is not a contract. It is a certification. McDonald's operates one of the most stringent food supply chain qualification processes in the world. Every ingredient, every supplier, every batch must meet global hygiene, consistency, and safety standards that are audited without warning.</p>
+
+    <p>A small Indian manufacturer winning that qualification was not inevitable. It required investment in industrial food-grade production facilities, processes, and documentation that most Indian food companies of that era had never contemplated. Mrs. Bector's made that investment.</p>
+
+    <p>And the payoff was permanent. Once you are a McDonald's supplier &mdash; once you have met their standards and built the relationship &mdash; the business is sticky in a way that almost no other B2B food relationship is. The supply chain does not casually change bread suppliers. The quality audit is too painful, the transition risk too high.</p>
+
+    <p>More importantly, winning McDonald's opened every other door. If you supply McDonald's, every other quick service restaurant in India takes your call. <strong style="color: var(--gold-light);">The credential became a distribution strategy.</strong></p>
+
+    <div class="pull-quote">
+      <p>&#8220;She didn't know she was building an industrial food company. She just knew how bread was supposed to taste.&#8221;</p>
+      <div class="pull-quote-attr">&mdash; The Rajni Bector story in a sentence</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">The Journey</div>
+    <h2>From a Ludhiana Kitchen to a 198x IPO</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1956</div>
+        <div class="timeline-event">Rajni Bector starts baking in Ludhiana</div>
+        <div class="timeline-detail">A homemaker in Ludhiana begins making biscuits and bread from her kitchen. No formal training, no culinary school, no business plan. Just recipes that neighbours cannot stop requesting. The word spreads slowly through the city &mdash; one loaf, one batch of biscuits at a time.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1970s&ndash;80s</div>
+        <div class="timeline-event">Local legend grows into a Ludhiana institution</div>
+        <div class="timeline-detail">Over two decades of consistent quality, Mrs. Bector's recipes become well-known across Ludhiana. The operation scales slowly but the reputation scales faster. Small institutional orders begin to arrive &mdash; hotels, catering businesses, local retailers.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">Mid-1990s</div>
+        <div class="timeline-event">McDonald's enters India &mdash; and calls Mrs. Bector's</div>
+        <div class="timeline-detail">McDonald's launches in India and searches for a local bread bun supplier who can meet their global quality standards. They choose Mrs. Bector's. The contract transforms the company overnight &mdash; from a regional food business to a nationally significant food manufacturer supplying one of the world's most demanding customers.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">1995</div>
+        <div class="timeline-event">Mrs. Bector's Food Specialities formally incorporated</div>
+        <div class="timeline-detail">The company is formally incorporated as a listed entity, giving a corporate structure to what had been a family food business. The McDonald's relationship is the anchor that funds expansion into new products and new QSR customers.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">2000s&ndash;2010s</div>
+        <div class="timeline-event">Expanding the B2B QSR client base</div>
+        <div class="timeline-detail">With McDonald's as the reference, Mrs. Bector's adds more quick service restaurant chains to its client roster. The company builds industrial-scale manufacturing capacity across Punjab and other states, adding product lines beyond bread buns into biscuits and other bakery products for retail.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-year">December 2020</div>
+        <div class="timeline-event">IPO subscribed 198 times &mdash; one of India's highest ever</div>
+        <div class="timeline-detail">Mrs. Bector's Food Specialities lists on NSE and BSE. The IPO is subscribed 198 times &mdash; reflecting investor appetite for a profitable B2B food business with irreplaceable customer relationships. A kitchen in Ludhiana has become a publicly listed industrial food company.</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">The Clients</div>
+    <h2>The Customers Behind the Growth</h2>
+    <p>Mrs. Bector's business sits at the invisible intersection of India's QSR boom &mdash; every burger chain expansion is a revenue line for the company:</p>
+    <div class="clients-grid">
+      <div class="client-chip"><strong>McDonald's India</strong>Bread buns &mdash; the anchor relationship</div>
+      <div class="client-chip"><strong>Other QSR Chains</strong>Expanding B2B bakery supply</div>
+      <div class="client-chip"><strong>Retail Biscuits</strong>Cremica brand consumer segment</div>
+      <div class="client-chip"><strong>Institutional</strong>Hotels, catering, food service</div>
+      <div class="client-chip"><strong>North India</strong>Strong Punjab manufacturing base</div>
+      <div class="client-chip"><strong>Pan-India</strong>National distribution via QSR chains</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">By the Numbers</div>
+    <h2>Revenue Baked One QSR Expansion at a Time</h2>
+    <p>As India's QSR sector grows, every new McDonald's outlet and every new quick service restaurant chain is a volume increase for Mrs. Bector's. The growth is structural, not cyclical.</p>
+    <div class="chart-wrap">
+      <div class="chart-title">Mrs. Bector's Food Specialities &mdash; Revenue</div>
+      <div class="chart-subtitle">&#8377; Crore &middot; FY20 to FY25E</div>
+      <div class="bar-chart">
+        <div class="bar-group"><div class="bar-value">850</div><div class="bar" style="height:85px;"></div><div class="bar-label">FY20</div></div>
+        <div class="bar-group"><div class="bar-value">930</div><div class="bar" style="height:93px;"></div><div class="bar-label">FY21</div></div>
+        <div class="bar-group"><div class="bar-value">1,100</div><div class="bar" style="height:110px;"></div><div class="bar-label">FY22</div></div>
+        <div class="bar-group"><div class="bar-value">1,300</div><div class="bar" style="height:130px;"></div><div class="bar-label">FY23</div></div>
+        <div class="bar-group"><div class="bar-value">1,450</div><div class="bar" style="height:145px;"></div><div class="bar-label">FY24</div></div>
+        <div class="bar-group"><div class="bar-value">1,600+</div><div class="bar" style="height:160px; opacity:0.75;"></div><div class="bar-label">FY25E</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-label">The Legacy</div>
+    <h2>What 68 Years of Baking Looks Like</h2>
+    <div class="legacy-card">
+      <div class="legacy-grid">
+        <div class="legacy-item"><div class="legacy-number">1956</div><div class="legacy-desc">Year Rajni Bector started baking &mdash; 68 years of compounding</div></div>
+        <div class="legacy-item"><div class="legacy-number">198x</div><div class="legacy-desc">IPO subscription rate &mdash; one of highest in India in 2020</div></div>
+        <div class="legacy-item"><div class="legacy-number">&#8377;3,500 Cr</div><div class="legacy-desc">Market capitalisation (NSE &amp; BSE: BECTORFOOD)</div></div>
+        <div class="legacy-item"><div class="legacy-number">McDonald's</div><div class="legacy-desc">Every burger bun served in India &mdash; from this company</div></div>
+        <div class="legacy-item"><div class="legacy-number">&#8377;1,600 Cr</div><div class="legacy-desc">Revenue FY25E &mdash; from a kitchen with no business plan</div></div>
+        <div class="legacy-item"><div class="legacy-number">B2B First</div><div class="legacy-desc">QSR supply chain &mdash; invisible to consumers, essential to chains</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom: none;">
+    <div class="section-label">The Takeaway</div>
+    <h2>What Mrs. Bector's Teaches Every Investor</h2>
+    <div class="lesson-card">
+      <div class="lesson-icon">&#127838;</div>
+      <div class="lesson-title">Expertise built quietly over decades becomes a moat that money cannot easily buy.</div>
+      <p>Rajni Bector was not trying to build a company. She was trying to bake well. But four decades of baking well &mdash; consistently, reliably, without compromise &mdash; created something that McDonald's was willing to anchor their entire India supply chain on.</p>
+      <p style="margin-top: 18px;">This is the story of how B2B food companies work at their best. <strong>The customer is invisible. The relationship is irreplaceable. And the revenue compounds every time a new QSR outlet opens anywhere in India.</strong> A kitchen in Ludhiana in 1956 is still baking &mdash; just at industrial scale now.</p>
+    </div>
+  </section>
+
+</div>
+
+<div class="story-footer">
+  <p>A Ticker Tales story &middot; Indian markets, told human.</p>
+  <a href="index.html" class="back-link">&larr; Back to all stories</a>
+</div>
+
+</body>
+</html>
